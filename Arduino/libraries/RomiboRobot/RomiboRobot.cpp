@@ -17,6 +17,7 @@
 // Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 // ##END_LICENSE##
 /****************************************************************/
+#include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
@@ -485,6 +486,38 @@ void RomiboRobot::drive(int leftSpeed, int rightSpeed)
 // The Rev3 electronics uses a TI DRV8833 dual H-bridge driver, which has a
 // different set of control signals.
 
+// Generic way of setting speed on a motor.
+// speed should be in range of [-100,100]
+// motor should be either "ROMIBO_LEFT_MOTOR" or "ROMIBO_RIGHT_MOTOR"
+void RomiboRobot::setMotor(int speed, int motor)
+{
+    // Bound the speed to be within the upper and lower limits
+    speed = constrain(speed, -ROMIBO_DRIVE_MOTOR_LIMIT, ROMIBO_DRIVE_MOTOR_LIMIT);
+  
+    // Reverse the speed for the right motor to adjust
+    // to how the motors are inverted on the robot
+    if(motor == ROMIBO_RIGHT_MOTOR)
+        speed = -speed;
+    
+    if(speed == 0) {
+        // (PIN1,PIN2) = (0,0) means the motor is off
+        digitalWrite(mot_drv1_pin[motor],LOW);
+        digitalWrite(mot_drv2_pin[motor],LOW);
+    }
+    else if(speed > 0) {
+        // (PIN1,PIN2) = (1,0) means the motor is turning forwards
+        // NOTE: Forwards does not mean moving forward due to the motor inversion
+        digitalWrite(mot_drv1_pin[motor],HIGH);
+        digitalWrite(mot_drv2_pin[motor],LOW);
+    }
+    else {
+        // (PIN1,PIN2) = (0,1) means the motor is turning backwards
+        // NOTE: Forwards does not mean moving forward due to the motor inversion
+        digitalWrite(mot_drv1_pin[motor],LOW);
+        digitalWrite(mot_drv2_pin[motor],HIGH);
+    }
+}
+
 #if (ROMIBO_ELECTRONICS_MAJOR_REV==3)
 
 void RomiboRobot::drive(int leftSpeed, int rightSpeed)
@@ -501,21 +534,29 @@ void RomiboRobot::drive(int leftSpeed, int rightSpeed)
   //   DRV2 is controlled by OCnC
   
   // The motor outputs use 16-bit PWM:
-#define DRIVEPWMRATE 20000L
-#define DRIVEPWMDIVISOR F_CPU/(2*DRIVEPWMRATE)
+  #define DRIVEPWMRATE 20000L
+  #define DRIVEPWMDIVISOR F_CPU/(2*DRIVEPWMRATE)
 
+  // Debug output
+  printf ("L: %d \n",leftSpeed);
+  printf ("R: %d \n",rightSpeed);
+
+  // Sets the appropriate speed to the appropriate motor
+  setMotor(leftSpeed,ROMIBO_LEFT_MOTOR);
+  setMotor(rightSpeed,ROMIBO_RIGHT_MOTOR);
+    
+  /* OLD CODE
   // The common register bit values:
   const uint8_t CS   =  1;   // prescaler divider is 1 (timer runs off system clock)
   const uint8_t WGM  = 11;   // see ATmega2560 manual Table 17-2 , mode 11, Phase-correct PWM with rate determined by OCRnA
   const uint8_t COMA =  0;   // OCnA is normal digital output
   const uint8_t IC   =  0;   // no input capture or filter
 
+
   // limit the motor commands to the global limits
   leftSpeed  = constrain(leftSpeed,  -ROMIBO_DRIVE_MOTOR_LIMIT, ROMIBO_DRIVE_MOTOR_LIMIT );
   rightSpeed = constrain(rightSpeed, -ROMIBO_DRIVE_MOTOR_LIMIT, ROMIBO_DRIVE_MOTOR_LIMIT );
-
-  // logic for left motor
-  // Left Motor off
+  
   if (leftSpeed == 0) {
     digitalWrite( mot_drv1_pin[ROMIBO_LEFT_MOTOR], LOW );      // coast: IN1=0    
     digitalWrite( mot_drv2_pin[ROMIBO_LEFT_MOTOR], LOW );      // coast: IN2=0    
@@ -523,11 +564,11 @@ void RomiboRobot::drive(int leftSpeed, int rightSpeed)
   }
   // Left Motor is positive (forward)
   else if (leftSpeed > 0) {
-    digitalWrite( mot_drv2_pin[ROMIBO_LEFT_MOTOR], LOW );      // forward: IN2=0
+    digitalWrite( mot_drv1_pin[ROMIBO_LEFT_MOTOR], LOW );      // forward: IN2=0
 
     // Left Motor is past upper maximum of 100
     if (leftSpeed >= 100) {
-      digitalWrite( mot_drv1_pin[ROMIBO_LEFT_MOTOR], HIGH );      // at full speed, just drive IN1 high
+      digitalWrite( mot_drv2_pin[ROMIBO_LEFT_MOTOR], HIGH );      // at full speed, just drive IN1 high
     }
     // Left Motor is within range of (0,100)
     else {  // else configure timer for IN1 PWM
@@ -536,7 +577,8 @@ void RomiboRobot::drive(int leftSpeed, int rightSpeed)
       uint16_t pwm = map( abs(leftSpeed), 0, 100, 0, DRIVEPWMDIVISOR);
 
       // Analog write should work because this is a PWM pin according to the schematic
-      analogWrite (mot_drv1_pin[ROMIBO_LEFT_MOTOR], pwm);
+      //analogWrite (mot_drv1_pin[ROMIBO_LEFT_MOTOR], pwm);
+      digitalWrite(mot_drv2_pin[ROMIBO_LEFT_MOTOR],HIGH);
 
       //TCCR3A = (COMA << 6) | (COMB << 4) | (COMC << 2) | (WGM & 3);
       //TCCR3B = (IC << 6) | ((WGM & 0x0c) << 1) | (CS);
@@ -546,10 +588,10 @@ void RomiboRobot::drive(int leftSpeed, int rightSpeed)
   }
   // Left Motor is negative (Reverse)
   else {
-    digitalWrite( mot_drv1_pin[ROMIBO_LEFT_MOTOR], LOW );      // reverse: IN1=0
+    digitalWrite( mot_drv2_pin[ROMIBO_LEFT_MOTOR], LOW );      // reverse: IN1=0
     // Left Motor is past lower maximum of -100
     if (leftSpeed <= -100) {
-      digitalWrite( mot_drv2_pin[ROMIBO_LEFT_MOTOR], HIGH );   // at full reverse, just drive IN2 high
+      digitalWrite( mot_drv1_pin[ROMIBO_LEFT_MOTOR], HIGH );   // at full reverse, just drive IN2 high
     }
     // Left Motor is within range of (-100,0)
     else {  // else configure timer for IN2 PWM
@@ -558,7 +600,8 @@ void RomiboRobot::drive(int leftSpeed, int rightSpeed)
 
       uint16_t pwm = map( abs(leftSpeed), 0, 100, 0, DRIVEPWMDIVISOR);
 
-      analogWrite( mot_drv2_pin[ROMIBO_LEFT_MOTOR], pwm);
+      //analogWrite(mot_drv2_pin[ROMIBO_LEFT_MOTOR], pwm);
+      digitalWrite(mot_drv1_pin[ROMIBO_LEFT_MOTOR],HIGH);
 
       //TCCR3A = (COMA << 6) | (COMB << 4) | (COMC << 2) | (WGM & 3);
       //TCCR3B = (IC << 6) | ((WGM & 0x0c) << 1) | (CS);
@@ -568,6 +611,8 @@ void RomiboRobot::drive(int leftSpeed, int rightSpeed)
   } // end of left motor
 
   // logic for right motor
+  // Forward: (0,1)
+  // Backwards: (1,0)
   // Right Motor off
   if (rightSpeed == 0) {
     digitalWrite( mot_drv1_pin[ROMIBO_RIGHT_MOTOR], LOW );      // coast: IN1=0    
@@ -576,11 +621,11 @@ void RomiboRobot::drive(int leftSpeed, int rightSpeed)
   }
   // Right Motor is positive (forward)
   else if (rightSpeed > 0) {
-    digitalWrite( mot_drv2_pin[ROMIBO_RIGHT_MOTOR], LOW );      // forward: IN2=0
+    digitalWrite( mot_drv1_pin[ROMIBO_RIGHT_MOTOR], LOW );      // forward: IN2=0
 
     // Right Motor is past upper maximum of 100
     if (rightSpeed >= 100) {
-      digitalWrite( mot_drv1_pin[ROMIBO_RIGHT_MOTOR], HIGH );      // at full speed, just drive IN1 high
+      digitalWrite( mot_drv2_pin[ROMIBO_RIGHT_MOTOR], HIGH );      // at full speed, just drive IN1 high
     }
     // Right Motor is within range of (0,100)
     else {  // else configure timer for IN1 PWM
@@ -588,7 +633,8 @@ void RomiboRobot::drive(int leftSpeed, int rightSpeed)
       //const uint8_t COMC =  0;   // OCnC is normal digital output for DRV2
       uint16_t pwm = map( abs(rightSpeed), 0, 100, 0, DRIVEPWMDIVISOR);
       
-      analogWrite( mot_drv1_pin[ROMIBO_RIGHT_MOTOR], pwm);
+      //analogWrite( mot_drv1_pin[ROMIBO_RIGHT_MOTOR], pwm);
+      digitalWrite( mot_drv2_pin[ROMIBO_RIGHT_MOTOR], HIGH);
 
       //TCCR4A = (COMA << 6) | (COMB << 4) | (COMC << 2) | (WGM & 3); 
       //TCCR4B = (IC << 6) | ((WGM & 0x0c) << 1) | (CS); 
@@ -599,10 +645,10 @@ void RomiboRobot::drive(int leftSpeed, int rightSpeed)
   }
   // Right Motor is negative (Reverse)
   else {
-    digitalWrite( mot_drv1_pin[ROMIBO_RIGHT_MOTOR], LOW );      // reverse: IN1=0
+    digitalWrite( mot_drv2_pin[ROMIBO_RIGHT_MOTOR], LOW );      // reverse: IN2=0
     // Right Motor is past lower maximum of -100
     if (rightSpeed <= -100) {
-      digitalWrite( mot_drv2_pin[ROMIBO_RIGHT_MOTOR], HIGH );   // at full reverse, just drive IN2 high
+      digitalWrite( mot_drv1_pin[ROMIBO_RIGHT_MOTOR], HIGH );   // at full reverse, just drive IN1 high
     }
     // Right Motor is within range of (-100,0)
     else {  // else configure timer for IN2 PWM
@@ -610,14 +656,16 @@ void RomiboRobot::drive(int leftSpeed, int rightSpeed)
       //const uint8_t COMC =  2;   // OCnC is PWM for DRV2
       uint16_t pwm = map( abs(rightSpeed), 0, 100, 0, DRIVEPWMDIVISOR);
       
-      analogWrite( mot_drv2_pin[ROMIBO_RIGHT_MOTOR], pwm);
+      //analogWrite( mot_drv2_pin[ROMIBO_RIGHT_MOTOR], pwm);
+      digitalWrite( mot_drv1_pin[ROMIBO_RIGHT_MOTOR], HIGH);
+      
       //TCCR4A = (COMA << 6) | (COMB << 4) | (COMC << 2) | (WGM & 3); 
       //TCCR4B = (IC << 6) | ((WGM & 0x0c) << 1) | (CS); 
       //OCR4A  = DRIVEPWMDIVISOR;
       //OCR4C  = pwm;
     }
   } // end of right motor
-
+  */
 }
 #undef DRIVEPWMRATE
 #undef DRIVEPWMDIVISOR

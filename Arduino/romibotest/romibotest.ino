@@ -23,6 +23,8 @@
 #include <RomiboSound.h>  
 #include <RomiboRobot.h>
 #include <ConsoleOutput.h>
+#include <mcpDac.h>
+
 /****************************************************************/
 
 // Declare the default parameter table object.
@@ -71,7 +73,7 @@ static const char *sounds[] = {
   "DIGIT7",
   "DIGIT8",
   "DIGIT9",
-  
+
 };
 
 void playallsounds()
@@ -79,13 +81,13 @@ void playallsounds()
   int len = 37;
   Romibo.waitForSoundToFinish ();
   for (int i = 0; i < len; i++) {
-      Romibo.playSoundNamed (sounds[i]);
-      Romibo.waitForSoundToFinish ();
-      if (i % 3 == 2) {
-        delay (2000);
-      }
-  }
+    Romibo.playSoundNamed (sounds[i]);
+    Romibo.waitForSoundToFinish ();
+    if (i % 3 == 2) {
+      delay (2000);
 
+    }
+  }
 }
 
 void setup(void) 
@@ -102,11 +104,11 @@ void setup(void)
 
   //setting a beginning head position
   Romibo.setNeutralHeadPosition ();
-  
+
   //Set up initial antennae color
   Romibo.setAntennaColor (255, 255, 255); // White
   Romibo.delay (1000);
-  
+
   // Romibo conveys successful setup with a blink, a nod, a whistle, and a green light
   int head_up = 95;
   int head_down = 5;
@@ -120,7 +122,7 @@ void setup(void)
   Romibo.setHeadPosition (head_up, head_down);
   Romibo.setEyelid (lid_up);
   Romibo.setAntennaColor (255, 255, 255); // White
-  
+
   //Romibo runs each of its drive motors
   Romibo.drive (100, 0);
   Romibo.delay (500);
@@ -131,21 +133,39 @@ void setup(void)
   Romibo.drive (0, -100);
   Romibo.delay (500);
   Romibo.stop ();
-  
+
   Romibo.setNeutralHeadPosition ();   
 
   //playallsounds();
-  
+
 }  // end setup
 
-  int irRange = 0;
-  int llight = 0;
-  int rlight = 0;
-  int buttons = 0;
+int irRange = 0;
+int llight = 0;
+int rlight = 0;
+int buttons = 0;
 
-  // Loops indefinitely.
+int incomingByte = 0;
+
+// Loops indefinitely.
 void loop( void )
 { 
+  
+  // Reading inputs coming over Serial
+  if (Serial.available() > 0) {
+    incomingByte = Serial.read();
+    Serial.println ("Serial1:");
+    Serial.println (incomingByte,DEC);
+  }
+  
+  // Reading inputs coming over wifi
+  if (Serial1.available() > 0) {
+    incomingByte = Serial1.read();
+    Serial1.println ("Serial1:");
+    Serial1.println (incomingByte,DEC);
+  }
+  
+    
   // Forces the update the robot inputs and outputs.
   Romibo.poll();
 
@@ -158,7 +178,7 @@ void loop( void )
     Romibo.delay(200);
     Romibo.setEyelid(100); 
   }
-  
+
   Romibo.setAntennaColor (0, 0, irRange); 
   Serial.print ("Range: ");
   Serial.println (irRange);
@@ -169,8 +189,9 @@ void loop( void )
   Serial.print ("Buttons: ");
   Serial.println (buttons);
   Serial.println ();
-  
+
   Romibo.delay(500);
- 
+
 }
+
 

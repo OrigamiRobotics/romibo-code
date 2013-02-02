@@ -45,7 +45,7 @@
 //   3   Romibo Shield Rev 3  (e.g. includes new motor drivers, accelerometer, etc.)
 
 #ifndef ROMIBO_ELECTRONICS_MAJOR_REV 
-#define ROMIBO_ELECTRONICS_MAJOR_REV 2
+#define ROMIBO_ELECTRONICS_MAJOR_REV 3
 #endif
 
 #ifndef ROMIBO_ELECTRONICS_MINOR_REV

@@ -125,8 +125,10 @@
 	// wave.)
 
 	enum { ROMIBO_LEFT_MOTOR = 0, ROMIBO_RIGHT_MOTOR = 1 };
-	const int mot_drv1_pin[2] = { 7, 8 };   // DRV8833 inputs IN1 *** Caz *** these are now the correct pin numbers
-	const int mot_drv2_pin[2] = { 2, 3 };   // DRV8833 inputs IN2 *** Caz *** these are now the correct pin numbers
+// Updated Pin Numbers 02/06/2013 - Mansfield Mark
+// Right: 16,15     Left: 9,10
+	const int mot_drv1_pin[2] = { 9, 16 };   // DRV8833 inputs IN1 *** Caz *** these are now the correct pin numbers
+	const int mot_drv2_pin[2] = { 10, 15 };   // DRV8833 inputs IN2 *** Caz *** these are now the correct pin numbers
 	const int motor_sleep_pin = 5;		// DRV8833 sleep pin ( active low = sleep ) // *** Caz *** new pin that *must* be handled
 	const int motor_fault_pin = 6;		// DRV8833 driver fault pin. No code yet. We should write some 
 	

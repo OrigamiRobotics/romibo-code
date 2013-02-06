@@ -493,11 +493,6 @@ void setMotor(int speed, int motor)
 {
     #define DRIVEPWMRATE 20000L
     #define DRIVEPWMDIVISOR F_CPU/(2*DRIVEPWMRATE)
-    // The common register bit values:
-    const uint8_t CS   =  1;   // prescaler divider is 1 (timer runs off system clock)
-    const uint8_t WGM  = 11;   // see ATmega2560 manual Table 17-2 , mode 11, Phase-correct PWM with rate determined by OCRnA
-    const uint8_t COMA =  0;   // OCnA is normal digital output
-    const uint8_t IC   =  0;   // no input capture or filter
 
     // Bound the speed to be within the upper and lower limits
     speed = constrain(speed, -ROMIBO_DRIVE_MOTOR_LIMIT, ROMIBO_DRIVE_MOTOR_LIMIT);
@@ -522,8 +517,8 @@ void setMotor(int speed, int motor)
             digitalWrite(mot_drv2_pin[motor],LOW);
         }
         else {
-
             uint16_t pwm = map( abs(speed), 0, 100, 0, DRIVEPWMDIVISOR);
+            digitalWrite(mot_drv2_pin[motor],LOW);
             analogWrite (mot_drv1_pin[motor], pwm);
             /*
             // (PIN1,PIN2) = (+x,0), 0 < x < 1
@@ -546,8 +541,15 @@ void setMotor(int speed, int motor)
     else {
         // (PIN1,PIN2) = (0,-x) means the motor is turning backwards
         // NOTE: Forwards does not mean moving forward due to the motor inversion
-        digitalWrite(mot_drv1_pin[motor],LOW);
-        digitalWrite(mot_drv2_pin[motor],HIGH);
+        if(speed <= -100) {
+            digitalWrite(mot_drv1_pin[motor],LOW);
+            digitalWrite(mot_drv2_pin[motor],HIGH);
+        }
+        else {
+            uint16_t pwm = map( abs(speed), 0, 100, 0, DRIVEPWMDIVISOR);
+            digitalWrite(mot_drv1_pin[motor],LOW);
+            analogWrite (mot_drv2_pin[motor], pwm);
+        }
     }
 }
 

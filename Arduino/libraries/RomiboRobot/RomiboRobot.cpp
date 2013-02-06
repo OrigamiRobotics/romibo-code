@@ -489,15 +489,14 @@ void RomiboRobot::drive(int leftSpeed, int rightSpeed)
 // Generic way of setting speed on a motor.
 // speed should be in range of [-100,100]
 // motor should be either "ROMIBO_LEFT_MOTOR" or "ROMIBO_RIGHT_MOTOR"
-void RomiboRobot::setMotor(int speed, int motor)
+void setMotor(int speed, int motor)
 {
     // Bound the speed to be within the upper and lower limits
     speed = constrain(speed, -ROMIBO_DRIVE_MOTOR_LIMIT, ROMIBO_DRIVE_MOTOR_LIMIT);
   
-    // Reverse the speed for the right motor to adjust
-    // to how the motors are inverted on the robot
-    if(motor == ROMIBO_RIGHT_MOTOR)
-        speed = -speed;
+    // We do not have to adjust to how the motors are inverted on the robot
+    // Either it is already adjusted in the pin configuration
+    // Or it is adjusted in the iOS app.
     
     if(speed == 0) {
         // (PIN1,PIN2) = (0,0) means the motor is off

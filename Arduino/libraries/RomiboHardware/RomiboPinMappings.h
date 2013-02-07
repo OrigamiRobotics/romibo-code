@@ -127,10 +127,11 @@
 	enum { ROMIBO_LEFT_MOTOR = 0, ROMIBO_RIGHT_MOTOR = 1 };
 // Updated Pin Numbers 02/06/2013 - Mansfield Mark
 // Pin Configuration:
-// Right: 2,3
-// Left: 7,8
+// Right: 7,8
+// Left: 2,3
 // Unsure if this is truly Pins 1/2 in the wiring
 // OR if it is reversed to adjust for the motor inversion
+// Also note that it may vary depending on how robot is wired
 //
 	const int mot_drv1_pin[2] = { 2,7 };   // DRV8833 inputs IN1 *** Caz *** these are now the correct pin numbers
 	const int mot_drv2_pin[2] = { 3,8 };   // DRV8833 inputs IN2 *** Caz *** these are now the correct pin numbers

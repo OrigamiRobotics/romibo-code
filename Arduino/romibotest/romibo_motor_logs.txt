@@ -1,0 +1,39 @@
+Progress:
+Pin 8 should be DRV2-R
+Pin 7 should be DRV1-R
+Pin 2 should be DRV1-L
+Pin 3 should be DRV2-L
+
+		Left		Right
+		 1 2	 	 1 2
+Up:		(1,0) 	(1,0)
+Down: 	(0,1) 	(0,1)
+Right: 	(1,0)	(0,1)
+Left:	(0,1)	(1,0)
+
+
+Ideal:
+UP: +L +R
+LT: -L +R
+RT: +L -R
+DN: -L -R
+
+	  L R
+DRV1: X,8
+DRV2: X,X
+
+Result:
+UP: -R
+LT: -R
+RT: None
+DN: None
+
+	  L R
+DRV1: X,7
+DRV2: X,X
+
+Result:
+UP: -R
+LT: -R
+RT: None
+DN: None

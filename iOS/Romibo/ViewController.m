@@ -188,7 +188,6 @@
     [configPopover release];
 }
 
-int soundCount = 0;
 
 -(IBAction)buttonClicked:(id)sender
 {
@@ -205,12 +204,7 @@ int soundCount = 0;
             break;
             
         case 3:           
-            soundCount = (soundCount < 5) ? soundCount + 1 : 1;            
-            NSString* countFileName = [NSString stringWithFormat:@"DIGIT%d\r", soundCount];
-            NSString* countCmd = [NSString stringWithFormat:@"say %@\r", countFileName];
-            NSLog(@"Send string: %@", countCmd);
-            
-            [romibo sendString:countCmd];
+            [romibo sendString:@"count"];
             break;
             
         case 4:

@@ -10,7 +10,6 @@
 		6390519314B66BDF007AB7CC /* EmotionNubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6390519214B66BDF007AB7CC /* EmotionNubView.m */; };
 		6390519814B68502007AB7CC /* DrivingNubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6390519714B68502007AB7CC /* DrivingNubView.m */; };
 		6390519D14B69403007AB7CC /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6390519B14B69403007AB7CC /* ConfigViewController.m */; };
-		6390519E14B69403007AB7CC /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6390519C14B69403007AB7CC /* ConfigViewController.xib */; };
 		639051A614B77263007AB7CC /* Romibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 639051A514B77263007AB7CC /* Romibo.m */; };
 		6396AD7E14B24DF00023CE66 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6396AD7D14B24DF00023CE66 /* Security.framework */; };
 		6396AF7014B2594B0023CE66 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6396AF6514B2594B0023CE66 /* DDAbstractDatabaseLogger.m */; };
@@ -28,8 +27,6 @@
 		63DBAFDA14B0126D00EAD344 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63DBAFD814B0126D00EAD344 /* InfoPlist.strings */; };
 		63DBAFDC14B0126D00EAD344 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DBAFDB14B0126D00EAD344 /* main.m */; };
 		63DBAFE014B0126D00EAD344 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DBAFDF14B0126D00EAD344 /* AppDelegate.m */; };
-		63DBAFE314B0126D00EAD344 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DBAFE114B0126D00EAD344 /* MainStoryboard_iPhone.storyboard */; };
-		63DBAFE614B0126D00EAD344 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DBAFE414B0126D00EAD344 /* MainStoryboard_iPad.storyboard */; };
 		63DBAFE914B0126D00EAD344 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DBAFE814B0126D00EAD344 /* ViewController.m */; };
 		63DBAFF114B0126D00EAD344 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DBAFF014B0126D00EAD344 /* SenTestingKit.framework */; };
 		63DBAFF214B0126D00EAD344 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DBAFCF14B0126D00EAD344 /* UIKit.framework */; };
@@ -377,8 +374,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				63DBAFDA14B0126D00EAD344 /* InfoPlist.strings in Resources */,
-				63DBAFE314B0126D00EAD344 /* MainStoryboard_iPhone.storyboard in Resources */,
-				63DBAFE614B0126D00EAD344 /* MainStoryboard_iPad.storyboard in Resources */,
 				63DD0E9714B5393B002FDC2F /* background-01.png in Resources */,
 				63DD0E9814B5393B002FDC2F /* background-02.png in Resources */,
 				63DD0E9914B5393B002FDC2F /* background-03.png in Resources */,
@@ -395,7 +390,6 @@
 				63DD0EA414B5393B002FDC2F /* volume-nub-01.png in Resources */,
 				63DD0EA714B54C1F002FDC2F /* sound_left.png in Resources */,
 				63DD0EA814B54C1F002FDC2F /* sound_right.png in Resources */,
-				6390519E14B69403007AB7CC /* ConfigViewController.xib in Resources */,
 				63AEE88214B91B7C00A8C8DC /* movement-base-03.png in Resources */,
 				63AEE88414B91C2300A8C8DC /* emotion-base-03.png in Resources */,
 			);

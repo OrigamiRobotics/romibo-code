@@ -1,0 +1,226 @@
+count, Count
+SAD4.wav, Cry
+dance, Dance
+rock, Rock
+bob, Bob
+nod, Nod
+twinkle.wav, Sing
+a.wav,A
+b.wav,B
+c.wav,C
+d.wav,D
+e.wav,E
+f.wav,F
+g.wav,G
+h.wav,H
+i.wav,I
+j.wav,J
+k.wav,K
+l.wav,L
+m.wav,M
+n.wav,N
+o.wav,O
+p.wav,P
+q.wav,Q
+r.wav,R
+s.wav,S
+t.wav,T
+u.wav,U
+v.wav,V
+w.wav,W
+x.wav,X
+y.wav,Y
+z.wav,Z
+black.wav,Black
+blue.wav,Blue
+green.wav,Green
+orange.wav,Orange
+purple.wav,Purple
+red.wav,Red
+white.wav,White
+yellow.wav,Yellow
+bless_you.wav,Bless you
+could_you_tell_me_a_story.wav,Could you tell me a story
+could_you_tell_me_more.wav,Could you tell me more
+it's_so_nice_to_see_you.wav,It's so nice to see you
+maybe.wav,Maybe
+me too.wav,Me too
+me_too.wav,Me too
+no.wav,No
+nope.wav,Nope
+okay.wav,Okay
+ooooo.wav,Ooooo
+ro_mi_bo.wav,Ro mi bo
+sorry.wav,Sorry
+thank_you.wav,Thank you
+thats_too_bad.wav,Thats too bad
+what_do_you_think.wav,What do you think
+what_happened_next.wav,What happened next
+what_happens_next.wav,What happens next
+what_was_that.wav,What was that
+why_is_that.wav,Why is that
+will_you_pet_me.wav,Will you pet me
+yes.wav,Yes
+you_are_my_friend.wav,You are my friend
+you_are_my_friend2.wav,You are my friend2
+big.wav,Big
+circle.wav,Circle
+oval.wav,Oval
+rectangle.wav,Rectangle
+rectangle2.wav,Rectangle2
+small.wav,Small
+square.wav,Square
+triangle.wav,Triangle
+down.wav,Down
+left.wav,Left
+right.wav,Right
+up.wav,Up
+angry.wav,Angry
+confused.wav,Confused
+happy.wav,Happy
+i_feel.wav,I feel
+i_feel2.wav,I feel2
+sad.wav,Sad
+come_and_get_me.wav,Come and get me
+come_find_me.wav,Come find me
+guess_again.wav,Guess again
+i_am_going_to_get_you.wav,I am going to get you
+i_spy.wav,I spy
+i_spy_something.wav,I spy something
+keep_guessing.wav,Keep guessing
+lets_play_hide_and_go_seek.wav,Lets play hide and go seek
+lets_spin.wav,Lets spin
+over_here.wav,Over here
+ready_or_not_here_i_come.wav,Ready or not here i come
+you_win.wav,You win
+hello.wav,Hello
+hola_amigo.wav,Hola amigo
+how_are_you_today.wav,How are you today
+how_do_you_feel.wav,How do you feel
+how_old_are_you.wav,How old are you
+i_am_a_robot.wav,I am a robot
+my_name_is_romibo.wav,My name is romibo
+what_is_your_name.wav,What is your name
+where_do_you_live.wav,Where do you live
+aaahhh.wav,Aaahhh
+daadut.wav,Daadut
+eeeee.wav,Eeeee
+hgrrr.wav,Hgrrr
+low_battery.wav,Low battery
+oh_uh.wav,Oh uh
+omnomnomnomnom.wav,Omnomnomnomnom
+omnomnomonom.wav,Omnomnomonom
+wheeee.wav,Wheeee
+0.wav,0
+1.wav,1
+2.wav,2
+3.wav,3
+4.wav,4
+5.wav,5
+6.wav,6
+7.wav,7
+8.wav,8
+9.wav,9
+bounce.wav,Bounce
+dance_with_me.wav,Dance with me
+give_me_a_hug.wav,Give me a hug
+give_me_a_hug2.wav,Give me a hug2
+lets_dance.wav,Lets dance
+lets_make_silly_sounds.wav,Lets make silly sounds
+look_down.wav,Look down
+look_left.wav,Look left
+look_right.wav,Look right
+look_up.wav,Look up
+nice_hands.wav,Nice hands
+nice_hands2.wav,Nice hands2
+nice_hands3.wav,Nice hands3
+no_running.wav,No running
+please.wav,Please
+silence.wav,Silence
+speak_spanish.wav,Speak spanish
+spin.wav,Spin
+stomp_your_feet.wav,Stomp your feet
+take_turns.wav,Take turns
+use_kind_words.wav,Use kind words
+use_kind_words2.wav,Use kind words2
+use_your_inside_voice.wav,Use your inside voice
+use_your_walking_feet.wav,Use your walking feet
+wave_your_hands.wav,Wave your hands
+we_use_nice_hands.wav,We use nice hands
+ANGRY1.WAV,Angry1
+ANGRY2.WAV,Angry2
+ANGRY3.WAV,Angry3
+AWESOME.WAV,Awesome
+BECKON1.WAV,Beckon1
+BECKON2.WAV,Beckon2
+BECKON3.WAV,Beckon3
+BECKON4.WAV,Beckon4
+BECKON5.WAV,Beckon5
+BECKON6.WAV,Beckon6
+BOSTON.WAV,Boston
+DIGIT0.WAV,Digit0
+DIGIT1.WAV,Digit1
+DIGIT2.WAV,Digit2
+DIGIT3.WAV,Digit3
+DIGIT4.WAV,Digit4
+DIGIT5.WAV,Digit5
+DIGIT6.WAV,Digit6
+DIGIT7.WAV,Digit7
+DIGIT8.WAV,Digit8
+DIGIT9.WAV,Digit9
+GOODBYE.WAV,Goodbye
+HAPPY1.WAV,Happy1
+HAPPY2.WAV,Happy2
+HAPPY3.WAV,Happy3
+HELLO.WAV,Hello
+LETSPLA1.WAV,Letspla1
+LETSPLA2.WAV,Letspla2
+PLAYWME.WAV,Playwme
+POWERON.WAV,Poweron
+QUEST1.WAV,Quest1
+QUEST2.WAV,Quest2
+S1.WAV,S1
+S10.WAV,S10
+S11.WAV,S11
+S12.WAV,S12
+S13.WAV,S13
+S14.WAV,S14
+S15.WAV,S15
+S16.WAV,S16
+S17.WAV,S17
+S18.WAV,S18
+S19.WAV,S19
+S2.WAV,S2
+S20.WAV,S20
+S3.WAV,S3
+S4.WAV,S4
+S5.WAV,S5
+S6.WAV,S6
+S7.WAV,S7
+S8.WAV,S8
+S9.WAV,S9
+SAD1.WAV,Sad1
+SAD2.WAV,Sad2
+SAD3.WAV,Sad3
+SAD4.WAV,Sad4
+SAD5.WAV,Sad5
+SAD6.WAV,Sad6
+kind_words.wav,Kind words
+maybe.wav,Maybe
+no.wav,No
+no_running.wav,No running
+please(question).wav,Please(question)
+please.wav,Please
+take_turns.wav,Take turns
+thank_you.wav,Thank you
+thank_you2.wav,Thank you2
+what_do_you_think.wav,What do you think
+yes(question).wav,Yes(question)
+you're_awesome.wav,You're awesome
+itsy_bitsy_spider.wav,Itsy bitsy spider
+little_miss_muffet.wav,Little miss muffet
+mario_theme.wav,Mario theme
+old_macdonald.wav,Old macdonald
+the_farmer_in_the_dell(complete).wav,The farmer in the dell(complete)
+the_farmer_in_the_dell(short).wav,The farmer in the dell(short)
+twinkle.wav,Twinkle

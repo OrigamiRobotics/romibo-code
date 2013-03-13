@@ -13,8 +13,9 @@
 #import "Romibo.h"
 #import "CmdDelegate.h"
 
-
 @implementation ViewController 
+
+//@synthesize commandPickerPopover;
 
 - (void)didReceiveMemoryWarning
 {
@@ -46,7 +47,45 @@
     [self setupDrivingSubview];
     [dNub setCmdDelegate:romibo];
     
+    [self setupRomiboCommands];
+
 }
+
+-(void)setupRomiboCommands
+{
+    NSString* commandPath = [[NSBundle mainBundle] pathForResource:@"RomiboCommands" ofType:@"txt"];
+    
+    NSString* allCommands = [NSString stringWithContentsOfFile:commandPath encoding:NSUTF8StringEncoding error:NULL];
+    
+    NSArray* commandsArray = [allCommands componentsSeparatedByString:@"\n"];
+    
+    romiboCommands = [[NSMutableDictionary alloc] init];
+    buttonLabels = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < commandsArray.count; i++)
+    {
+        NSString* command = [commandsArray objectAtIndex:i];
+        NSArray* commandFragments = [command componentsSeparatedByString:@","];
+        
+        NSString* cmd = [[commandFragments objectAtIndex:0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        
+        NSString* label = [[commandFragments objectAtIndex:1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        
+        [romiboCommands setObject:cmd forKey:label];
+        [buttonLabels addObject:label];
+    }
+    
+
+}
+
+
+-(IBAction)handleLongPress:(UILongPressGestureRecognizer*)gesture
+{
+    UIButton* button = (UIButton *) gesture.view;
+    [self pickCommand:button];
+    
+}
+
 
 - (void)viewDidUnload
 {
@@ -191,43 +230,19 @@
 
 -(IBAction)buttonClicked:(id)sender
 {
-    int btnTag = ((UIButton *)sender).tag;
     
-    switch(btnTag)
-    {
-        case 1:
-            [romibo sendString:@"say TWINKLE\r"];
-            break;
-            
-        case 2:
-            [romibo sendString:@"say AWESOME\r"];
-            break;
-            
-        case 3:           
-            [romibo sendString:@"count"];
-            break;
-            
-        case 4:
-            [romibo sendString:@"say SAD4\r"];
-            break;
-            
-        case 5:
-            [romibo sendString:@"dance\r"];
-            break;
-            
-        case 6:
-            [romibo sendString:@"nod\r"];
-            break;
-            
-        case 7:
-            [romibo sendString:@"rock\r"];
-            break;
-            
-        case 8:
-            [romibo sendString:@"bob\r"];
-            break;
-            
-    }
+    NSString* btnText = [((UIButton *)sender).titleLabel text];
+    NSLog(@"Button text: %@", btnText);
+    
+    NSString* btnCommand = [romiboCommands objectForKey:btnText];
+    NSLog(@"Button command: %@", btnCommand);
+
+    NSString* command;
+    if ([btnCommand hasSuffix:@".wav"])
+        command = [@"say " stringByAppendingString:btnCommand];
+    else command = btnCommand;
+    
+    NSLog(@"Full command: %@", command);
 }
 
 
@@ -236,6 +251,36 @@
     
 }
 
+- (void)commandSelected:(NSString *)cmd {
+    
+    [lastButtonClicked setTitle:cmd forState:UIControlStateNormal];
+    
+    [commandPickerPopover dismissPopoverAnimated:YES];
+}
+
+-(void)pickCommand:(id)sender {
+    
+    lastButtonClicked = sender;
+    
+    if (commandPicker == nil) {
+                
+        commandPicker = [[CommandPickerController alloc] 
+                             initWithStyle:UITableViewStylePlain];
+        
+        [commandPicker setDelegate:self];
+        [commandPicker setCommands:buttonLabels];
+         
+        commandPickerPopover = [[UIPopoverController alloc] 
+                                    initWithContentViewController:commandPicker];  
+        
+    }
+    
+    [commandPickerPopover presentPopoverFromRect:[sender frame]
+                          inView:[self view]      
+                            permittedArrowDirections:UIPopoverArrowDirectionAny 
+                            animated:YES];
+
+}
 
 - (void)dealloc {
     
@@ -247,6 +292,16 @@
     
     [cmdTimer invalidate];
     cmdTimer = nil;
+    
+    [romiboCommands release];
+    romiboCommands = nil;
+    
+    [buttonLabels release];
+    buttonLabels = nil;
+    
+    [commandPicker release];
+    commandPicker = nil;
+    
     
     [super dealloc];
 }

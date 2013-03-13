@@ -49,6 +49,8 @@
 		63DD0EA414B5393B002FDC2F /* volume-nub-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0E9614B5393B002FDC2F /* volume-nub-01.png */; };
 		63DD0EA714B54C1F002FDC2F /* sound_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0EA514B54C1F002FDC2F /* sound_left.png */; };
 		63DD0EA814B54C1F002FDC2F /* sound_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0EA614B54C1F002FDC2F /* sound_right.png */; };
+		7470808C16CF1D650007158D /* CommandPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7470808B16CF1D650007158D /* CommandPickerController.m */; };
+		74A6F86516CF0B1F00B99FF0 /* RomiboCommands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +101,6 @@
 		63DBAFDD14B0126D00EAD344 /* Romibo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Romibo-Prefix.pch"; sourceTree = "<group>"; };
 		63DBAFDE14B0126D00EAD344 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		63DBAFDF14B0126D00EAD344 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		63DBAFE214B0126D00EAD344 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		63DBAFE514B0126D00EAD344 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		63DBAFE714B0126D00EAD344 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		63DBAFE814B0126D00EAD344 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -125,6 +126,9 @@
 		63DD0E9614B5393B002FDC2F /* volume-nub-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "volume-nub-01.png"; path = "imgs/volume-nub-01.png"; sourceTree = "<group>"; };
 		63DD0EA514B54C1F002FDC2F /* sound_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sound_left.png; path = imgs/sound_left.png; sourceTree = "<group>"; };
 		63DD0EA614B54C1F002FDC2F /* sound_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sound_right.png; path = imgs/sound_right.png; sourceTree = "<group>"; };
+		7470808A16CF1D650007158D /* CommandPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandPickerController.h; path = ../CommandPickerController.h; sourceTree = "<group>"; };
+		7470808B16CF1D650007158D /* CommandPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommandPickerController.m; path = ../CommandPickerController.m; sourceTree = "<group>"; };
+		74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RomiboCommands.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 		6390519914B693F1007AB7CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7470808A16CF1D650007158D /* CommandPickerController.h */,
+				7470808B16CF1D650007158D /* CommandPickerController.m */,
 				6390519A14B69403007AB7CC /* ConfigViewController.h */,
 				6390519B14B69403007AB7CC /* ConfigViewController.m */,
 				6390519C14B69403007AB7CC /* ConfigViewController.xib */,
@@ -197,6 +203,7 @@
 		63DBAFC014B0126D00EAD344 = {
 			isa = PBXGroup;
 			children = (
+				74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */,
 				63DD0E2E14B5386E002FDC2F /* imgs */,
 				6396AF6314B259300023CE66 /* lib */,
 				63DBAFD514B0126D00EAD344 /* Romibo */,
@@ -238,7 +245,6 @@
 				6396AD7F14B24E020023CE66 /* Romibo.entitlements */,
 				63DBAFDE14B0126D00EAD344 /* AppDelegate.h */,
 				63DBAFDF14B0126D00EAD344 /* AppDelegate.m */,
-				63DBAFE114B0126D00EAD344 /* MainStoryboard_iPhone.storyboard */,
 				63DBAFE414B0126D00EAD344 /* MainStoryboard_iPad.storyboard */,
 				63DBAFE714B0126D00EAD344 /* ViewController.h */,
 				63DBAFE814B0126D00EAD344 /* ViewController.m */,
@@ -392,6 +398,7 @@
 				63DD0EA814B54C1F002FDC2F /* sound_right.png in Resources */,
 				63AEE88214B91B7C00A8C8DC /* movement-base-03.png in Resources */,
 				63AEE88414B91C2300A8C8DC /* emotion-base-03.png in Resources */,
+				74A6F86516CF0B1F00B99FF0 /* RomiboCommands.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +446,7 @@
 				6390519814B68502007AB7CC /* DrivingNubView.m in Sources */,
 				6390519D14B69403007AB7CC /* ConfigViewController.m in Sources */,
 				639051A614B77263007AB7CC /* Romibo.m in Sources */,
+				7470808C16CF1D650007158D /* CommandPickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,14 +477,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		63DBAFE114B0126D00EAD344 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				63DBAFE214B0126D00EAD344 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
 		63DBAFE414B0126D00EAD344 /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -501,7 +501,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -517,8 +518,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -527,7 +532,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -536,9 +542,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MACOSX_DEPLOYMENT_TARGET = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -552,8 +562,10 @@
 				HEADER_SEARCH_PATHS = /Users/HCII/Documents/RomiboApp/Romibo/lib;
 				"HEADER_SEARCH_PATHS[arch=*]" = "/Users/HCII/Documents/RomiboApp/Romibo/lib/**";
 				INFOPLIST_FILE = "Romibo/Romibo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -566,8 +578,10 @@
 				GCC_PREFIX_HEADER = "Romibo/Romibo-Prefix.pch";
 				HEADER_SEARCH_PATHS = /Users/HCII/Documents/RomiboApp/Romibo/lib;
 				INFOPLIST_FILE = "Romibo/Romibo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -13,8 +13,9 @@
 
 #import "EmotionNubView.h"
 #import "DrivingNubView.h"
+#import "CommandPickerController.h"
 
-@interface ViewController : UIViewController <UIPopoverControllerDelegate, DismissPopoverDelegate>
+@interface ViewController : UIViewController <UIPopoverControllerDelegate, DismissPopoverDelegate, CommandPickerDelegate>
 
 {
     IBOutlet UILabel *connectionLabel;
@@ -22,15 +23,26 @@
     Romibo* romibo; 
     NSTimer* cmdTimer;
     NSTimer* connectionStatusTimer;
+    
     EmotionNubView* eNub;
     DrivingNubView* dNub;
-    //NubView* eNub;
-    //NubView* dNub;
+
+    CommandPickerController *commandPicker;
+    UIPopoverController *commandPickerPopover;
+    UIButton* lastButtonClicked;
+    
+    NSMutableDictionary* romiboCommands;
+    NSMutableArray* buttonLabels;
+    
+    UILongPressGestureRecognizer* longPressRecognizer;
+
 }
 
 
 //handles the 8 action buttons
 -(IBAction)buttonClicked:(id)sender;
+-(IBAction)handleLongPress:(id)sender;
+-(void)pickCommand:(id)sender;
 
 //gear button
 -(IBAction)configClicked:(id)sender;
@@ -39,10 +51,8 @@
 -(void)disconnectClicked;
 -(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController;
 
-
 -(void)setupEmotionSubview;
 -(void)setupDrivingSubview;
-
 
 -(void)setConnectionStatus;
 

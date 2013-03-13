@@ -4,7 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
         <scene sceneID="4">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
@@ -42,6 +41,7 @@
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="c0k-IX-63B">
                                 <rect key="frame" x="32" y="587" width="344" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Sing" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -52,11 +52,13 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="fAF-2V-44e"/>
+                                    <outletCollection property="gestureRecognizers" destination="KPO-Z8-pDv" appends="YES" id="IRq-eZ-L1E"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oNk-2j-ypD">
                                 <rect key="frame" x="384" y="587" width="344" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Dance" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,11 +69,13 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="771-yu-djL"/>
+                                    <outletCollection property="gestureRecognizers" destination="GBS-QA-1eV" appends="YES" id="F8l-fu-LGg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FAJ-3e-Hnv">
                                 <rect key="frame" x="32" y="669" width="344" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Awesome" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -82,11 +86,13 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="VHM-x0-A1M"/>
+                                    <outletCollection property="gestureRecognizers" destination="DwR-NO-0dk" appends="YES" id="bmv-lQ-g0u"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fbD-hP-pAl">
                                 <rect key="frame" x="384" y="669" width="344" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Nod" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,11 +103,13 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="Iia-Dm-bTZ"/>
+                                    <outletCollection property="gestureRecognizers" destination="Clm-2R-Y0F" appends="YES" id="OVj-QE-XlN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Jee-La-5Qx">
                                 <rect key="frame" x="32" y="748" width="344" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Count" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -112,11 +120,13 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="jbm-Bd-SB5"/>
+                                    <outletCollection property="gestureRecognizers" destination="rsA-38-rf9" appends="YES" id="FK1-QZ-4gy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xvZ-gn-2gy">
                                 <rect key="frame" x="389" y="748" width="344" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Rock" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -127,11 +137,13 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="l9P-eb-dy8"/>
+                                    <outletCollection property="gestureRecognizers" destination="jsd-mm-o7t" appends="YES" id="vbN-jm-emQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="awl-yP-8NF">
                                 <rect key="frame" x="32" y="829" width="344" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Cry" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -142,11 +154,13 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="4qj-sl-rI9"/>
+                                    <outletCollection property="gestureRecognizers" destination="vN2-Zp-Kir" appends="YES" id="uz1-u2-gPL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3Ja-Le-dtw">
                                 <rect key="frame" x="384" y="829" width="344" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
                                 <state key="normal" title="Bob" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -157,6 +171,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="VOs-uP-WxS"/>
+                                    <outletCollection property="gestureRecognizers" destination="8bc-fS-caf" appends="YES" id="lvt-y7-8sD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Not connected" lineBreakMode="tailTruncation" minimumFontSize="10" id="5PG-kn-YsT">
@@ -178,10 +193,54 @@
                     <connections>
                         <outlet property="connectionLabel" destination="5PG-kn-YsT" id="kea-M3-5tM"/>
                     </connections>
+                    
+                    
+                    <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="KPO-Z8-pDv">
+                        <connections>
+                            <action selector="handleLongPress:" destination="2" id="Fml-xj-HTc"/>
+                        </connections>
+                    </pongPressGestureRecognizer>
+                    <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="DwR-NO-0dk">
+                        <connections>
+                            <action selector="handleLongPress:" destination="2" id="e2y-JP-VYi"/>
+                        </connections>
+                    </pongPressGestureRecognizer>
+                    <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="rsA-38-rf9">
+                        <connections>
+                            <action selector="handleLongPress:" destination="2" id="J9C-17-oYL"/>
+                        </connections>
+                    </pongPressGestureRecognizer>
+                    <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="vN2-Zp-Kir">
+                        <connections>
+                            <action selector="handleLongPress:" destination="2" id="xR6-aI-nta"/>
+                        </connections>
+                    </pongPressGestureRecognizer>
+                    <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="GBS-QA-1eV">
+                        <connections>
+                            <action selector="handleLongPress:" destination="2" id="7js-en-kb4"/>
+                        </connections>
+                    </pongPressGestureRecognizer>
+                    <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="Clm-2R-Y0F">
+                        <connections>
+                            <action selector="handleLongPress:" destination="2" id="kJo-Uk-bTi"/>
+                        </connections>
+                    </pongPressGestureRecognizer>
+                    <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="jsd-mm-o7t">
+                        <connections>
+                            <action selector="handleLongPress:" destination="2" id="iOZ-sY-45M"/>
+                        </connections>
+                    </pongPressGestureRecognizer>
+                    <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="8bc-fS-caf">
+                        <connections>
+                            <action selector="handleLongPress:" destination="2" id="1ym-RJ-TqJ"/>
+                        </connections>
+                    </pongPressGestureRecognizer>
+                    
+                    
+                    
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-271" y="-346"/>
+               </objects>
+           <point key="canvasLocation" x="-271" y="-346"/>
         </scene>
     </scenes>
     <resources>
@@ -192,6 +251,17 @@
         <image name="sound_left.png" width="27" height="27"/>
         <image name="sound_right.png" width="35" height="27"/>
     </resources>
+    <classes>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonClicked:"/>
+                <relationship kind="action" name="configClicked:"/>
+                <relationship kind="action" name="handleLongPress:"/>
+                <relationship kind="outlet" name="connectionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

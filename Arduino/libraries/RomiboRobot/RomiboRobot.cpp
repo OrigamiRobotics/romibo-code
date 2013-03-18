@@ -687,6 +687,13 @@ void RomiboRobot::waitForNewSensorData(void)
 }
 
 /****************************************************************/
+
+void RomiboRobot::playWavFile(char* wavFileName)
+{
+  playfile(wavFileName);
+}
+
+
 void RomiboRobot::playSoundNamed(const char *basename) 
 {
   char name[13];          // space for a DOS 8.3 filename

@@ -238,11 +238,14 @@
     NSLog(@"Button command: %@", btnCommand);
 
     NSString* command;
-    if ([btnCommand hasSuffix:@".wav"])
+    if ([btnCommand hasSuffix:@".wav"] || [btnCommand hasSuffix:@".WAV"])
         command = [@"say " stringByAppendingString:btnCommand];
     else command = btnCommand;
     
-    NSLog(@"Full command: %@", command);
+    NSString* fullCommand = [NSString stringWithFormat:@"%@\r", command];
+    NSLog(@"Full command: %@", fullCommand);
+    
+    [romibo sendString:fullCommand];
 }
 
 

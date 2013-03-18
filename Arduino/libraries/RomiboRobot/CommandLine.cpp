@@ -28,6 +28,7 @@ extern ConsoleOutput Console;
 extern Parameters parameters;
 
 static int execute_command_count;
+static int current_count;
 
 void print_matching_variable( const char *name, int value )
 {
@@ -81,19 +82,55 @@ void execute_command( int argc, char **argv )
       Romibo.stop();
     }
 
+    else if (!strcmp(argv[0], "count"))
+    {
+      current_count = (current_count < 10) ? current_count + 1 : 1;
+
+      char countCommand[8];
+      
+      if (sprintf(countCommand, "%d.wav", current_count) > -1)
+      {
+	Console.print("counting "); Console.println(countCommand);
+
+	Romibo.playWavFile(countCommand);
+      }
+
+    }
+
+
     /* this command is part of the host protocol */
     else if (!strcmp(argv[0], "say")) {
+
       const char *sound = "S1";
+
       if (argc > 1) {
-	// map the abstract sound names to specific sound files
-	if      (!strcmp( argv[1], "WHISTLE" )) sound = "BECKON1";
-	else if (!strcmp( argv[1], "GROWL" ))   sound = "ANGRY1";
-	else if (!strcmp( argv[1], "PLAY" ))    sound = "PLAYWME";
-	else if (!strcmp( argv[1], "BYE" ))     sound = "GOODBYE";
-	else sound = argv[1];
+
+	//current iPad app passes wav file name directly
+	char* extension = ".wav";
+	char* extensionUpper = ".WAV";
+
+	if ( (strstr(argv[1], extension) != NULL) || (strstr(argv[1], extensionUpper) != NULL) )
+	{
+	  Romibo.playWavFile(argv[1]);
+	  sound = argv[1];
+	}
+
+	else
+	{
+	  // map the abstract sound names to specific sound files
+	  // used in early versions of the iPad app
+	  if      (!strcmp( argv[1], "WHISTLE" )) sound = "BECKON1";
+	  else if (!strcmp( argv[1], "GROWL" ))   sound = "ANGRY1";
+	  else if (!strcmp( argv[1], "PLAY" ))    sound = "PLAYWME";
+	  else if (!strcmp( argv[1], "BYE" ))     sound = "GOODBYE";
+
+	  Romibo.playSoundNamed( sound );
+        }
+
+	Console.print("Playing sound: "); Console.println(sound);
+
       }
-      Romibo.playSoundNamed( sound );
-      Console.print("playing sound "); Console.println( sound );
+
     }
 
     /* this command is part of the host protocol */

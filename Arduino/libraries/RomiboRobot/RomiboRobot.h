@@ -302,6 +302,7 @@ public:
 
   // Control the audio output.  Currently starting a sound takes a long time
   // during which no inputs will be read or outputs changed.
+  void playWavFile(char* wavFileName);
   void playSoundNamed(const char *name);  // Given an 8-character base filename, play the corresponding .WAV file.
   int  isSoundPlaying(void);              // Returns true if a sound is currently playing.
   void stopSound(void);

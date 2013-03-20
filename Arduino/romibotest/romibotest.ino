@@ -24,6 +24,8 @@
 #include <RomiboRobot.h>
 #include <ConsoleOutput.h>
 #include <mcpDac.h>
+#include <I2C.h>
+#include <MMA8453_n0m1.h>
 
 /****************************************************************/
 
@@ -168,7 +170,19 @@ void loop( void )
     
   // Forces the update the robot inputs and outputs.
   Romibo.poll();
+  int accX = Romibo.readAccX();
+  int accY = Romibo.readAccY();
+  int accZ = Romibo.readAccZ();
+  Serial.print("X: ");
+  Serial.print(accX);
+  Serial.print("\t Y: ");
+  Serial.print(accY);
+  Serial.print("\t Z: ");
+  Serial.print(accZ);
+  Serial.println();
 
+  
+  /*
   irRange = Romibo.frontRangeDistance();
   llight = Romibo.leftFrontLightLevel();
   rlight = Romibo.rightFrontLightLevel();
@@ -189,8 +203,8 @@ void loop( void )
   Serial.print ("Buttons: ");
   Serial.println (buttons);
   Serial.println ();
-
-  Romibo.delay(500);
+*/
+  Romibo.delay(250);
 
 }
 

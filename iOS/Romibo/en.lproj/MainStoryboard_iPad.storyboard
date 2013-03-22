@@ -53,6 +53,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="fAF-2V-44e"/>
+                                    <outletCollection property="gestureRecognizers" destination="xcp-KB-RQi" appends="YES" id="oCP-sd-eKA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oNk-2j-ypD">
@@ -69,6 +70,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="771-yu-djL"/>
+                                    <outletCollection property="gestureRecognizers" destination="4Vo-ty-UwK" appends="YES" id="wUO-Bd-QS7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FAJ-3e-Hnv">
@@ -85,6 +87,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="VHM-x0-A1M"/>
+                                    <outletCollection property="gestureRecognizers" destination="q9D-ST-jN6" appends="YES" id="xtJ-fY-GCO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fbD-hP-pAl">
@@ -101,6 +104,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="Iia-Dm-bTZ"/>
+                                    <outletCollection property="gestureRecognizers" destination="JfH-7e-PUn" appends="YES" id="EUy-Xj-GLq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Jee-La-5Qx">
@@ -117,6 +121,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="jbm-Bd-SB5"/>
+                                    <outletCollection property="gestureRecognizers" destination="1DU-j0-e1J" appends="YES" id="VmX-vm-hTr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xvZ-gn-2gy">
@@ -133,6 +138,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="l9P-eb-dy8"/>
+                                    <outletCollection property="gestureRecognizers" destination="12A-pG-LNa" appends="YES" id="RRv-Zn-XrL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="awl-yP-8NF">
@@ -149,6 +155,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="4qj-sl-rI9"/>
+                                    <outletCollection property="gestureRecognizers" destination="Ecl-Sd-2bV" appends="YES" id="bbJ-jg-V5k"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3Ja-Le-dtw">
@@ -165,6 +172,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="VOs-uP-WxS"/>
+                                    <outletCollection property="gestureRecognizers" destination="tNQ-TR-FCg" appends="YES" id="mB9-h4-gG3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Not connected" lineBreakMode="tailTruncation" minimumFontSize="10" id="5PG-kn-YsT">
@@ -180,6 +188,7 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
+                        <gestureRecognizers/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -188,6 +197,46 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="xcp-KB-RQi">
+                    <connections>
+                        <action selector="handleLongPress:" destination="2" id="AVa-V9-cz4"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="q9D-ST-jN6">
+                    <connections>
+                        <action selector="handleLongPress:" destination="2" id="QBO-8t-Bzp"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="1DU-j0-e1J">
+                    <connections>
+                        <action selector="handleLongPress:" destination="2" id="oLy-DP-nzq"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Ecl-Sd-2bV">
+                    <connections>
+                        <action selector="handleLongPress:" destination="2" id="rj2-fm-w8i"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="4Vo-ty-UwK">
+                    <connections>
+                        <action selector="handleLongPress:" destination="2" id="7Kf-Ba-ljA"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="JfH-7e-PUn">
+                    <connections>
+                        <action selector="handleLongPress:" destination="2" id="qBI-AT-YhP"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="12A-pG-LNa">
+                    <connections>
+                        <action selector="handleLongPress:" destination="2" id="hNA-jX-8AR"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="tNQ-TR-FCg">
+                    <connections>
+                        <action selector="handleLongPress:" destination="2" id="5pd-Df-krw"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-271" y="-346"/>
         </scene>
@@ -207,6 +256,7 @@
                 <relationship kind="action" name="buttonClicked:"/>
                 <relationship kind="action" name="configClicked:"/>
                 <relationship kind="action" name="handleLongPress:"/>
+                <relationship kind="action" name="stopClicked:"/>
                 <relationship kind="outlet" name="connectionLabel" candidateClass="UILabel"/>
             </relationships>
         </class>

@@ -50,6 +50,7 @@
 		63DD0EA714B54C1F002FDC2F /* sound_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0EA514B54C1F002FDC2F /* sound_left.png */; };
 		63DD0EA814B54C1F002FDC2F /* sound_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0EA614B54C1F002FDC2F /* sound_right.png */; };
 		7470808C16CF1D650007158D /* CommandPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7470808B16CF1D650007158D /* CommandPickerController.m */; };
+		7480608216FCE3C50023A26B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DBAFE414B0126D00EAD344 /* MainStoryboard_iPad.storyboard */; };
 		74A6F86516CF0B1F00B99FF0 /* RomiboCommands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */; };
 /* End PBXBuildFile section */
 
@@ -399,6 +400,7 @@
 				63AEE88214B91B7C00A8C8DC /* movement-base-03.png in Resources */,
 				63AEE88414B91C2300A8C8DC /* emotion-base-03.png in Resources */,
 				74A6F86516CF0B1F00B99FF0 /* RomiboCommands.txt in Resources */,
+				7480608216FCE3C50023A26B /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

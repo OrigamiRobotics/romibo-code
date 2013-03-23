@@ -1,0 +1,6 @@
+what,kind,bundleId,bundleVersion,description,time
+stopped,bundle,org.eclipse.ui.editors,3.7.0.v20110928-1504,"org.eclipse.ui.editors",1363817321191
+stopped,bundle,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.workbench.texteditor",1363817321192
+stopped,bundle,org.eclipse.compare.core,3.5.200.I20110208-0800,"org.eclipse.compare.core",1363817321192
+stopped,bundle,org.eclipse.rse.services.dstore,3.1.201.R33x_v201106291530,"org.eclipse.rse.services.dstore",1363817321192
+stopped,bundle,org.eclipse.dstore.core,3.3.1.R33x_v201107181530,"org.eclipse.dstore.core",1363817321192

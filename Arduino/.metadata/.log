@@ -1,0 +1,13 @@
+!SESSION 2013-03-20 18:08:42.014 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_31
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -product org.eclipse.epp.package.cpp.product -keyring /Users/mansfield/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.cpp.product -data /Users/mansfield/playground/Romibo/romibo-code/arduino/ -product org.eclipse.epp.package.cpp.product -keyring /Users/mansfield/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2013-03-20 18:08:44.322
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-03-20 18:09:06.534
+!MESSAGE Indexed 'RomiboProject' (0 sources, 69 headers) in 0.91 sec: 1,754 declarations; 2,098 references; 0 unresolved inclusions; 0 syntax errors; 6 unresolved names (0.16%)

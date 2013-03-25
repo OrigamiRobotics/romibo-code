@@ -29,9 +29,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background-02.png"]];
+    
     UIImageView* drivingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"movement-base-03.png"]];
     
-    drivingView.frame = CGRectMake(20, 230, 338, 338);
+    drivingView.frame = CGRectMake(109, 40, 550, 550);
     drivingView.userInteractionEnabled = YES;
     
     [self.view addSubview:drivingView ];

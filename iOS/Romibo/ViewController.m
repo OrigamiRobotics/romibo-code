@@ -97,47 +97,9 @@
 
 -(IBAction)changeShell:(UILongPressGestureRecognizer*)gesture
 {
-    
-    if (!lockVC)
-    {
-        lockVC = [[DrawPatternLockViewController alloc] init];
-        [lockVC setTarget:self withAction:@selector(lockEntered:)];
-    
-    }
-    
-    if (![lockVC isBeingPresented])
-    {
-        [self presentModalViewController:lockVC animated:YES];
-    
-    }
+    if (![childView isBeingPresented])
+        [self presentModalViewController:childView animated:YES];
 
-
-}
-
-- (void)lockEntered:(NSString*)key {
-    NSLog(@"key: %@", key);
-    
-    if (![key isEqualToString:@"070809"]) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                            message:@"Wrong pattern for entering child view"
-                                                           delegate:nil
-                                                  cancelButtonTitle:nil
-                                                  otherButtonTitles:@"OK", nil];
-        [alertView show];
-        [self dismissModalViewControllerAnimated:YES];
-    }
-    else
-    {
-        [self dismissViewControllerAnimated:YES
-                                 completion:^{
-            if (![childView isBeingPresented])
-                [self presentModalViewController:childView animated:YES];
-
-            }
-         
-         ];
-        
-     }
 }
 
 

@@ -51,6 +51,13 @@
 		63DD0EA814B54C1F002FDC2F /* sound_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0EA614B54C1F002FDC2F /* sound_right.png */; };
 		7470808C16CF1D650007158D /* CommandPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7470808B16CF1D650007158D /* CommandPickerController.m */; };
 		7480608216FCE3C50023A26B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DBAFE414B0126D00EAD344 /* MainStoryboard_iPad.storyboard */; };
+		7480608616FD31270023A26B /* ChildBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7480608416FD31270023A26B /* ChildBaseView.m */; };
+		7480608716FD31270023A26B /* ChildBaseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7480608516FD31270023A26B /* ChildBaseView.xib */; };
+		7480608C16FD41F50023A26B /* silhouette.png in Resources */ = {isa = PBXBuildFile; fileRef = 7480608B16FD41F50023A26B /* silhouette.png */; };
+		748060BA16FD49530023A26B /* DrawPatternLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 748060B716FD49530023A26B /* DrawPatternLockView.m */; };
+		748060BB16FD49530023A26B /* DrawPatternLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 748060B916FD49530023A26B /* DrawPatternLockViewController.m */; };
+		748060BE16FE71820023A26B /* dot_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 748060BC16FE71820023A26B /* dot_off.png */; };
+		748060BF16FE71820023A26B /* dot_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 748060BD16FE71820023A26B /* dot_on.png */; };
 		74A6F86516CF0B1F00B99FF0 /* RomiboCommands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +136,16 @@
 		63DD0EA614B54C1F002FDC2F /* sound_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sound_right.png; path = imgs/sound_right.png; sourceTree = "<group>"; };
 		7470808A16CF1D650007158D /* CommandPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandPickerController.h; path = ../CommandPickerController.h; sourceTree = "<group>"; };
 		7470808B16CF1D650007158D /* CommandPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommandPickerController.m; path = ../CommandPickerController.m; sourceTree = "<group>"; };
+		7480608316FD31270023A26B /* ChildBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildBaseView.h; sourceTree = "<group>"; };
+		7480608416FD31270023A26B /* ChildBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildBaseView.m; sourceTree = "<group>"; };
+		7480608516FD31270023A26B /* ChildBaseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildBaseView.xib; sourceTree = "<group>"; };
+		7480608B16FD41F50023A26B /* silhouette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = silhouette.png; path = imgs/silhouette.png; sourceTree = "<group>"; };
+		748060B616FD49530023A26B /* DrawPatternLockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawPatternLockView.h; path = lib/DrawPatternLockView.h; sourceTree = "<group>"; };
+		748060B716FD49530023A26B /* DrawPatternLockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawPatternLockView.m; path = lib/DrawPatternLockView.m; sourceTree = "<group>"; };
+		748060B816FD49530023A26B /* DrawPatternLockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawPatternLockViewController.h; path = lib/DrawPatternLockViewController.h; sourceTree = "<group>"; };
+		748060B916FD49530023A26B /* DrawPatternLockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawPatternLockViewController.m; path = lib/DrawPatternLockViewController.m; sourceTree = "<group>"; };
+		748060BC16FE71820023A26B /* dot_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dot_off.png; path = imgs/dot_off.png; sourceTree = "<group>"; };
+		748060BD16FE71820023A26B /* dot_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dot_on.png; path = imgs/dot_on.png; sourceTree = "<group>"; };
 		74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RomiboCommands.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +190,9 @@
 		6390519914B693F1007AB7CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7480608316FD31270023A26B /* ChildBaseView.h */,
+				7480608416FD31270023A26B /* ChildBaseView.m */,
+				7480608516FD31270023A26B /* ChildBaseView.xib */,
 				7470808A16CF1D650007158D /* CommandPickerController.h */,
 				7470808B16CF1D650007158D /* CommandPickerController.m */,
 				6390519A14B69403007AB7CC /* ConfigViewController.h */,
@@ -185,6 +205,10 @@
 		6396AF6314B259300023CE66 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				748060B616FD49530023A26B /* DrawPatternLockView.h */,
+				748060B716FD49530023A26B /* DrawPatternLockView.m */,
+				748060B816FD49530023A26B /* DrawPatternLockViewController.h */,
+				748060B916FD49530023A26B /* DrawPatternLockViewController.m */,
 				6396AF6414B2594B0023CE66 /* DDAbstractDatabaseLogger.h */,
 				6396AF6514B2594B0023CE66 /* DDAbstractDatabaseLogger.m */,
 				6396AF6614B2594B0023CE66 /* DDASLLogger.h */,
@@ -287,6 +311,9 @@
 		63DD0E2E14B5386E002FDC2F /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				748060BC16FE71820023A26B /* dot_off.png */,
+				748060BD16FE71820023A26B /* dot_on.png */,
+				7480608B16FD41F50023A26B /* silhouette.png */,
 				63AEE88314B91C2300A8C8DC /* emotion-base-03.png */,
 				63AEE88114B91B7C00A8C8DC /* movement-base-03.png */,
 				63DD0EA514B54C1F002FDC2F /* sound_left.png */,
@@ -401,6 +428,10 @@
 				63AEE88414B91C2300A8C8DC /* emotion-base-03.png in Resources */,
 				74A6F86516CF0B1F00B99FF0 /* RomiboCommands.txt in Resources */,
 				7480608216FCE3C50023A26B /* MainStoryboard_iPad.storyboard in Resources */,
+				7480608716FD31270023A26B /* ChildBaseView.xib in Resources */,
+				7480608C16FD41F50023A26B /* silhouette.png in Resources */,
+				748060BE16FE71820023A26B /* dot_off.png in Resources */,
+				748060BF16FE71820023A26B /* dot_on.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +480,9 @@
 				6390519D14B69403007AB7CC /* ConfigViewController.m in Sources */,
 				639051A614B77263007AB7CC /* Romibo.m in Sources */,
 				7470808C16CF1D650007158D /* CommandPickerController.m in Sources */,
+				7480608616FD31270023A26B /* ChildBaseView.m in Sources */,
+				748060BA16FD49530023A26B /* DrawPatternLockView.m in Sources */,
+				748060BB16FD49530023A26B /* DrawPatternLockViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

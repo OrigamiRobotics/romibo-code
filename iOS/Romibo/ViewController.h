@@ -14,6 +14,10 @@
 #import "EmotionNubView.h"
 #import "DrivingNubView.h"
 #import "CommandPickerController.h"
+#import "DrawPatternLockViewController.h"
+#import "DrawPatternLockView.h"
+
+@class ChildBaseView;
 
 @interface ViewController : UIViewController <UIPopoverControllerDelegate, DismissPopoverDelegate, CommandPickerDelegate>
 
@@ -35,6 +39,9 @@
     NSMutableArray* buttonLabels;
     
     UILongPressGestureRecognizer* longPressRecognizer;
+    
+    DrawPatternLockViewController *lockVC;
+    ChildBaseView* childView;
 
 }
 
@@ -50,6 +57,10 @@
 -(void)connectClicked:(NSString*) ipaddr;
 -(void)disconnectClicked;
 -(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController;
+
+//silhouette button
+-(IBAction)changeShell:(id)sender;
+- (void)lockEntered:(NSString*)key;
 
 -(void)setupEmotionSubview;
 -(void)setupDrivingSubview;

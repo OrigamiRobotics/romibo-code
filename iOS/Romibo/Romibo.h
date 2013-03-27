@@ -14,6 +14,8 @@
 
 {
     GCDAsyncSocket *socket;
+    NSTimer* cmdTimer;
+    NSTimer* childDriveCommandTimer;
 }
 
 @property (nonatomic) BOOL isConnected;
@@ -25,6 +27,7 @@
 @property (nonatomic, retain) NSString* lastSendEmoteCmd;
 
 @property (nonatomic, retain) NSString* ipAddress;
+//@property (nonatomic) float cmdInterval;
 
 
 -(void)connectToIP:(NSString*)ipAddress;
@@ -33,6 +36,14 @@
 -(void)sendDriveCmd:(int)x:(int)y;
 -(void)sendEmoteCmd:(int)x:(int)y;
 -(void)handleCmdTimer;
+
+-(void)driveForward;
+-(void)driveBackward;
+-(void)driveLeft;
+-(void)driveRight;
+-(void)stopDriving;
+-(void)setStopDrivingTimer;
+-(void)endStopDrivingTimer;
 
 -(void)sendString:(NSString*)str;
 

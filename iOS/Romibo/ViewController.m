@@ -37,12 +37,8 @@
     
     
     romibo = [[Romibo alloc] init];
-    [self closePopup];
     
-    if (!cmdTimer)
-    {
-        cmdTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:romibo selector:@selector(handleCmdTimer) userInfo:nil repeats:true];
-    }
+    [self closePopup];
     
     [self setupEmotionSubview];
     [eNub setCmdDelegate:romibo];
@@ -56,6 +52,8 @@
     {
         childView = [[ChildBaseView alloc] initWithNibName:@"ChildBaseView" bundle:nil];
         childView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        
+        [childView setRomibo:romibo];
     }
 
 }

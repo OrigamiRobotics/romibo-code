@@ -19,6 +19,7 @@
 @synthesize lastSendEmoteCmd;
 @synthesize lastSendDriveCmd;
 @synthesize ipAddress;
+//@synthesize cmdInterval;
 
 
 -(id)init
@@ -31,7 +32,14 @@
     [self setEmoteCmd:@""];
     [self setLastSendEmoteCmd:@""];
     
+    cmdTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(handleCmdTimer) userInfo:nil repeats:true];
+    
     return self;
+}
+
+-(void)setCmdInterval:(float)cmdInterval
+{
+    
 }
 
 -(void)connectToIP:(NSString*)_ipAddress
@@ -100,9 +108,6 @@
         [self sendString:emoteCmd];
         [self setLastSendEmoteCmd:emoteCmd];
     }
-    
-    
-    
 }
 
 -(void)testDriveCmd:(int)startX:(int)startY:(int)x:(int)y
@@ -123,18 +128,87 @@
 -(void)sendEmoteCmd:(int)x:(int)y
 {
     NSString* eCmd = [NSString stringWithFormat:@"emote %i %i\r", x, y];
+    
+    NSLog(@"%@", eCmd);
+    
     [self setEmoteCmd:eCmd];
 }
 
 -(void)sendString:(NSString*)str
 {
-    NSLog(@"Send string: %@", str);
+    //NSLog(@"Send string: %@", str);
     
     NSData* data = [str dataUsingEncoding:NSUTF8StringEncoding];
     
     [socket writeData:data withTimeout:1000 tag:1];
     
     
+}
+
+-(void)driveForward
+{
+    NSString* dCmd = [NSString stringWithFormat:@"drive 100 100\r"];
+    NSLog(@"%@", dCmd);
+    [self setDriveCmd:dCmd];
+    //[self setStopDrivingTimer];
+}
+
+-(void)driveBackward
+{
+    NSString* dCmd = [NSString stringWithFormat:@"drive -100 -100\r"];
+    NSLog(@"%@", dCmd);
+    [self setDriveCmd:dCmd];
+    //[self setStopDrivingTimer];
+}
+
+-(void)driveLeft
+{
+    NSString* dCmd = [NSString stringWithFormat:@"drive 0 100\r"];
+    NSLog(@"%@", dCmd);
+    [self setDriveCmd:dCmd];
+    //[self setStopDrivingTimer];
+}
+
+-(void)driveRight
+{
+    NSString* dCmd = [NSString stringWithFormat:@"drive 100 0\r"];
+    NSLog(@"%@", dCmd);
+    [self setDriveCmd:dCmd];
+    //[self setStopDrivingTimer];
+}
+
+-(void)stopDriving
+{
+    NSString* dCmd = [NSString stringWithFormat:@"drive 0 0\r"];
+    NSLog(@"%@", dCmd);
+    [self setDriveCmd:dCmd];
+    
+    if ([childDriveCommandTimer isValid])
+    {
+        [childDriveCommandTimer invalidate];
+        childDriveCommandTimer = nil;
+    }
+}
+
+-(void)setStopDrivingTimer
+{
+    if ([childDriveCommandTimer isValid])
+    {
+        [childDriveCommandTimer invalidate];
+        childDriveCommandTimer = nil;
+    }
+    
+    childDriveCommandTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(stopDriving) userInfo:nil repeats:false];
+    
+}
+
+-(void)endStopDrivingTimer
+{
+    if ([childDriveCommandTimer isValid])
+    {
+        [childDriveCommandTimer invalidate];
+        childDriveCommandTimer = nil;
+    }
 }
 
 -(void)dealloc

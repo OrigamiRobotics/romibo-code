@@ -98,7 +98,6 @@
         driveY = driveY * q;
     }
         
-    //[cmdDelegate testDriveCmd:x:y:roundf(driveX):roundf(driveY)];
     [cmdDelegate sendDriveCmd:roundf(driveX):roundf(driveY)];
     
 }

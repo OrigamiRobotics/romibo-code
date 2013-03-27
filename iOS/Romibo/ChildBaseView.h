@@ -12,19 +12,24 @@
 
 @interface ChildBaseView : UIViewController
 {
-    
-    
     DrawPatternLockViewController *lockVC;
     UIViewController* adultBase;
+    
+    UIImageView* drivingView;
 
 }
 
+@property (nonatomic, retain) Romibo* romibo;
 
-@property (nonatomic, retain) id <CmdDelegate> cmdDelegate;
+-(void)setRomibo:(Romibo *)romibo;
 
 //silhouette button
 -(IBAction)changeShell:(id)sender;
 - (void)lockEntered:(NSString*)key;
+
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+-(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
+-(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
 
 @end
 

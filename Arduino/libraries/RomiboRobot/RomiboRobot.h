@@ -73,6 +73,12 @@ enum romibo_brightness_t { ROMIBO_DARK,  ROMIBO_DIM, ROMIBO_BRIGHT };
 // Define a structure for a 3D vector
 struct Vector3 { int x,y,z; };
 
+// Define a structure to contain an accelerometer and some current vector.
+// We have a "current vector" so we can have define all three axes at once, 
+// opposed to accessing each axis separately at a different time.
+struct Accelerometer { MMA8453_n0m1* acc;
+                      Vector3* vec; };
+
 /****************************************************************/
 class RomiboRobot
 {
@@ -157,11 +163,11 @@ public:
 
   // ------------ Sensor inputs -----------------------------------------------
   //
-  // Accelerometer on the main board
-  MMA8453_n0m1* accel_mobo;
-  // Accelerometer data
-  Vector3* accVector;
-  void getAccVector(MMA8453_n0m1 *acc, Vector3* acc_vec);
+  // Accelerometers on the main board and head breakout board
+  Accelerometer* accel_mobo;
+  Accelerometer* accel_hbbo;
+  
+  void updateAccVector(Accelerometer *acc);
   
   // The poll() method is called internally by API methods to check whether it
   // is time to sample the sensors, update the outputs, recompute trajectories,
@@ -213,9 +219,11 @@ public:
   int topLightLevel(void);
   int leftFrontLightLevel(void);
   int rightFrontLightLevel(void);
-  int readAccX(void);
-  int readAccY(void);
-  int readAccZ(void);
+
+  // Reads some respective axis from the accelerometer.
+  // Valid inputs are 'x', 'y', and 'z'.
+  int readAccMobo(char axis);
+  int readAccHbbo(char axis);
 
   // Return sensor values binned into three levels (close, medium, far) or
   // (dark, dim, bright), encoded as (0, 1, 2).  The bins are automatically

@@ -146,7 +146,10 @@ const int motor_fault_pin = 6;		// DRV8833 driver fault pin. No code yet. We sho
 // Accelerometer on the main board
 const int accel_sda5v_mobo = 20;
 const int accel_scl5v_mobo = 21;
-const int accel_add_mobo = 0x1C; // Address of the accelerometer
+const int accel_add_mobo = 0x1C; // Address of the accelerometer on Main Board
+
+// Accelerometer on the head breakout board
+const int accel_add_hbbo = 0x1D; // Address of the accelerometer on HB Board
 
 
 // Servos = front, back, eye.  These are digital outputs which generate the

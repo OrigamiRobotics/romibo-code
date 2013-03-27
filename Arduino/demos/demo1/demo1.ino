@@ -48,9 +48,11 @@ void setup(void)
 }
 
 boolean disoriented = false;
-// Magnitude of the acceleration vector on accelerometer for the breakout board
+// Magnitude of the acceleration vector on accelerometers
 int headVecMag = 0;
 int bodyVecMag = 0;
+
+// Times for when it was last flipped (upside down, sideways), and last hit.
 unsigned long lastFlip;
 unsigned long lastHit;
 
@@ -60,7 +62,8 @@ void loop( void )
 {     
   // Forces the update the robot inputs and outputs. 
   Romibo.poll();
-    
+  
+  // Access the accelerometer data
   int accXMobo = Romibo.readAccMobo('x');
   int accYMobo = Romibo.readAccMobo('y');
   int accZMobo = Romibo.readAccMobo('z');
@@ -69,21 +72,7 @@ void loop( void )
   int accYHbbo = Romibo.readAccHbbo('y');
   int accZHbbo = Romibo.readAccHbbo('z');
 
-     Serial.print("Mobo: ");
-     Serial.print(accXMobo);
-     Serial.print("\t");
-     Serial.print(accYMobo);
-     Serial.print("\t");
-     Serial.println(accZMobo);
-
-     Serial.print("Hbbo: ");
-     Serial.print(accXHbbo);
-     Serial.print("\t");
-     Serial.print(accYHbbo);
-     Serial.print("\t");
-     Serial.println(accZHbbo);
-
-  // Magnitude of accel vector for head
+  // Magnitude of accel vector for head, and body
   headVecMag = sqrt(pow(accXHbbo,2) +
                     pow(accYHbbo,2) +
                     pow(accZHbbo,2));
@@ -92,10 +81,16 @@ void loop( void )
                     pow(accYMobo,2) +
                     pow(accZMobo,2));
                     
-                 
+  
+  // Calculate the difference in the two accelerometers
   Serial.println("Vec Diff: ");
   Serial.println(headVecMag - bodyVecMag);
   
+  /* We set a timer for making the noise when it's hit so it doesn't interrupt
+   * the sound being played.
+   * We consider a hit when the difference in the vectors is 80, which is
+   * (1/3)g. This value can be adjusted to make it more or less sensitive.
+   * Note that a magnitude of 255 means a difference of 1g. */
   if(abs(headVecMag - bodyVecMag) > 80 && (millis() > lastHit + 500))
   {
     
@@ -113,33 +108,38 @@ void loop( void )
      Serial.println(headVecMag);
   }
 
+  /* We only want to set disoriented to true when it has changed
+   * from rightside-up to some disorientation. 
+   * The reason behind this is we do not want it to play the 
+   * crying sound continuously, but rather at a controllable
+   * interval so it doesn't interrupt the previously playing sound
+   * Then we begin the timer */
   if(!disoriented && (accYMobo > 200 ||
-                      accXMobo > 200 ||
-                      accXMobo < -200 ||
-                      accZMobo > 200 ||
-                      accZMobo < -200))
+                      abs(accXMobo) < 200||
+                      abs(accZMobo) < 200))
   {
      Serial.println("turned upside down");
      disoriented = true;
      lastFlip = millis(); 
   }
-  else if(disoriented && !(accYMobo > 200 ||
-                        accXMobo > 200 ||
-                        accXMobo < -200 ||
-                        accZMobo > 200 ||
-                        accZMobo < -200))
+  /* Set disoriented to false when it changes from disoriented to 
+   * rightside-up so that it knows when it is not disoriented. */
+  else if(disoriented && !(accYMobo >= 200 ||
+                        abs(accXMobo) >= 200||
+                      abs(accZMobo) >= 200))
   {
      Serial.println("turned rightside up");
      disoriented = false;
   }
   
-  if(disoriented && (millis() > lastFlip + 1000))
+  /* Reset the timer so that it can set a controlled interval
+   * for when the sound will play again if the Romibo remains
+   * disoriented */
+  if(disoriented && (millis() > lastFlip + 1500))
   {
     Romibo.playSoundNamed("SAD2");
     Serial.println("Sad");
     lastFlip = millis();
   }
-  
-  delay(500);
 }
 

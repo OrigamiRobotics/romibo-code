@@ -126,6 +126,7 @@ void setup(void)
   Romibo.setAntennaColor (255, 255, 255); // White
 
   //Romibo runs each of its drive motors
+  /*
   Romibo.drive (100, 0);
   Romibo.delay (500);
   Romibo.drive (0, 100);
@@ -135,7 +136,7 @@ void setup(void)
   Romibo.drive (0, -100);
   Romibo.delay (500);
   Romibo.stop ();
-
+*/
   Romibo.setNeutralHeadPosition ();   
 
   //playallsounds();
@@ -204,6 +205,9 @@ void loop( void )
   Serial.println (buttons);
   Serial.println ();
 */
+  Romibo.drive (100, 0);
+  Romibo.delay (500);
+  Romibo.stop();
   Romibo.delay(250);
 
 }

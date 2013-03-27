@@ -1,4 +1,4 @@
-/************************************************************************************
+ /************************************************************************************
  * 	
  * 	Name    : MMA8453_n0m1 Library Example: DataMode                       
  * 	Author  : Noah Shibley, Michael Grant, NoMi Design Ltd. http://n0m1.com                       
@@ -12,7 +12,7 @@
 #include <MMA8453_n0m1.h>
 
 MMA8453_n0m1 accel;
-int accAddress = 0x1C;
+int accAddress = 0x1D;
 
 void setup()
 {
@@ -39,6 +39,8 @@ void loop()
   Serial.print(accel.y());
   Serial.print(" z: ");
   Serial.println(accel.z());
+
+  delay(150);
 
 }
 

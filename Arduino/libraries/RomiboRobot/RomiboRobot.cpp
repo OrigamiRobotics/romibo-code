@@ -42,7 +42,6 @@ static const int biasInterval = 64;     // in sampling intervals
 // objects.
 
 extern ConsoleOutput Console;
-struct Vector3;
 
 /****************************************************************/
 // Perform basic filtering on an analog input signal.
@@ -69,11 +68,11 @@ void RomiboRobot::update_sensor_filter( struct romibo_sensor_t *sensor, int reco
     }
 }
 
-void RomiboRobot::getAccVector( MMA8453_n0m1 *acc, Vector3* acc_vec) {
-    acc->update();
-    acc_vec->x = acc->x();
-    acc_vec->y = acc->y();
-    acc_vec->z = acc->z();
+void RomiboRobot::updateAccVector( Accelerometer* acc) {
+    (acc->acc)->update();
+    (acc->vec)->x = (acc->acc)->x();
+    (acc->vec)->y = (acc->acc)->y();
+    (acc->vec)->z = (acc->acc)->z();
 }
 
 /****************************************************************/
@@ -138,7 +137,9 @@ void RomiboRobot::poll(void)
         // Now sample all the analog sensors.
 
         // Sample the main board accelerometer
-        getAccVector(accel_mobo, accVector);
+        updateAccVector(accel_mobo);
+        // Sample the head breakout board accelerometer
+        updateAccVector(accel_hbbo);
 
         // Brighter light == lower resistance == lower voltage reading, so invert the sense.
         photo_left.raw  = 1023 - analogRead( photo_sensor[0] );
@@ -338,7 +339,6 @@ RomiboRobot::RomiboRobot()
     bottom_switch = 0;
     switches = 0;
 
-    accVector = new Vector3();
 }
 
 /****************************************************************/
@@ -378,14 +378,25 @@ void RomiboRobot::begin(void)
 
     pinMode(irPin, INPUT);
 #endif
-    
+   
     // Set up accelerometers
-    accel_mobo = new MMA8453_n0m1();
-    accel_mobo->setI2CAddr(accel_add_mobo);
-    accel_mobo->dataMode(true,2);
-    accel_mobo->regWrite(0x1,0);
-    accel_mobo->regWrite(0x3,0);
-    accel_mobo->regWrite(0x5,0);
+    accel_mobo = new Accelerometer();
+    (accel_mobo->acc) = new MMA8453_n0m1();
+    (accel_mobo->acc)->setI2CAddr(accel_add_mobo);
+    (accel_mobo->acc)->dataMode(true,2);
+    (accel_mobo->acc)->regWrite(0x1,0);
+    (accel_mobo->acc)->regWrite(0x3,0);
+    (accel_mobo->acc)->regWrite(0x5,0);
+    (accel_mobo->vec) = new Vector3();
+
+    accel_hbbo = new Accelerometer();
+    (accel_hbbo->acc) = new MMA8453_n0m1();
+    (accel_hbbo->acc)->setI2CAddr(accel_add_hbbo);
+    (accel_hbbo->acc)->dataMode(true,2);
+    (accel_hbbo->acc)->regWrite(0x1,0);
+    (accel_hbbo->acc)->regWrite(0x3,0);
+    (accel_hbbo->acc)->regWrite(0x5,0);
+    (accel_hbbo->vec) = new Vector3();
 
     pinMode(rgb_led[0], OUTPUT);
     pinMode(rgb_led[1], OUTPUT);
@@ -432,9 +443,37 @@ int RomiboRobot::topLightLevel(void)        { poll(); return photo_top.scaled; }
 int RomiboRobot::leftFrontLightLevel(void)  { poll(); return photo_left.scaled; }
 int RomiboRobot::rightFrontLightLevel(void) { poll(); return photo_right.scaled; }
 int RomiboRobot::soundLevel(void)           { poll(); return microphone.scaled; }
-int RomiboRobot::readAccX(void)             { poll(); return accVector->x; }
-int RomiboRobot::readAccY(void)             { poll(); return accVector->y; }
-int RomiboRobot::readAccZ(void)             { poll(); return accVector->z; }
+int RomiboRobot::readAccMobo(char axis)     { poll(); 
+                                                switch(axis)
+                                                {
+                                                    case 'x':
+                                                        return (accel_mobo->vec)->x;
+                                                        break;
+                                                    case 'y':
+                                                        return (accel_mobo->vec)->y;
+                                                        break;
+                                                    case 'z':
+                                                        return (accel_mobo->vec)->z;
+                                                        break;
+                                                }
+                                                    return -1;
+                                                }
+int RomiboRobot::readAccHbbo(char axis)     { poll(); 
+                                                switch(axis)
+                                                {
+                                                    case 'x':
+                                                        return (accel_hbbo->vec)->x;
+                                                        break;
+                                                    case 'y':
+                                                        return (accel_hbbo->vec)->y;
+                                                        break;
+                                                    case 'z':
+                                                        return (accel_hbbo->vec)->z;
+                                                        break;
+                                                }
+                                                    return -1;
+                                            }
+
 
 int RomiboRobot::obstacleProximity(void)    { poll();  return discretized_sensor_value( &range ); }
 int RomiboRobot::topBrightness(void)        { poll();  return discretized_sensor_value( &photo_top ); }
@@ -600,28 +639,6 @@ void RomiboRobot::drive(int leftSpeed, int rightSpeed)
     // Sets the appropriate speed to the appropriate motor
     setMotor(leftSpeed,ROMIBO_LEFT_MOTOR);
     setMotor(rightSpeed,ROMIBO_RIGHT_MOTOR);
-
-    /* OLD CODE for PWM Generator
-    // The common register bit values:
-    const uint8_t CS   =  1;   // prescaler divider is 1 (timer runs off system clock)
-    const uint8_t WGM  = 11;   // see ATmega2560 manual Table 17-2 , mode 11, Phase-correct PWM with rate determined by OCRnA
-    const uint8_t COMA =  0;   // OCnA is normal digital output
-    const uint8_t IC   =  0;   // no input capture or filter
-
-        //const uint8_t COMB =  0;   // OCnB is normal digital output for DRV1
-        //const uint8_t COMC =  2;   // OCnC is PWM for DRV2
-        uint16_t pwm = map( abs(rightSpeed), 0, 100, 0, DRIVEPWMDIVISOR);
-
-        //analogWrite( mot_drv2_pin[ROMIBO_RIGHT_MOTOR], pwm);
-        digitalWrite( mot_drv1_pin[ROMIBO_RIGHT_MOTOR], HIGH);
-
-        //TCCR4A = (COMA << 6) | (COMB << 4) | (COMC << 2) | (WGM & 3); 
-        //TCCR4B = (IC << 6) | ((WGM & 0x0c) << 1) | (CS); 
-        //OCR4A  = DRIVEPWMDIVISOR;
-        //OCR4C  = pwm;
-    }
-} // end of right motor
-*/
 }
 #undef DRIVEPWMRATE
 #undef DRIVEPWMDIVISOR

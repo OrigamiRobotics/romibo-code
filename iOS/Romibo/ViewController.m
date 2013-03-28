@@ -153,7 +153,7 @@
     
     eNub = [[EmotionNubView alloc] init];
     
-    emotionView.frame = CGRectMake(390, 230, 338, 338);
+    emotionView.frame = CGRectMake(400, 210, 338, 338);
     
     eNub.center = CGPointMake(CGRectGetMidX(emotionView.bounds), CGRectGetMidY(emotionView.bounds));
     
@@ -173,7 +173,7 @@
     
     dNub = [[DrivingNubView alloc] init];
     
-    drivingView.frame = CGRectMake(20, 230, 338, 338);
+    drivingView.frame = CGRectMake(28, 215, 338, 338);
     
     dNub.center = CGPointMake(CGRectGetMidX(drivingView.bounds), CGRectGetMidY(drivingView.bounds));
     

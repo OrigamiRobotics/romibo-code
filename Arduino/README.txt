@@ -40,5 +40,3 @@ programs and hardware.  Invoke the Serial Monitor brings up a window which
 display output from the robot and provides a text box from which you can send
 commands to the robot.  This only works while the USB cable is connected, but it
 a useful way to debug a program before letting the robot roam disconnected.
-
-

@@ -24,6 +24,9 @@
 #include <RomiboAction.h>
 #include <RomiboEmotion.h>
 #include "ConsoleOutput.h"
+#include <I2C.h>
+#include <MMA8453_n0m1.h>
+
 /****************************************************************/
 // Declare the default parameter table object.
 #include <Parameters.h>

@@ -65,16 +65,25 @@
 #include "RomiboServo.h"
 #include "ElapsedTimer.h"
 #include "Parameters.h"
+#include <MMA8453_n0m1.h>
 
 enum romibo_proximity_t { ROMIBO_CLOSE, ROMIBO_MEDIUM, ROMIBO_FAR };
 enum romibo_brightness_t { ROMIBO_DARK,  ROMIBO_DIM, ROMIBO_BRIGHT };
+
+// Define a structure for a 3D vector
+struct Vector3 { int x,y,z; };
+
+// Define a structure to contain an accelerometer and some current vector.
+// We have a "current vector" so we can have define all three axes at once, 
+// opposed to accessing each axis separately at a different time.
+struct Accelerometer { MMA8453_n0m1* acc;
+                      Vector3* vec; };
 
 /****************************************************************/
 class RomiboRobot
 {
   // The protected variables and functions are hidden from the user to allow changing
   // the implemention behind the public interface.
-
 protected:
 
   // A function to iterate through all polling callbacks and execute each one
@@ -96,8 +105,11 @@ protected:
     // the normalized value
     int scaled;
 
-  } photo_left, photo_right, photo_top, range, microphone;
+  };
 
+  romibo_sensor_t photo_left, photo_right, photo_top, range, microphone;
+
+  
   // utility functions for sensor processing
   static void update_sensor_filter( struct romibo_sensor_t *sensor, int recompute_bias );
   static void init_sensor_struct( struct romibo_sensor_t *sensor );
@@ -150,7 +162,13 @@ public:
   static size_t parameters_table_size(void);
 
   // ------------ Sensor inputs -----------------------------------------------
-
+  //
+  // Accelerometers on the main board and head breakout board
+  Accelerometer* accel_mobo;
+  Accelerometer* accel_hbbo;
+  
+  void updateAccVector(Accelerometer *acc);
+  
   // The poll() method is called internally by API methods to check whether it
   // is time to sample the sensors, update the outputs, recompute trajectories,
   // update automatic calibration, pump serial output, process console commands,
@@ -201,6 +219,11 @@ public:
   int topLightLevel(void);
   int leftFrontLightLevel(void);
   int rightFrontLightLevel(void);
+
+  // Reads some respective axis from the accelerometer.
+  // Valid inputs are 'x', 'y', and 'z'.
+  int readAccMobo(char axis);
+  int readAccHbbo(char axis);
 
   // Return sensor values binned into three levels (close, medium, far) or
   // (dark, dim, bright), encoded as (0, 1, 2).  The bins are automatically

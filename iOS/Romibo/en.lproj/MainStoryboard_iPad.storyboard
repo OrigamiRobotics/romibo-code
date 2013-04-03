@@ -54,6 +54,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kiN-JD-98X" appends="YES" id="qTl-pv-Isp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="61k-yk-iKD">
                                 <rect key="frame" x="12" y="568" width="240" height="49"/>
@@ -460,6 +463,11 @@
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="nNS-Sz-zhy">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="Xyb-ij-k6H"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="kiN-JD-98X">
+                    <connections>
+                        <action selector="changeShell:" destination="2" id="rVs-tD-Bb3"/>
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>

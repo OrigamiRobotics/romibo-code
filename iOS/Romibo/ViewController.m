@@ -74,6 +74,12 @@
         NSString* command = [commandsArray objectAtIndex:i];
         NSArray* commandFragments = [command componentsSeparatedByString:@","];
         
+        if ([commandFragments count] < 2)
+        {
+            NSLog(@"Invalid command syntax: %@", command);
+            continue;
+        }
+        
         NSString* cmd = [[commandFragments objectAtIndex:0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
         
         NSString* label = [[commandFragments objectAtIndex:1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];

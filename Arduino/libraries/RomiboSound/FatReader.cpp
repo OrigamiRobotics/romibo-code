@@ -186,7 +186,7 @@ uint8_t FatReader::open(FatReader &dir, uint16_t index) {
  */  
 uint8_t FatReader::open(FatReader &dir, char *name) {
   dir_t entry;
-  char dname[13];
+  char dname[50];
   
   dir.rewind();
   while(dir.readDir(entry) > 0) {

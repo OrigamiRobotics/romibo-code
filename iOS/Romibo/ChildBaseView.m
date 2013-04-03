@@ -40,7 +40,7 @@
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background-02.png"]];
     
     
-    drivingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"movement-base-03.png"]];
+    drivingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"movement-base.png"]];
     
     drivingView.frame = CGRectMake(109, 40, 550, 550);
     drivingView.userInteractionEnabled = YES;

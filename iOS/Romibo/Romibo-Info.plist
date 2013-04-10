@@ -11,6 +11,7 @@
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>memote72.png</string>
+		<string>RomiboAppIcon.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -19,6 +20,7 @@
 			<key>CFBundleIconFiles</key>
 			<array>
 				<string>memote72.png</string>
+				<string>RomiboAppIcon.png</string>
 			</array>
 		</dict>
 	</dict>

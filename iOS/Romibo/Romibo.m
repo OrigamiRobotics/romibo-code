@@ -50,7 +50,6 @@
     
     NSError *err = nil;
     
-    
     [socket connectToHost:ipAddress onPort:2000 error:&err];
     NSLog(@"Attempting connection to: %@\r", ipAddress); 
    
@@ -198,7 +197,7 @@
         childDriveCommandTimer = nil;
     }
     
-    childDriveCommandTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(stopDriving) userInfo:nil repeats:false];
+    childDriveCommandTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(stopDriving) userInfo:nil repeats:false];
     
 }
 

@@ -54,6 +54,7 @@
         childView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         
         [childView setRomibo:romibo];
+        [childView setRomiboCommands:romiboCommands];
     }
 
 }
@@ -200,7 +201,7 @@
 
 -(IBAction)configClicked:(id)sender
 {
-    ConfigViewController* configVC = [[ConfigViewController alloc] init];
+    ConfigViewController* configVC = [[ConfigViewController alloc] initWithNibName:@"ConfigViewController" bundle:nil];
     [configVC view];
     [configVC setPopDelegate:self];
     [configVC configureButtonState:[romibo isConnected]];

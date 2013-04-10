@@ -49,6 +49,7 @@
 		63DD0EA414B5393B002FDC2F /* volume-nub-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0E9614B5393B002FDC2F /* volume-nub-01.png */; };
 		63DD0EA714B54C1F002FDC2F /* sound_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0EA514B54C1F002FDC2F /* sound_left.png */; };
 		63DD0EA814B54C1F002FDC2F /* sound_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0EA614B54C1F002FDC2F /* sound_right.png */; };
+		745DD6C81711FEF800A14AD2 /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6390519C14B69403007AB7CC /* ConfigViewController.xib */; };
 		7470808C16CF1D650007158D /* CommandPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7470808B16CF1D650007158D /* CommandPickerController.m */; };
 		7480608216FCE3C50023A26B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DBAFE414B0126D00EAD344 /* MainStoryboard_iPad.storyboard */; };
 		7480608616FD31270023A26B /* ChildBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7480608416FD31270023A26B /* ChildBaseView.m */; };
@@ -66,6 +67,8 @@
 		74D1A824170BA819007E8CF9 /* Arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A820170BA819007E8CF9 /* Arrow_right.png */; };
 		74D1A825170BA819007E8CF9 /* Arrow_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A821170BA819007E8CF9 /* Arrow_up.png */; };
 		74D1A827170BA8B3007E8CF9 /* movement_base.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A826170BA8B3007E8CF9 /* movement_base.png */; };
+		74D1A829170F5BD0007E8CF9 /* RomiboAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A828170F5BD0007E8CF9 /* RomiboAppIcon.png */; };
+		74D1A82B170F5BDE007E8CF9 /* RomiboAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A82A170F5BDE007E8CF9 /* RomiboAppIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +164,8 @@
 		74D1A820170BA819007E8CF9 /* Arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow_right.png; path = imgs/Arrow_right.png; sourceTree = "<group>"; };
 		74D1A821170BA819007E8CF9 /* Arrow_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow_up.png; path = imgs/Arrow_up.png; sourceTree = "<group>"; };
 		74D1A826170BA8B3007E8CF9 /* movement_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = movement_base.png; path = imgs/movement_base.png; sourceTree = "<group>"; };
+		74D1A828170F5BD0007E8CF9 /* RomiboAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RomiboAppIcon.png; path = imgs/RomiboAppIcon.png; sourceTree = "<group>"; };
+		74D1A82A170F5BDE007E8CF9 /* RomiboAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RomiboAppIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +247,7 @@
 		63DBAFC014B0126D00EAD344 = {
 			isa = PBXGroup;
 			children = (
+				74D1A82A170F5BDE007E8CF9 /* RomiboAppIcon.png */,
 				74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */,
 				63DD0E2E14B5386E002FDC2F /* imgs */,
 				6396AF6314B259300023CE66 /* lib */,
@@ -325,6 +331,7 @@
 		63DD0E2E14B5386E002FDC2F /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				74D1A828170F5BD0007E8CF9 /* RomiboAppIcon.png */,
 				74D1A826170BA8B3007E8CF9 /* movement_base.png */,
 				74D1A81E170BA819007E8CF9 /* Arrow_left.png */,
 				74D1A81F170BA819007E8CF9 /* Arrow_down.png */,
@@ -460,6 +467,9 @@
 				74D1A824170BA819007E8CF9 /* Arrow_right.png in Resources */,
 				74D1A825170BA819007E8CF9 /* Arrow_up.png in Resources */,
 				74D1A827170BA8B3007E8CF9 /* movement_base.png in Resources */,
+				74D1A829170F5BD0007E8CF9 /* RomiboAppIcon.png in Resources */,
+				74D1A82B170F5BDE007E8CF9 /* RomiboAppIcon.png in Resources */,
+				745DD6C81711FEF800A14AD2 /* ConfigViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

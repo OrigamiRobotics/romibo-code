@@ -52,7 +52,6 @@ okay.wav,Okay
 ooooo.wav,Ooooo
 ro_mi_bo.wav,Ro mi bo
 sorry.wav,Sorry
-Sufferin.wav,Sufferin succotash-old1
 Sufferi0.wav,Sufferin succotash
 thank_yo.wav,Thank you
 thats_to.wav,Thats too bad

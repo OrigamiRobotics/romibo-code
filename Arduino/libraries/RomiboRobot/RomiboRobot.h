@@ -292,6 +292,7 @@ public:
   // Set the eyelid position.  The position is an integer on [0, 100]
   // representing the percentage the eye is "open".
   void setEyelid(int eye_open_position);
+  void blink(void);
 
   // Set the neck actuators.  Each position is an integer on [0, 100]
   // representing vertical position: {0,0} is as scrunched down as possible,
@@ -305,6 +306,8 @@ public:
   void tiltHeadForward(void);
   void tiltHeadBack(void);
 
+  void bob(void);
+
   // Each color channel is specified as an integer on [0,255] representing
   // intensity.  The actual implementation may or may not offer proportional
   // color.  Several overloaded forms are provided to either specify an entire color
@@ -312,6 +315,8 @@ public:
   void setAntennaColor( uint8_t color[3] );     // color array is ordered as {red, green, blue};
   void setAntennaColor( uint8_t red, uint8_t green, uint8_t blue );
   void setAntennaColor( int color[3] );
+  void setAntennaColorWhite(void);
+  void setAntennaColorGreen(void);
 
   // These sleep functions continue to process robot I/O during the sleep
   // interval, and must be used instead of the Arduino equivalents for I/O

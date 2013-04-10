@@ -12,14 +12,8 @@
 @implementation ChildBaseView
 
 
-@synthesize romibo;
+@synthesize romibo, romiboCommands;
 
--(void)setRomibo:(Romibo *)_romibo
-{
-    romibo = _romibo;
-    [romibo retain];
-
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,7 +32,6 @@
     // Do any additional setup after loading the view from its nib.
     
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background-02.png"]];
-    
     
     drivingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"movement-base.png"]];
     
@@ -67,6 +60,10 @@
 
 - (void) touchesBegan:(NSSet*)touches withEvent:(UIEvent*) event
 {
+    if (!self.view.window)
+    {
+        return;
+    }
     [romibo endStopDrivingTimer];
     
     CGPoint currentPt = [[touches anyObject] locationInView:drivingView];
@@ -119,6 +116,11 @@
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    if (!self.view.window)
+    {
+        return;
+    }
+    
     [romibo setStopDrivingTimer];
 }
 
@@ -155,8 +157,11 @@
     }
     else
     {
+        //self.view.userInteractionEnabled = NO;
+        
         [self dismissViewControllerAnimated:YES
                                  completion:^{
+                                     
                                      if (![adultBase isBeingPresented])
                                          [self presentModalViewController:adultBase animated:YES];
                                      
@@ -167,6 +172,30 @@
     }
 }
 
+
+-(IBAction)buttonClicked:(id)sender
+{
+    if (!self.view.window)
+    {
+        return;
+    }
+    
+    NSString* btnText = [((UIButton *)sender).titleLabel text];
+    NSLog(@"Button text: %@", btnText);
+    
+    NSString* btnCommand = [romiboCommands objectForKey:btnText];
+    NSLog(@"Button command: %@", btnCommand);
+    
+    NSString* command;
+    if ([btnCommand hasSuffix:@".wav"] || [btnCommand hasSuffix:@".WAV"])
+        command = [@"say " stringByAppendingString:btnCommand];
+    else command = btnCommand;
+    
+    NSString* fullCommand = [NSString stringWithFormat:@"%@\r", command];
+    NSLog(@"Full command: %@", fullCommand);
+    
+    [romibo sendString:fullCommand];
+}
 
 
 - (void)didReceiveMemoryWarning
@@ -181,7 +210,6 @@
     adultBase = nil;
     
     [romibo release];
-    romibo = nil;
     
     [super dealloc];
     

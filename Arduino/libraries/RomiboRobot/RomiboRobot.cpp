@@ -659,6 +659,13 @@ int RomiboRobot::leftSpeed(void)  { return left_speed;  }
 int RomiboRobot::rightSpeed(void) { return right_speed; }
 
 /****************************************************************/
+void RomiboRobot::blink(void)
+{
+  setEyelid(10);
+  delay(200);
+  setEyelid(100); 
+}
+
 void RomiboRobot::setEyelid(int eye_open_position) 
 {
     tilt_servo[ ROMIBO_EYE_SERVO ].write( map( constrain(eye_open_position, 0, 100), 0, 100, eye_max, eye_min ) );  
@@ -693,6 +700,15 @@ void RomiboRobot::tiltHeadBack(void)
     setHeadPosition( 100, 0 );
 }
 
+void RomiboRobot::bob(void)
+{
+  setHeadPosition (0,0);
+  delay (300);
+  setHeadPosition (100,100);
+  delay (300);
+  setNeutralHeadPosition ();
+}
+
 /****************************************************************/
 void RomiboRobot::setAntennaColor( uint8_t red, uint8_t green, uint8_t blue ) 
 {
@@ -717,6 +733,18 @@ void RomiboRobot::setAntennaColor( int color[3] )
 {
     setAntennaColor( color[0], color[1], color[2] );
 }
+
+void RomiboRobot::setAntennaColorWhite(void)
+{ 
+  setAntennaColor(255, 255, 255); // White
+}
+
+void RomiboRobot::setAntennaColorGreen(void)
+{ 
+  setAntennaColor(0, 255, 0); // White
+}
+
+
 
 /****************************************************************/
 void RomiboRobot::delayMicroseconds(unsigned long microseconds_duration) 

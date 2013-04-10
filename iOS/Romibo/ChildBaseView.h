@@ -20,13 +20,15 @@
 }
 
 @property (nonatomic, retain) Romibo* romibo;
-
--(void)setRomibo:(Romibo *)romibo;
+@property (nonatomic, retain) NSMutableDictionary* romiboCommands;
 
 //silhouette button
 -(IBAction)changeShell:(id)sender;
 - (void)lockEntered:(NSString*)key;
 
+-(IBAction)buttonClicked:(id)sender;
+
+//driving
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;

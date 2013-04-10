@@ -63,7 +63,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Dance" backgroundImage="button-02.png">
+                                <state key="normal" title="Nod" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -97,7 +97,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Could you tell me a story" backgroundImage="button-02.png">
+                                <state key="normal" title="Bye bye blackbird" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -114,7 +114,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Count" backgroundImage="button-02.png">
+                                <state key="normal" title="Bob" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -131,7 +131,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="How are you today" backgroundImage="button-02.png">
+                                <state key="normal" title="Hava nagila" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -165,7 +165,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Nod" backgroundImage="button-02.png">
+                                <state key="normal" title="Shalom" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -182,7 +182,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Dance with me" backgroundImage="button-02.png">
+                                <state key="normal" title="In the mood (glenn miller)" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -216,7 +216,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Bob" backgroundImage="button-02.png">
+                                <state key="normal" title="How are you feeling" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -233,7 +233,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Come find me" backgroundImage="button-02.png">
+                                <state key="normal" title="Show me the way to go home" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -267,7 +267,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Rock" backgroundImage="button-02.png">
+                                <state key="normal" title="I hope you feel better soon" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -284,7 +284,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Will you pet me" backgroundImage="button-02.png">
+                                <state key="normal" title="Let me call you sweetheart" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -318,7 +318,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Cry" backgroundImage="button-02.png">
+                                <state key="normal" title="It was nice talking to you" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -335,7 +335,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                                <state key="normal" title="Guess again" backgroundImage="button-02.png">
+                                <state key="normal" title="You are my sunshine" backgroundImage="button-02.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -375,7 +375,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="3" id="a2U-qG-Ybl">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="a2U-qG-Ybl">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="99N-b8-APi"/>
                     </connections>
@@ -385,87 +385,87 @@
                         <action selector="handleLongPress:" destination="2" id="3Ye-6B-Ps2"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="ieM-79-cL1">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="ieM-79-cL1">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="mbc-Qm-odm"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="TqL-KB-t9J">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="TqL-KB-t9J">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="c2X-5Y-gzc"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="YPC-WA-6tm">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="YPC-WA-6tm">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="DBp-bo-5NN"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="y1U-dP-psL">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="y1U-dP-psL">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="oRd-JT-7tb"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="aAI-RX-w81">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="aAI-RX-w81">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="25C-Cw-uao"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="6l6-or-wvg">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="6l6-or-wvg">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="BgN-xJ-cP4"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="dfn-sp-yIh">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="dfn-sp-yIh">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="7bf-QS-CsZ"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="0eV-ie-suM">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="0eV-ie-suM">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="53a-S3-IPn"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="26q-BC-9JK">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="26q-BC-9JK">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="KP2-aS-SiC"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="yVG-ra-ENK">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="yVG-ra-ENK">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="sHn-Y5-Ntu"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Cqb-Fc-7ZP">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="Cqb-Fc-7ZP">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="YN5-KV-XJ2"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="SRh-UZ-ItH">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="SRh-UZ-ItH">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="ClC-ud-qSc"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="04a-qz-Xet">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="04a-qz-Xet">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="3bl-fy-8ce"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="vFx-Iw-1fc">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="vFx-Iw-1fc">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="o2B-qO-4sZ"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="XAV-2j-UfY">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="XAV-2j-UfY">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="FWf-y5-oI2"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="nNS-Sz-zhy">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="nNS-Sz-zhy">
                     <connections>
                         <action selector="handleLongPress:" destination="2" id="Xyb-ij-k6H"/>
                     </connections>
                 </pongPressGestureRecognizer>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="kiN-JD-98X">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1.5" id="kiN-JD-98X">
                     <connections>
                         <action selector="changeShell:" destination="2" id="rVs-tD-Bb3"/>
                     </connections>
@@ -481,18 +481,6 @@
         <image name="romibo-logo.png" width="375" height="116"/>
         <image name="silhouette.png" width="30" height="25"/>
     </resources>
-    <classes>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="buttonClicked:"/>
-                <relationship kind="action" name="changeShell:"/>
-                <relationship kind="action" name="configClicked:"/>
-                <relationship kind="action" name="handleLongPress:"/>
-                <relationship kind="outlet" name="connectionLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

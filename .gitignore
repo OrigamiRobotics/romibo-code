@@ -1,0 +1,4 @@
+*.cpp~
+*.h~
+.DS_STORE
+*.DS_STORE

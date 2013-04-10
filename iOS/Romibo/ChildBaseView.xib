@@ -40,7 +40,7 @@
 					<object class="IBUIButton" id="125371886">
 						<reference key="NSNextResponder" ref="734817208"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{709, 20}, {48, 42}}</string>
+						<string key="NSFrame">{{719, 1}, {48, 42}}</string>
 						<reference key="NSSuperview" ref="734817208"/>
 						<reference key="NSNextKeyView" ref="761790562"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -86,7 +86,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUINormalTitle">Button</string>
+						<string key="IBUINormalTitle">Dance</string>
 						<reference key="IBUIHighlightedTitleColor" ref="259030453"/>
 						<reference key="IBUINormalTitleColor" ref="259030453"/>
 						<reference key="IBUINormalTitleShadowColor" ref="137411503"/>
@@ -114,7 +114,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUINormalTitle">Button</string>
+						<string key="IBUINormalTitle">Thank you</string>
 						<reference key="IBUIHighlightedTitleColor" ref="259030453"/>
 						<reference key="IBUINormalTitleColor" ref="259030453"/>
 						<reference key="IBUINormalTitleShadowColor" ref="137411503"/>
@@ -133,7 +133,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUINormalTitle">Button</string>
+						<string key="IBUINormalTitle">Goodbye</string>
 						<reference key="IBUIHighlightedTitleColor" ref="259030453"/>
 						<reference key="IBUINormalTitleColor" ref="259030453"/>
 						<reference key="IBUINormalTitleShadowColor" ref="137411503"/>
@@ -152,7 +152,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUINormalTitle">Button</string>
+						<string key="IBUINormalTitle">Shalom</string>
 						<reference key="IBUIHighlightedTitleColor" ref="259030453"/>
 						<reference key="IBUINormalTitleColor" ref="259030453"/>
 						<reference key="IBUINormalTitleShadowColor" ref="137411503"/>
@@ -171,7 +171,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUINormalTitle">Button</string>
+						<string key="IBUINormalTitle">Bob</string>
 						<reference key="IBUIHighlightedTitleColor" ref="259030453"/>
 						<reference key="IBUINormalTitleColor" ref="259030453"/>
 						<reference key="IBUINormalTitleShadowColor" ref="137411503"/>
@@ -190,7 +190,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUINormalTitle">Button</string>
+						<string key="IBUINormalTitle">Nod</string>
 						<reference key="IBUIHighlightedTitleColor" ref="259030453"/>
 						<reference key="IBUINormalTitleColor" ref="259030453"/>
 						<reference key="IBUINormalTitleShadowColor" ref="137411503"/>
@@ -359,6 +359,60 @@
 					</object>
 					<int key="connectionID">39</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">buttonClicked:</string>
+						<reference key="source" ref="347407444"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">1</int>
+					</object>
+					<int key="connectionID">62</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">buttonClicked:</string>
+						<reference key="source" ref="2406629"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">1</int>
+					</object>
+					<int key="connectionID">65</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">buttonClicked:</string>
+						<reference key="source" ref="186427881"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">1</int>
+					</object>
+					<int key="connectionID">64</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">buttonClicked:</string>
+						<reference key="source" ref="994043634"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">1</int>
+					</object>
+					<int key="connectionID">61</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">buttonClicked:</string>
+						<reference key="source" ref="690659946"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">1</int>
+					</object>
+					<int key="connectionID">63</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">buttonClicked:</string>
+						<reference key="source" ref="329933452"/>
+						<reference key="destination" ref="841351856"/>
+						<int key="IBEventType">1</int>
+					</object>
+					<int key="connectionID">60</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -491,7 +545,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">59</int>
+			<int key="maxID">65</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

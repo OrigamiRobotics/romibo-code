@@ -1,0 +1,8 @@
+INDEX VERSION 1.126+C:\Users\Mansfield\Desktop\OpenCV-2.4.4-android-sdk\.metadata\.plugins\org.eclipse.jdt.core
+2257542629.index
+4015795910.index
+374985064.index
+401892571.index
+3296258240.index
+2535054089.index
+2114575291.index

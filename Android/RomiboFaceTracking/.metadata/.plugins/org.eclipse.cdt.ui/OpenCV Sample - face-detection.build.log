@@ -1,0 +1,6 @@
+03:13:23 **** Auto Build of configuration Default for project OpenCV Sample - face-detection ****
+"C:\\Users\\Mansfield\\Desktop\\NDKROOT\\ndk-build.cmd" 
+Install        : libdetection_based_tracker.so => libs/armeabi-v7a/libdetection_based_tracker.so
+
+03:13:24 Build Finished (took 242ms)
+

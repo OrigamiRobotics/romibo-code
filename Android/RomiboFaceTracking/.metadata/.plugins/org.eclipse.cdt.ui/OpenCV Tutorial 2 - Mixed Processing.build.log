@@ -1,0 +1,6 @@
+03:13:24 **** Auto Build of configuration Default for project OpenCV Tutorial 2 - Mixed Processing ****
+"C:\\Users\\Mansfield\\Desktop\\NDKROOT\\ndk-build.cmd" 
+Install        : libmixed_sample.so => libs/armeabi-v7a/libmixed_sample.so
+
+03:13:24 Build Finished (took 177ms)
+

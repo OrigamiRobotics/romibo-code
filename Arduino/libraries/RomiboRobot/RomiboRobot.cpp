@@ -321,10 +321,10 @@ RomiboRobot::RomiboRobot()
     eye_max   =  90;   // most closed position
 #endif
 #if (ROMIBO_ELECTRONICS_MAJOR_REV==3)
-    front_max = 120;   // position closest to the neck
-    front_min = 80;   // position closest to the head structure
-    back_min  = 50;   // position closest to the neck
-    back_max  = 100;   // position closest to the head structure
+    front_max = 110;   // position closest to the neck
+    front_min = 0;   // position closest to the head structure
+    back_min  = 80;   // position closest to the neck
+    back_max  = 190;   // position closest to the head structure
     eye_min   =  60;   // most wide-open position  *** Caz *** was playing around with the eyelid calibration a bit
     eye_max   = 150;   // most closed position	*** Caz *** hard to know what these should be without a defined servo linkage length
 #endif
@@ -433,6 +433,7 @@ void RomiboRobot::begin(void)
         Serial.print("SD ERR: ");
         Serial.println(err);
     }
+
     Serial.println("RomiboRobot initialized.");
 }
 /****************************************************************/
@@ -547,6 +548,7 @@ void RomiboRobot::drive(int leftSpeed, int rightSpeed)
 {
     leftSpeed  = constrain(leftSpeed,  -ROMIBO_DRIVE_MOTOR_LIMIT, ROMIBO_DRIVE_MOTOR_LIMIT );
     rightSpeed = constrain(rightSpeed, -ROMIBO_DRIVE_MOTOR_LIMIT, ROMIBO_DRIVE_MOTOR_LIMIT );
+    
     setDriveMotor( ROMIBO_LEFT_MOTOR,  leftSpeed,  constrain( map(abs(leftSpeed ), 0, 100, 0, 255), 0, 255 ) );;
     setDriveMotor( ROMIBO_RIGHT_MOTOR, rightSpeed, constrain( map(abs(rightSpeed), 0, 100, 0, 255), 0, 255 ) );
 }
@@ -666,6 +668,7 @@ void RomiboRobot::blink(void)
   setEyelid(100); 
 }
 
+
 void RomiboRobot::setEyelid(int eye_open_position) 
 {
     tilt_servo[ ROMIBO_EYE_SERVO ].write( map( constrain(eye_open_position, 0, 100), 0, 100, eye_max, eye_min ) );  
@@ -674,8 +677,15 @@ void RomiboRobot::setEyelid(int eye_open_position)
 
 void RomiboRobot::setHeadPosition( int front_position, int back_position ) 
 {
-    tilt_servo[ ROMIBO_FRONT_SERVO ].write( map( constrain(front_position, 0, 100), 0, 100, front_max, front_min ) );
-    tilt_servo[ ROMIBO_BACK_SERVO  ].write( map( constrain(back_position,  0, 100), 0, 100, back_min,  back_max ) );
+  //tilt_servo[ ROMIBO_FRONT_SERVO ].write( front_position );
+  //tilt_servo[ ROMIBO_BACK_SERVO  ].write( back_position );
+   
+  int yAxis = map( constrain(front_position,0,100), 0, 100, front_min, front_max);
+  int xAxis = map( constrain(back_position,0,100), 0, 100, back_min, back_max);
+
+    tilt_servo[ ROMIBO_FRONT_SERVO ].write( yAxis );
+    tilt_servo[ ROMIBO_BACK_SERVO  ].write( xAxis );
+
     front_pos = front_position;
     back_pos  = back_position;
 }
@@ -703,11 +713,13 @@ void RomiboRobot::tiltHeadBack(void)
 void RomiboRobot::bob(void)
 {
   setHeadPosition (0,0);
-  delay (300);
+  delay (1000);
   setHeadPosition (100,100);
-  delay (300);
+  delay (1000);
   setNeutralHeadPosition ();
 }
+
+
 
 /****************************************************************/
 void RomiboRobot::setAntennaColor( uint8_t red, uint8_t green, uint8_t blue ) 

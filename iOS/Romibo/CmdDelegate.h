@@ -12,7 +12,5 @@
 -(void)sendDriveCmd:(int)x:(int)y;
 -(void)sendEmoteCmd:(int)x:(int)y;
 -(void)testDriveCmd:(int)startX:(int)startY:(int)x:(int)y;
+-(void)sendHeadTiltCmd:(int)x:(int)y;
 @end
-
-
-

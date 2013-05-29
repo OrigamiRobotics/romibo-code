@@ -13,6 +13,7 @@
 
 #import "EmotionNubView.h"
 #import "DrivingNubView.h"
+#import "HeadTiltNubView.h"
 #import "CommandPickerController.h"
 #import "DrawPatternLockViewController.h"
 #import "DrawPatternLockView.h"

@@ -77,6 +77,14 @@ void execute_command( int argc, char **argv )
       Romibo.drive( left, right );
     }
 
+  else if (!strcmp(argv[0], "tilt" )) {
+      int xtilt = 50, ytilt = 50;
+      if (argc > 1) xtilt = atoi(argv[1]);
+      if (argc > 2) ytilt = atoi(argv[2]);
+      Romibo.setHeadPosition( ytilt, xtilt );
+    }
+
+
     /* this command is part of the host protocol */
     else if (!strcmp(argv[0], "stop")) {
       Romibo.stop();

@@ -158,7 +158,7 @@
 {
     UIImageView* emotionView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"emotion-base-03.png"]];
     
-    eNub = [[EmotionNubView alloc] init];
+    eNub = [[HeadTiltNubView alloc] init];
     
     emotionView.frame = CGRectMake(400, 210, 338, 338);
     

@@ -16,6 +16,7 @@
 @synthesize isConnected;
 @synthesize driveCmd;
 @synthesize emoteCmd;
+@synthesize tiltCmd;
 @synthesize lastSendEmoteCmd;
 @synthesize lastSendDriveCmd;
 @synthesize ipAddress;
@@ -31,6 +32,7 @@
     [self setLastSendDriveCmd:@""];
     [self setEmoteCmd:@""];
     [self setLastSendEmoteCmd:@""];
+    [self setTiltCmd:@""];
     
     cmdTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(handleCmdTimer) userInfo:nil repeats:true];
     
@@ -102,6 +104,12 @@
         }
     }
     
+    if (tiltCmd.length > 0)
+    {
+        [self sendString:tiltCmd];
+        
+    }
+    
     if (![emoteCmd isEqualToString:lastSendEmoteCmd]) 
     {
         [self sendString:emoteCmd];
@@ -131,6 +139,16 @@
     NSLog(@"%@", eCmd);
     
     [self setEmoteCmd:eCmd];
+}
+
+-(void)sendHeadTiltCmd:(int)x:(int)y
+{
+    NSString* tCmd = [NSString stringWithFormat:@"tilt %i %i\r", x, y];
+    
+    [self setTiltCmd:tCmd];
+    
+    NSLog(@"%@", tCmd);
+    
 }
 
 -(void)sendString:(NSString*)str

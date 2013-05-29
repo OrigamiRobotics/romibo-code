@@ -49,6 +49,7 @@
 		63DD0EA414B5393B002FDC2F /* volume-nub-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0E9614B5393B002FDC2F /* volume-nub-01.png */; };
 		63DD0EA714B54C1F002FDC2F /* sound_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0EA514B54C1F002FDC2F /* sound_left.png */; };
 		63DD0EA814B54C1F002FDC2F /* sound_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0EA614B54C1F002FDC2F /* sound_right.png */; };
+		7438733017554C2B0069EEC9 /* HeadTiltNubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7438732F17554C2B0069EEC9 /* HeadTiltNubView.m */; };
 		745DD6C81711FEF800A14AD2 /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6390519C14B69403007AB7CC /* ConfigViewController.xib */; };
 		7470808C16CF1D650007158D /* CommandPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7470808B16CF1D650007158D /* CommandPickerController.m */; };
 		7480608216FCE3C50023A26B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DBAFE414B0126D00EAD344 /* MainStoryboard_iPad.storyboard */; };
@@ -144,6 +145,8 @@
 		63DD0E9614B5393B002FDC2F /* volume-nub-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "volume-nub-01.png"; path = "imgs/volume-nub-01.png"; sourceTree = "<group>"; };
 		63DD0EA514B54C1F002FDC2F /* sound_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sound_left.png; path = imgs/sound_left.png; sourceTree = "<group>"; };
 		63DD0EA614B54C1F002FDC2F /* sound_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sound_right.png; path = imgs/sound_right.png; sourceTree = "<group>"; };
+		7438732E17554C2B0069EEC9 /* HeadTiltNubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadTiltNubView.h; sourceTree = "<group>"; };
+		7438732F17554C2B0069EEC9 /* HeadTiltNubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadTiltNubView.m; sourceTree = "<group>"; };
 		7470808A16CF1D650007158D /* CommandPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandPickerController.h; path = ../CommandPickerController.h; sourceTree = "<group>"; };
 		7470808B16CF1D650007158D /* CommandPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommandPickerController.m; path = ../CommandPickerController.m; sourceTree = "<group>"; };
 		7480608316FD31270023A26B /* ChildBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildBaseView.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				6390519714B68502007AB7CC /* DrivingNubView.m */,
 				6390519114B66BDF007AB7CC /* EmotionNubView.h */,
 				6390519214B66BDF007AB7CC /* EmotionNubView.m */,
+				7438732E17554C2B0069EEC9 /* HeadTiltNubView.h */,
+				7438732F17554C2B0069EEC9 /* HeadTiltNubView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -521,6 +526,7 @@
 				7480608616FD31270023A26B /* ChildBaseView.m in Sources */,
 				748060BA16FD49530023A26B /* DrawPatternLockView.m in Sources */,
 				748060BB16FD49530023A26B /* DrawPatternLockViewController.m in Sources */,
+				7438733017554C2B0069EEC9 /* HeadTiltNubView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

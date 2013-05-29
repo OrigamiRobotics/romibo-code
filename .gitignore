@@ -2,3 +2,4 @@
 *.h~
 .DS_STORE
 *.DS_STORE
+*.xcuserstate

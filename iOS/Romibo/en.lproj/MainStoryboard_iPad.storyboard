@@ -75,7 +75,7 @@
                                     <outletCollection property="gestureRecognizers" destination="a2U-qG-Ybl" appends="YES" id="bp2-zz-ViK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="E81-AY-XpO">
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="E81-AY-XpO">
                                 <rect key="frame" x="264" y="568" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -92,7 +92,7 @@
                                     <outletCollection property="gestureRecognizers" destination="aAI-RX-w81" appends="YES" id="RwF-SK-sV6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nGg-yZ-ZiS">
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nGg-yZ-ZiS">
                                 <rect key="frame" x="516" y="568" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -109,7 +109,7 @@
                                     <outletCollection property="gestureRecognizers" destination="Cqb-Fc-7ZP" appends="YES" id="cab-CK-wsT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OSf-kE-Rod">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OSf-kE-Rod">
                                 <rect key="frame" x="11" y="625" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -126,7 +126,7 @@
                                     <outletCollection property="gestureRecognizers" destination="mGd-Mf-Zb0" appends="YES" id="rlc-9r-8f4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oaF-07-C2L">
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oaF-07-C2L">
                                 <rect key="frame" x="263" y="625" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -143,7 +143,7 @@
                                     <outletCollection property="gestureRecognizers" destination="6l6-or-wvg" appends="YES" id="LR7-CC-Wo4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1hF-pv-3sN">
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1hF-pv-3sN">
                                 <rect key="frame" x="515" y="625" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -160,7 +160,7 @@
                                     <outletCollection property="gestureRecognizers" destination="SRh-UZ-ItH" appends="YES" id="NE1-QJ-omt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iH2-wK-SB9">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iH2-wK-SB9">
                                 <rect key="frame" x="12" y="682" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -177,7 +177,7 @@
                                     <outletCollection property="gestureRecognizers" destination="ieM-79-cL1" appends="YES" id="bVt-3r-7UQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NRR-OS-dyb">
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NRR-OS-dyb">
                                 <rect key="frame" x="264" y="682" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -194,7 +194,7 @@
                                     <outletCollection property="gestureRecognizers" destination="dfn-sp-yIh" appends="YES" id="OEh-nS-XxP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YUb-rq-P3j">
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YUb-rq-P3j">
                                 <rect key="frame" x="516" y="682" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -211,7 +211,7 @@
                                     <outletCollection property="gestureRecognizers" destination="04a-qz-Xet" appends="YES" id="h5l-T1-xfR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Eta-zd-Y9e">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Eta-zd-Y9e">
                                 <rect key="frame" x="12" y="739" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -228,7 +228,7 @@
                                     <outletCollection property="gestureRecognizers" destination="TqL-KB-t9J" appends="YES" id="1S5-CU-KdE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AzW-YL-8vJ">
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AzW-YL-8vJ">
                                 <rect key="frame" x="264" y="739" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -245,7 +245,7 @@
                                     <outletCollection property="gestureRecognizers" destination="0eV-ie-suM" appends="YES" id="HJj-zI-flA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7Kg-tw-Ojw">
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7Kg-tw-Ojw">
                                 <rect key="frame" x="516" y="739" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -262,7 +262,7 @@
                                     <outletCollection property="gestureRecognizers" destination="nNS-Sz-zhy" appends="YES" id="VYf-9h-oOO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LBe-26-aZM">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LBe-26-aZM">
                                 <rect key="frame" x="11" y="796" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -279,7 +279,7 @@
                                     <outletCollection property="gestureRecognizers" destination="YPC-WA-6tm" appends="YES" id="ygd-Bn-5hD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7ES-rv-XBQ">
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7ES-rv-XBQ">
                                 <rect key="frame" x="263" y="796" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -296,7 +296,7 @@
                                     <outletCollection property="gestureRecognizers" destination="26q-BC-9JK" appends="YES" id="hLQ-fa-O6T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uGC-Xu-FHa">
+                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uGC-Xu-FHa">
                                 <rect key="frame" x="515" y="796" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -313,7 +313,7 @@
                                     <outletCollection property="gestureRecognizers" destination="vFx-Iw-1fc" appends="YES" id="f0z-Go-zTz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UlG-IF-0fe">
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UlG-IF-0fe">
                                 <rect key="frame" x="12" y="853" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -330,7 +330,7 @@
                                     <outletCollection property="gestureRecognizers" destination="y1U-dP-psL" appends="YES" id="abh-fg-hqf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="00O-UD-VDu">
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="00O-UD-VDu">
                                 <rect key="frame" x="264" y="853" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -347,7 +347,7 @@
                                     <outletCollection property="gestureRecognizers" destination="yVG-ra-ENK" appends="YES" id="PNp-pK-NYO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0bZ-Lm-cuC">
+                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0bZ-Lm-cuC">
                                 <rect key="frame" x="516" y="853" width="240" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -362,6 +362,66 @@
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="VTO-IW-l68"/>
                                     <outletCollection property="gestureRecognizers" destination="XAV-2j-UfY" appends="YES" id="iii-NU-1T9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0zQ-Qf-cEw">
+                                <rect key="frame" x="477" y="68" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="mood-happy.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="happyClicked:" destination="2" eventType="touchDown" id="A3q-Ch-rQs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IfF-Kk-1eM">
+                                <rect key="frame" x="549" y="68" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="mood-sad.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sadClicked:" destination="2" eventType="touchDown" id="AH4-dH-gCs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="izt-Bu-pFS">
+                                <rect key="frame" x="621" y="68" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="mood-surprised.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="surprisedClicked:" destination="2" eventType="touchDown" id="Vmg-Mb-zpP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kBm-ss-rkI">
+                                <rect key="frame" x="691" y="68" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="mood-angry.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="angryClicked:" destination="2" eventType="touchDown" id="u7C-jq-C7U"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -477,6 +537,10 @@
     <resources>
         <image name="button-02.png" width="334" height="59"/>
         <image name="gear.png" width="32" height="32"/>
+        <image name="mood-angry.png" width="93" height="93"/>
+        <image name="mood-happy.png" width="93" height="93"/>
+        <image name="mood-sad.png" width="93" height="93"/>
+        <image name="mood-surprised.png" width="94" height="93"/>
         <image name="or-logo.png" width="230" height="82"/>
         <image name="romibo-logo.png" width="375" height="116"/>
         <image name="silhouette.png" width="30" height="25"/>
@@ -485,10 +549,14 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="angryClicked:"/>
                 <relationship kind="action" name="buttonClicked:"/>
                 <relationship kind="action" name="changeShell:"/>
                 <relationship kind="action" name="configClicked:"/>
                 <relationship kind="action" name="handleLongPress:"/>
+                <relationship kind="action" name="happyClicked:"/>
+                <relationship kind="action" name="sadClicked:"/>
+                <relationship kind="action" name="surprisedClicked:"/>
                 <relationship kind="outlet" name="connectionLabel" candidateClass="UILabel"/>
             </relationships>
         </class>

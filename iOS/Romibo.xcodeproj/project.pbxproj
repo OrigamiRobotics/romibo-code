@@ -19,7 +19,6 @@
 		6396AF7414B2594B0023CE66 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6396AF6D14B2594B0023CE66 /* DDTTYLogger.m */; };
 		6396AF7514B2594B0023CE66 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6396AF6F14B2594B0023CE66 /* GCDAsyncSocket.m */; };
 		6396AF7714B25A230023CE66 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6396AF7614B25A230023CE66 /* CFNetwork.framework */; };
-		63AEE88214B91B7C00A8C8DC /* movement-base-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 63AEE88114B91B7C00A8C8DC /* movement-base-03.png */; };
 		63AEE88414B91C2300A8C8DC /* emotion-base-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 63AEE88314B91C2300A8C8DC /* emotion-base-03.png */; };
 		63DBAFD014B0126D00EAD344 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DBAFCF14B0126D00EAD344 /* UIKit.framework */; };
 		63DBAFD214B0126D00EAD344 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DBAFD114B0126D00EAD344 /* Foundation.framework */; };
@@ -50,6 +49,14 @@
 		63DD0EA714B54C1F002FDC2F /* sound_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0EA514B54C1F002FDC2F /* sound_left.png */; };
 		63DD0EA814B54C1F002FDC2F /* sound_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0EA614B54C1F002FDC2F /* sound_right.png */; };
 		7438733017554C2B0069EEC9 /* HeadTiltNubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7438732F17554C2B0069EEC9 /* HeadTiltNubView.m */; };
+		7438733B17580A7B0069EEC9 /* Home.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7438733A17580A7B0069EEC9 /* Home.txt */; };
+		7438733E1759527C0069EEC9 /* tiltBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 7438733C1759527C0069EEC9 /* tiltBackground.png */; };
+		7438733F1759527C0069EEC9 /* tiltBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7438733D1759527C0069EEC9 /* tiltBackground@2x.png */; };
+		74387341175956AD0069EEC9 /* driveBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 74387340175956AD0069EEC9 /* driveBackground.png */; };
+		743873461759579F0069EEC9 /* mood-sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 743873421759579F0069EEC9 /* mood-sad.png */; };
+		743873471759579F0069EEC9 /* mood-surprised.png in Resources */ = {isa = PBXBuildFile; fileRef = 743873431759579F0069EEC9 /* mood-surprised.png */; };
+		743873481759579F0069EEC9 /* mood-happy.png in Resources */ = {isa = PBXBuildFile; fileRef = 743873441759579F0069EEC9 /* mood-happy.png */; };
+		743873491759579F0069EEC9 /* mood-angry.png in Resources */ = {isa = PBXBuildFile; fileRef = 743873451759579F0069EEC9 /* mood-angry.png */; };
 		745DD6C81711FEF800A14AD2 /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6390519C14B69403007AB7CC /* ConfigViewController.xib */; };
 		7470808C16CF1D650007158D /* CommandPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7470808B16CF1D650007158D /* CommandPickerController.m */; };
 		7480608216FCE3C50023A26B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DBAFE414B0126D00EAD344 /* MainStoryboard_iPad.storyboard */; };
@@ -108,7 +115,6 @@
 		6396AF6F14B2594B0023CE66 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = lib/GCDAsyncSocket.m; sourceTree = "<group>"; };
 		6396AF7614B25A230023CE66 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		63AEE87D14B8F06800A8C8DC /* CmdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CmdDelegate.h; sourceTree = "<group>"; };
-		63AEE88114B91B7C00A8C8DC /* movement-base-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "movement-base-03.png"; path = "imgs/movement-base-03.png"; sourceTree = "<group>"; };
 		63AEE88314B91C2300A8C8DC /* emotion-base-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "emotion-base-03.png"; path = "imgs/emotion-base-03.png"; sourceTree = "<group>"; };
 		63DBAFCB14B0126D00EAD344 /* Romibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Romibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63DBAFCF14B0126D00EAD344 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -147,6 +153,14 @@
 		63DD0EA614B54C1F002FDC2F /* sound_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sound_right.png; path = imgs/sound_right.png; sourceTree = "<group>"; };
 		7438732E17554C2B0069EEC9 /* HeadTiltNubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadTiltNubView.h; sourceTree = "<group>"; };
 		7438732F17554C2B0069EEC9 /* HeadTiltNubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadTiltNubView.m; sourceTree = "<group>"; };
+		7438733A17580A7B0069EEC9 /* Home.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Home.txt; sourceTree = "<group>"; };
+		7438733C1759527C0069EEC9 /* tiltBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tiltBackground.png; path = imgs/tiltBackground.png; sourceTree = "<group>"; };
+		7438733D1759527C0069EEC9 /* tiltBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tiltBackground@2x.png"; path = "imgs/tiltBackground@2x.png"; sourceTree = "<group>"; };
+		74387340175956AD0069EEC9 /* driveBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = driveBackground.png; path = imgs/driveBackground.png; sourceTree = "<group>"; };
+		743873421759579F0069EEC9 /* mood-sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mood-sad.png"; path = "imgs/mood-sad.png"; sourceTree = "<group>"; };
+		743873431759579F0069EEC9 /* mood-surprised.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mood-surprised.png"; path = "imgs/mood-surprised.png"; sourceTree = "<group>"; };
+		743873441759579F0069EEC9 /* mood-happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mood-happy.png"; path = "imgs/mood-happy.png"; sourceTree = "<group>"; };
+		743873451759579F0069EEC9 /* mood-angry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mood-angry.png"; path = "imgs/mood-angry.png"; sourceTree = "<group>"; };
 		7470808A16CF1D650007158D /* CommandPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandPickerController.h; path = ../CommandPickerController.h; sourceTree = "<group>"; };
 		7470808B16CF1D650007158D /* CommandPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommandPickerController.m; path = ../CommandPickerController.m; sourceTree = "<group>"; };
 		7480608316FD31270023A26B /* ChildBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildBaseView.h; sourceTree = "<group>"; };
@@ -252,6 +266,7 @@
 		63DBAFC014B0126D00EAD344 = {
 			isa = PBXGroup;
 			children = (
+				743873361757EB5C0069EEC9 /* screens */,
 				74D1A82A170F5BDE007E8CF9 /* RomiboAppIcon.png */,
 				74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */,
 				63DD0E2E14B5386E002FDC2F /* imgs */,
@@ -336,6 +351,13 @@
 		63DD0E2E14B5386E002FDC2F /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				743873421759579F0069EEC9 /* mood-sad.png */,
+				743873431759579F0069EEC9 /* mood-surprised.png */,
+				743873441759579F0069EEC9 /* mood-happy.png */,
+				743873451759579F0069EEC9 /* mood-angry.png */,
+				74387340175956AD0069EEC9 /* driveBackground.png */,
+				7438733C1759527C0069EEC9 /* tiltBackground.png */,
+				7438733D1759527C0069EEC9 /* tiltBackground@2x.png */,
 				74D1A828170F5BD0007E8CF9 /* RomiboAppIcon.png */,
 				74D1A826170BA8B3007E8CF9 /* movement_base.png */,
 				74D1A81E170BA819007E8CF9 /* Arrow_left.png */,
@@ -348,7 +370,6 @@
 				748060BD16FE71820023A26B /* dot_on.png */,
 				7480608B16FD41F50023A26B /* silhouette.png */,
 				63AEE88314B91C2300A8C8DC /* emotion-base-03.png */,
-				63AEE88114B91B7C00A8C8DC /* movement-base-03.png */,
 				63DD0EA514B54C1F002FDC2F /* sound_left.png */,
 				63DD0EA614B54C1F002FDC2F /* sound_right.png */,
 				63DD0E8914B5393B002FDC2F /* background-01.png */,
@@ -367,6 +388,14 @@
 				63DD0E9614B5393B002FDC2F /* volume-nub-01.png */,
 			);
 			name = imgs;
+			sourceTree = "<group>";
+		};
+		743873361757EB5C0069EEC9 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				7438733A17580A7B0069EEC9 /* Home.txt */,
+			);
+			path = screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,7 +486,6 @@
 				63DD0EA414B5393B002FDC2F /* volume-nub-01.png in Resources */,
 				63DD0EA714B54C1F002FDC2F /* sound_left.png in Resources */,
 				63DD0EA814B54C1F002FDC2F /* sound_right.png in Resources */,
-				63AEE88214B91B7C00A8C8DC /* movement-base-03.png in Resources */,
 				63AEE88414B91C2300A8C8DC /* emotion-base-03.png in Resources */,
 				74A6F86516CF0B1F00B99FF0 /* RomiboCommands.txt in Resources */,
 				7480608216FCE3C50023A26B /* MainStoryboard_iPad.storyboard in Resources */,
@@ -475,6 +503,14 @@
 				74D1A829170F5BD0007E8CF9 /* RomiboAppIcon.png in Resources */,
 				74D1A82B170F5BDE007E8CF9 /* RomiboAppIcon.png in Resources */,
 				745DD6C81711FEF800A14AD2 /* ConfigViewController.xib in Resources */,
+				7438733B17580A7B0069EEC9 /* Home.txt in Resources */,
+				7438733E1759527C0069EEC9 /* tiltBackground.png in Resources */,
+				7438733F1759527C0069EEC9 /* tiltBackground@2x.png in Resources */,
+				74387341175956AD0069EEC9 /* driveBackground.png in Resources */,
+				743873461759579F0069EEC9 /* mood-sad.png in Resources */,
+				743873471759579F0069EEC9 /* mood-surprised.png in Resources */,
+				743873481759579F0069EEC9 /* mood-happy.png in Resources */,
+				743873491759579F0069EEC9 /* mood-angry.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

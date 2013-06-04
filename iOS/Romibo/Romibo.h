@@ -27,6 +27,7 @@
 @property (nonatomic, retain) NSString* lastSendEmoteCmd;
 
 @property (nonatomic, retain) NSString* tiltCmd;
+@property (nonatomic, retain) NSString* lastSentTiltCmd;
 
 @property (nonatomic, retain) NSString* ipAddress;
 //@property (nonatomic) float cmdInterval;

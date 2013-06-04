@@ -1,0 +1,18 @@
+nod,Nod
+bob,Bob
+shalom.wav,Shalom
+how_are0.wav,How are you feeling
+i_hope_0.wav,I hope you feel better soon
+it_was_n.wav,It was nice talking to you
+it's_so_.wav,It's so nice to see you
+Hava_Nag.wav,Hava nagila
+In_the_M.wav,In the mood (glenn miller)
+Show_Me_.wav,Show me the way to go home
+Let_Me_C.wav,Let me call you sweetheart
+You_Are1.wav,You are my sunshine
+Bye_Bye_.wav,Bye bye blackbird
+could_y0.wav,Could you tell me more
+what_hap.wav,What happened next
+what_was.wav,What was that
+why_is_t.wav,Why is that
+thats_to.wav,Thats too bad

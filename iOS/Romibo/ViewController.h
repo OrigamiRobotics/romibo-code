@@ -29,7 +29,7 @@
     NSTimer* cmdTimer;
     NSTimer* connectionStatusTimer;
     
-    EmotionNubView* eNub;
+    HeadTiltNubView* tNub;
     DrivingNubView* dNub;
 
     CommandPickerController *commandPicker;
@@ -47,10 +47,16 @@
 }
 
 
-//handles the 8 action buttons
+//handles the 16 action buttons
 -(IBAction)buttonClicked:(id)sender;
 -(IBAction)handleLongPress:(id)sender;
 -(void)pickCommand:(id)sender;
+
+//handles the emotion buttons
+-(IBAction)happyClicked:(id)sender;
+-(IBAction)sadClicked:(id)sender;
+-(IBAction)surprisedClicked:(id)sender;
+-(IBAction)angryClicked:(id)sender;
 
 //gear button
 -(IBAction)configClicked:(id)sender;
@@ -63,8 +69,9 @@
 -(IBAction)changeShell:(id)sender;
 - (void)lockEntered:(NSString*)key;
 
--(void)setupEmotionSubview;
+-(void)setupHeadTiltSubview;
 -(void)setupDrivingSubview;
+-(void)setupButtons;
 
 -(void)setConnectionStatus;
 

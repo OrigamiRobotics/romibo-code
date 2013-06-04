@@ -40,13 +40,17 @@
     
     [self closePopup];
     
-    [self setupEmotionSubview];
-    [eNub setCmdDelegate:romibo];
+    [self setupHeadTiltSubview];
+    [tNub setCmdDelegate:romibo];
     
     [self setupDrivingSubview];
     [dNub setCmdDelegate:romibo];
     
+    //gathers the generic list of commands
     [self setupRomiboCommands];
+    
+    //sets up buttons specified in screens
+    [self setupButtons];
     
     if (!childView)
     {
@@ -59,8 +63,46 @@
 
 }
 
+
+-(void)setupButtons
+{
+    NSString* screenPath = [[NSBundle mainBundle] pathForResource:@"Home" ofType:@"txt"];
+    
+    NSString* allCommands = [NSString stringWithContentsOfFile:screenPath encoding:NSUTF8StringEncoding error:NULL];
+    
+    NSArray* commandsArray = [allCommands componentsSeparatedByString:@"\n"];
+    
+    for (int i = 1; i < 19; i++)
+    {
+        NSString* command = [commandsArray objectAtIndex:i-1];
+        NSArray* commandFragments = [command componentsSeparatedByString:@","];
+        
+        if ([commandFragments count] < 2)
+        {
+            NSLog(@"Invalid command syntax: %@", command);
+            continue;
+        }
+        
+        NSString* cmd = [[commandFragments objectAtIndex:0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        
+        NSString* label = [[commandFragments objectAtIndex:1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        
+        if ([romiboCommands objectForKey:label] == nil)
+        {
+            [romiboCommands setObject:cmd forKey:label];
+            [buttonLabels addObject:label];
+        }
+        
+        UIButton* button = (UIButton*)[self.view viewWithTag:i];
+        [button setTitle:label forState:UIControlStateNormal];
+        
+        //NSLog(@"%@", [[button titleLabel] text]);
+    }
+}
+
 -(void)setupRomiboCommands
 {
+    
     NSString* commandPath = [[NSBundle mainBundle] pathForResource:@"RomiboCommands" ofType:@"txt"];
     
     NSString* allCommands = [NSString stringWithContentsOfFile:commandPath encoding:NSUTF8StringEncoding error:NULL];
@@ -88,8 +130,6 @@
         [romiboCommands setObject:cmd forKey:label];
         [buttonLabels addObject:label];
     }
-    
-
 }
 
 
@@ -115,7 +155,7 @@
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil
     
-    [eNub release];
+    [tNub release];
     [dNub release];
     [romibo release];
     [cmdTimer release];
@@ -154,29 +194,29 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
--(void)setupEmotionSubview
+-(void)setupHeadTiltSubview
 {
-    UIImageView* emotionView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"emotion-base-03.png"]];
+    UIImageView* headTiltView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tiltBackground.png"]];
     
-    eNub = [[HeadTiltNubView alloc] init];
+    tNub = [[HeadTiltNubView alloc] init];
     
-    emotionView.frame = CGRectMake(400, 210, 338, 338);
+    headTiltView.frame = CGRectMake(400, 215, 338, 338);
     
-    eNub.center = CGPointMake(CGRectGetMidX(emotionView.bounds), CGRectGetMidY(emotionView.bounds));
+    tNub.center = CGPointMake(CGRectGetMidX(headTiltView.bounds), CGRectGetMidY(headTiltView.bounds));
     
-    eNub.userInteractionEnabled = YES;
-    emotionView.userInteractionEnabled = YES;
+    tNub.userInteractionEnabled = YES;
+    headTiltView.userInteractionEnabled = YES;
     
-    [emotionView addSubview:eNub];
-    [eNub release];
+    [headTiltView addSubview:tNub];
+    [tNub release];
     
-    [self.view addSubview:emotionView ];
-    [emotionView release];
+    [self.view addSubview:headTiltView ];
+    [headTiltView release];
 }
 
 -(void)setupDrivingSubview
 {
-    UIImageView* drivingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"movement-base-03.png"]];
+    UIImageView* drivingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"driveBackground.png"]];
     
     dNub = [[DrivingNubView alloc] init];
     
@@ -305,6 +345,47 @@
                             permittedArrowDirections:UIPopoverArrowDirectionAny 
                             animated:YES];
 
+}
+
+
+-(IBAction)happyClicked:(id)sender
+{
+    
+    NSString* emotion = @"emote 100 100\r";
+    NSLog(@"Full command: %@", emotion);
+    
+    [romibo sendString:emotion];
+}
+
+
+
+-(IBAction)surprisedClicked:(id)sender
+{
+    
+    NSString* emotion = @"emote 100 -100\r";
+    NSLog(@"Full command: %@", emotion);
+    
+    [romibo sendString:emotion];
+}
+
+
+-(IBAction)angryClicked:(id)sender
+{
+    
+    NSString* emotion = @"emote -100 100\r";
+    NSLog(@"Full command: %@", emotion);
+    
+    [romibo sendString:emotion];
+}
+
+
+-(IBAction)sadClicked:(id)sender
+{
+    
+    NSString* emotion = @"emote -100 -100\r";
+    NSLog(@"Full command: %@", emotion);
+    
+    [romibo sendString:emotion];
 }
 
 - (void)dealloc {

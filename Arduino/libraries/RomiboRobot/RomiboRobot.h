@@ -300,11 +300,13 @@ public:
   // provided for either component angles or a position array.
   void setHeadPosition( int front_position, int back_position );
   void setHeadPosition( int neck_positions[2] );
+  void setHeadPositionAbsolute(int yaxis, int xaxis);
 
   // Convenience functions to move the head.
   void setNeutralHeadPosition(void);
   void tiltHeadForward(void);
   void tiltHeadBack(void);
+  void sway(void);
 
   void bob(void);
 
@@ -317,6 +319,9 @@ public:
   void setAntennaColor( int color[3] );
   void setAntennaColorWhite(void);
   void setAntennaColorGreen(void);
+  void setAntennaColorRed(void);
+  void setAntennaColorYellow(void);
+  void setAntennaColorBlue(void);
 
   // These sleep functions continue to process robot I/O during the sleep
   // interval, and must be used instead of the Arduino equivalents for I/O

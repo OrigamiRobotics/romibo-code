@@ -321,11 +321,11 @@ RomiboRobot::RomiboRobot()
     eye_max   =  90;   // most closed position
 #endif
 #if (ROMIBO_ELECTRONICS_MAJOR_REV==3)
-    front_max = 110;   // position closest to the neck
-    front_min = 0;   // position closest to the head structure
-    back_min  = 80;   // position closest to the neck
-    back_max  = 190;   // position closest to the head structure
-    eye_min   =  60;   // most wide-open position  *** Caz *** was playing around with the eyelid calibration a bit
+    front_max = 150;   // position closest to the neck
+    front_min = 20;   // position closest to the head structure
+    back_min  = 20;   // x-axis
+    back_max  = 150;   // x-axis
+    eye_min   =  0;   // most wide-open position  *** Caz *** was playing around with the eyelid calibration a bit
     eye_max   = 150;   // most closed position	*** Caz *** hard to know what these should be without a defined servo linkage length
 #endif
 
@@ -566,7 +566,7 @@ void setMotor(int speed, int motor)
 {
 
   //adjustment for new wiring (5/27) that caused robot to run backwards
-  speed = -speed;
+  //speed = -speed;
 
     #define DRIVEPWMRATE 20000L
     #define DRIVEPWMDIVISOR F_CPU/(2*DRIVEPWMRATE)
@@ -684,15 +684,22 @@ void RomiboRobot::setHeadPosition( int front_position, int back_position )
   //tilt_servo[ ROMIBO_FRONT_SERVO ].write( front_position );
   //tilt_servo[ ROMIBO_BACK_SERVO  ].write( back_position );
    
+
+
   int yAxis = map( constrain(front_position,0,100), 0, 100, front_min, front_max);
   int xAxis = map( constrain(back_position,0,100), 0, 100, back_min, back_max);
 
     tilt_servo[ ROMIBO_FRONT_SERVO ].write( yAxis );
     tilt_servo[ ROMIBO_BACK_SERVO  ].write( xAxis );
 
-    front_pos = front_position;
-    back_pos  = back_position;
+    Console.print("Setting yaxis to "); Console.println(yAxis);
+    Console.print("Setting xaxis to "); Console.println(xAxis);
+
+
+    front_pos = yAxis;
+    back_pos  = xAxis;
 }
+
 void RomiboRobot::setHeadPosition( int neck_positions[2] ) 
 {
     setHeadPosition( neck_positions[0], neck_positions[1] );
@@ -706,22 +713,106 @@ void RomiboRobot::setNeutralHeadPosition(void)
 
 void RomiboRobot::tiltHeadForward(void)
 {
-    setHeadPosition( 0, 100 );
+  int nextY = front_pos;
+
+  while (nextY < 100)
+   {
+     setHeadPosition(nextY,back_pos);
+     nextY = nextY + 1;
+     delay(10);
+   } 
+
+  /* int midPoint = round((front_max - front_min)/2);
+
+  while (nextY > midPoint)
+    {
+      setHeadPosition(nextY, back_pos);
+      nextY = nextY - 1;
+      delay(10);
+    }
+  */
+
 }
 
 void RomiboRobot::tiltHeadBack(void) 
 {
-    setHeadPosition( 100, 0 );
+
+ int nextY = front_pos;
+
+  while (nextY > 0)
+   {
+     setHeadPosition(nextY,back_pos);
+     nextY = nextY - 1;
+     delay(10);
+   } 
+
+
+  /* int midPoint = round((front_max - front_min)/2);
+
+  while (nextY < midPoint)
+    {
+      setHeadPosition(nextY, back_pos);
+      nextY = nextY + 1;
+      delay(10);
+    }
+  */
+
 }
+
+void RomiboRobot::sway(void)
+{
+
+   int nextX = back_pos;
+
+  while (nextX < 100)
+   {
+     //Console.print("Setting head to "); Console.println(nextX);
+     setHeadPosition(front_pos,nextX);
+     nextX = nextX + 1;
+     delay(15);
+   } 
+
+  int midPoint = round((back_max - back_min)/2);
+
+  while (nextX > 50)
+    {
+      //Console.print("Setting head to "); Console.println(nextX);
+      setHeadPosition(front_pos, nextX);
+      nextX = nextX - 1;
+      delay(15);
+    }
+
+
+
+}
+
 
 void RomiboRobot::bob(void)
 {
-  setHeadPosition (0,0);
-  delay (1000);
-  setHeadPosition (100,100);
-  delay (1000);
-  setNeutralHeadPosition ();
+
+ int nextY = front_pos;
+
+  while (nextY < 100)
+   {
+ Console.print("Setting head to "); Console.println(nextY);
+     setHeadPosition(nextY,back_pos);
+     nextY = nextY + 1;
+     delay(10);
+   } 
+
+  int midPoint = round((front_max - front_min)/2);
+
+  while (nextY > 50)
+    {
+ Console.print("Setting head to "); Console.println(nextY);
+      setHeadPosition(nextY, back_pos);
+      nextY = nextY - 1;
+      delay(10);
+    }
+
+
 }
+
 
 
 
@@ -757,7 +848,22 @@ void RomiboRobot::setAntennaColorWhite(void)
 
 void RomiboRobot::setAntennaColorGreen(void)
 { 
-  setAntennaColor(0, 255, 0); // White
+  setAntennaColor(255, 0,0); // Green
+}
+
+void RomiboRobot::setAntennaColorRed(void)
+{ 
+  setAntennaColor(0, 255, 0); // Red
+}
+
+void RomiboRobot::setAntennaColorBlue(void)
+{ 
+  setAntennaColor(0, 0, 255); // Blue
+}
+
+void RomiboRobot::setAntennaColorYellow(void)
+{ 
+  setAntennaColor(255, 255, 0); // Yellow
 }
 
 

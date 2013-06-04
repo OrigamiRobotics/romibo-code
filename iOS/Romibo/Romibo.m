@@ -16,7 +16,7 @@
 @synthesize isConnected;
 @synthesize driveCmd;
 @synthesize emoteCmd;
-@synthesize tiltCmd;
+@synthesize tiltCmd, lastSentTiltCmd;
 @synthesize lastSendEmoteCmd;
 @synthesize lastSendDriveCmd;
 @synthesize ipAddress;
@@ -32,6 +32,7 @@
     [self setLastSendDriveCmd:@""];
     [self setEmoteCmd:@""];
     [self setLastSendEmoteCmd:@""];
+    [self setLastSentTiltCmd:@""];
     [self setTiltCmd:@""];
     
     cmdTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(handleCmdTimer) userInfo:nil repeats:true];
@@ -106,7 +107,11 @@
     
     if (tiltCmd.length > 0)
     {
-        [self sendString:tiltCmd];
+        if (! ( [tiltCmd isEqualToString:@"tilt 50 50\r"] && [lastSentTiltCmd isEqualToString:@"tilt 50 50\r"]) )
+        {
+            [self setLastSentTiltCmd:tiltCmd];
+            [self sendString:tiltCmd];
+        }
         
     }
     

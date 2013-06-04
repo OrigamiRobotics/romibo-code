@@ -15,7 +15,7 @@
 
 - (id)init
 {   
-    if (self = [super initWithImage:[UIImage imageNamed:@"movement-nub-02.png"]])
+    if (self = [super initWithImage:[UIImage imageNamed:@"emotion-nub-02.png"]])
     {
         self.userInteractionEnabled = YES;
     }

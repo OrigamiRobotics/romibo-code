@@ -5,6 +5,8 @@ bob,Bob
 nod,Nod
 SAD4.wav,Cry
 twinkle.wav,Sing
+look_down,Look Down
+look_up,Look Up
 a.wav,A
 b.wav,B
 c.wav,C

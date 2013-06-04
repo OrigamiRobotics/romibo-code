@@ -78,6 +78,7 @@ void execute_command( int argc, char **argv )
     }
 
   else if (!strcmp(argv[0], "tilt" )) {
+   
       int xtilt = 50, ytilt = 50;
       if (argc > 1) xtilt = atoi(argv[1]);
       if (argc > 2) ytilt = atoi(argv[2]);
@@ -151,13 +152,16 @@ void execute_command( int argc, char **argv )
     }
 
     /****************************************************************/
-    else if (!strcmp(argv[0], "tilt")) {
-      int front = 50;
-      int back  = 50;
-      if (argc > 1) front = atoi( argv[1] );
-      if (argc > 2) back  = atoi( argv[2] );
-      Romibo.setHeadPosition( front, back );
-    }
+
+    else if (!strcmp(argv[0], "look_down"))
+      {
+	Romibo.tiltHeadForward();
+      }
+
+    else if (!strcmp(argv[0], "look_up"))
+      {
+	Romibo.tiltHeadBack();
+      }
 
     else if (!strcmp(argv[0], "eye")) {
       int eye = 50;
@@ -196,9 +200,10 @@ void execute_command( int argc, char **argv )
     }
 	
 	else if (!strcmp(argv[0], "spin")) {
-      int speed = 100;
-      if (argc > 1) speed = atoi(argv[1]);
-      Romibo.drive( speed, -speed );
+	  int speed = 100;
+	  if (argc > 1) speed = atoi(argv[1]);
+	  Console.println("spinning");
+	  Romibo.drive( speed, -speed );
     }
 	
 	else if (!strcmp(argv[0], "bob")) {
@@ -222,6 +227,11 @@ void execute_command( int argc, char **argv )
       if (argc > 1) speed = atoi(argv[1]);
       Romibo.drive( 0, speed );
     }
+
+	else if (!strcmp(argv[0], "sway"))
+	  {
+	    Romibo.sway();
+	  }
 	
 	else if (!strcmp(argv[0], "nod")) {
       Romibo.setHeadPosition (0,100);
@@ -238,48 +248,92 @@ void execute_command( int argc, char **argv )
 	else if (!strcmp(argv[0], "dance")) {
 	  Romibo.playSoundNamed("HAPPY1");
 	  RomiboAct.setAntenna (ROA_BLUE);
-      for (int i = 0; i < 4; i++) {
-        Romibo.setHeadPosition (0, 100);
-        RomiboAct.driveForwardTimed (50);
-        Romibo.delay (200);
-        Romibo.setHeadPosition (100, 0);
-        RomiboAct.driveBackwardTimed (50);
-        Romibo.delay (200);
-      }
-      RomiboAct.turnRight (50);
-      RomiboAct.turnLeft (50);
-      Romibo.playSoundNamed ("HAPPY3"); 
+	  Romibo.drive(50,-50);
+	  Romibo.delay(500);
+	  Romibo.drive(0,0);
+	  Romibo.setHeadPosition (0, 50);
+
+	  Romibo.drive(-50,50);
+	  Romibo.delay(500);
+	  Romibo.drive(0,0);
+	  //Romibo.setHeadPosition (0, 50);
+	  
+
+	  Romibo.drive(50,-50);
+	  Romibo.delay(500);
+	  Romibo.drive(0,0);
+	  //Romibo.setHeadPosition (100, 50);
+
+
+	  Romibo.drive(-50,50);
+	  Romibo.delay(500);
+	  Romibo.drive(0,0);
+
+	  Romibo.setNeutralHeadPosition();
+	 
+	  Romibo.playSoundNamed ("HAPPY3"); 
 	}
 
-	else if (!strcmp(argv[0], "emote" )) {
-      int x = 0, y = 0;
+	else if (!strcmp(argv[0], "emote" )) 
+	  {
+
+	  int x = 0, y = 0;
 	  int absx, absy;
-      if (argc > 1) x = atoi(argv[1]);
-      if (argc > 2) y = atoi(argv[2]);
+	 
+	  if (argc > 1) x = atoi(argv[1]);
+	  if (argc > 2) y = atoi(argv[2]);
 	  
-	  if (x < 0) absx = -1 * x;
+	  absx = abs(x);
+	  absy = abs(y);
+
+	  /*	  if (x < 0) absx = -1 * x;
 	  else (absx = x);
 	  
 	  if (y < 0) absy = -1 * y;
 	  else (absy = y);
-	  
-      if (x > 0 && (absx > absy)) {
-	    //excited
-		Romibo.setAntennaColor (0, 255, 0);
-		Romibo.playSoundNamed ("HAPPY1");
-	  } else if (x < 0 && (absx > absy)) {
-	    //angry
-		Romibo.setAntennaColor (255, 0, 0);
-		Romibo.playSoundNamed ("ANGRY1");
-	  } else if (y > 0 && (absy > absx)) {
-	    //satisfied
-		Romibo.setAntennaColor (255, 255, 0);
+	  */
+
+	  if (x > 0) 
+	  {
+	    if (y < 0)
+	      {
+	
+		//satisfied
+		Romibo.setAntennaColorYellow();
 		Romibo.playSoundNamed ("BECKON2");
-	  } else if (y < 0 && (absy > absx)) {
-	    //sad
-		Romibo.setAntennaColor (0, 0, 255);
+		Console.println("satisfied");
+		
+	      }
+	    else
+	      {
+		//excited
+		Romibo.setAntennaColorGreen();
+		Romibo.playSoundNamed ("HAPPY1");
+		Console.println("happy");
+
+	
+		
+	      }
+	  } 
+	  else 
+	  {
+	    if (y < 0)
+	      {
+		
+		//sad
+		Romibo.setAntennaColorBlue();
 		Romibo.playSoundNamed ("SAD3");
-	  }
+		Console.println("sad");
+	      }
+	    else
+	      {
+		RomiboAct.setAntenna(ROA_RED);
+		Romibo.playSoundNamed ("ANGRY1");
+		Console.println("angry");
+
+	
+	      }
+	  } 
     }
 
     else {

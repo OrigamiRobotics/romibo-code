@@ -89,6 +89,7 @@ void setup(void)
   Romibo.playSoundNamed ("HAPPY1");
   Romibo.setAntennaColorGreen(); // Green 
  
+ 
   if (shouldBlink)
   {
     blinkRandomly();

@@ -48,8 +48,12 @@
 		63DD0EA414B5393B002FDC2F /* volume-nub-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0E9614B5393B002FDC2F /* volume-nub-01.png */; };
 		63DD0EA714B54C1F002FDC2F /* sound_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0EA514B54C1F002FDC2F /* sound_left.png */; };
 		63DD0EA814B54C1F002FDC2F /* sound_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 63DD0EA614B54C1F002FDC2F /* sound_right.png */; };
+		74193724175E777D0012A630 /* ButtonPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 74193722175E777D0012A630 /* ButtonPage.m */; };
+		74193725175E777D0012A630 /* ButtonPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74193723175E777D0012A630 /* ButtonPage.xib */; };
+		741937291767A09A0012A630 /* ButtonScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 741937271767A09A0012A630 /* ButtonScrollView.m */; };
+		7419372A1767A09A0012A630 /* ButtonScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 741937281767A09A0012A630 /* ButtonScrollView.xib */; };
+		7419373017691B180012A630 /* screens in Resources */ = {isa = PBXBuildFile; fileRef = 7419372F17691B180012A630 /* screens */; };
 		7438733017554C2B0069EEC9 /* HeadTiltNubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7438732F17554C2B0069EEC9 /* HeadTiltNubView.m */; };
-		7438733B17580A7B0069EEC9 /* Home.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7438733A17580A7B0069EEC9 /* Home.txt */; };
 		7438733E1759527C0069EEC9 /* tiltBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 7438733C1759527C0069EEC9 /* tiltBackground.png */; };
 		7438733F1759527C0069EEC9 /* tiltBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7438733D1759527C0069EEC9 /* tiltBackground@2x.png */; };
 		74387341175956AD0069EEC9 /* driveBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 74387340175956AD0069EEC9 /* driveBackground.png */; };
@@ -68,6 +72,8 @@
 		748060BE16FE71820023A26B /* dot_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 748060BC16FE71820023A26B /* dot_off.png */; };
 		748060BF16FE71820023A26B /* dot_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 748060BD16FE71820023A26B /* dot_on.png */; };
 		74A6F86516CF0B1F00B99FF0 /* RomiboCommands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */; };
+		74AEBF3C177350C20015FEE2 /* Page5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74AEBF3B177350C10015FEE2 /* Page5.txt */; };
+		74AEBF3E177350E40015FEE2 /* Page6.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74AEBF3D177350E40015FEE2 /* Page6.txt */; };
 		74D1A81B170643BD007E8CF9 /* ActionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A819170643BD007E8CF9 /* ActionButton.png */; };
 		74D1A81D1706441C007E8CF9 /* ArrowDepressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A81C1706441C007E8CF9 /* ArrowDepressed.png */; };
 		74D1A822170BA819007E8CF9 /* Arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A81E170BA819007E8CF9 /* Arrow_left.png */; };
@@ -151,9 +157,15 @@
 		63DD0E9614B5393B002FDC2F /* volume-nub-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "volume-nub-01.png"; path = "imgs/volume-nub-01.png"; sourceTree = "<group>"; };
 		63DD0EA514B54C1F002FDC2F /* sound_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sound_left.png; path = imgs/sound_left.png; sourceTree = "<group>"; };
 		63DD0EA614B54C1F002FDC2F /* sound_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sound_right.png; path = imgs/sound_right.png; sourceTree = "<group>"; };
+		74193721175E777D0012A630 /* ButtonPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonPage.h; sourceTree = "<group>"; };
+		74193722175E777D0012A630 /* ButtonPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonPage.m; sourceTree = "<group>"; };
+		74193723175E777D0012A630 /* ButtonPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonPage.xib; sourceTree = "<group>"; };
+		741937261767A09A0012A630 /* ButtonScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonScrollView.h; sourceTree = "<group>"; };
+		741937271767A09A0012A630 /* ButtonScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonScrollView.m; sourceTree = "<group>"; };
+		741937281767A09A0012A630 /* ButtonScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonScrollView.xib; sourceTree = "<group>"; };
+		7419372F17691B180012A630 /* screens */ = {isa = PBXFileReference; lastKnownFileType = folder; path = screens; sourceTree = "<group>"; };
 		7438732E17554C2B0069EEC9 /* HeadTiltNubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadTiltNubView.h; sourceTree = "<group>"; };
 		7438732F17554C2B0069EEC9 /* HeadTiltNubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadTiltNubView.m; sourceTree = "<group>"; };
-		7438733A17580A7B0069EEC9 /* Home.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Home.txt; sourceTree = "<group>"; };
 		7438733C1759527C0069EEC9 /* tiltBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tiltBackground.png; path = imgs/tiltBackground.png; sourceTree = "<group>"; };
 		7438733D1759527C0069EEC9 /* tiltBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tiltBackground@2x.png"; path = "imgs/tiltBackground@2x.png"; sourceTree = "<group>"; };
 		74387340175956AD0069EEC9 /* driveBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = driveBackground.png; path = imgs/driveBackground.png; sourceTree = "<group>"; };
@@ -174,6 +186,8 @@
 		748060BC16FE71820023A26B /* dot_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dot_off.png; path = imgs/dot_off.png; sourceTree = "<group>"; };
 		748060BD16FE71820023A26B /* dot_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dot_on.png; path = imgs/dot_on.png; sourceTree = "<group>"; };
 		74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RomiboCommands.txt; sourceTree = "<group>"; };
+		74AEBF3B177350C10015FEE2 /* Page5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Page5.txt; path = screens/Page5.txt; sourceTree = "<group>"; };
+		74AEBF3D177350E40015FEE2 /* Page6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Page6.txt; path = screens/Page6.txt; sourceTree = "<group>"; };
 		74D1A819170643BD007E8CF9 /* ActionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ActionButton.png; path = imgs/ActionButton.png; sourceTree = "<group>"; };
 		74D1A81C1706441C007E8CF9 /* ArrowDepressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ArrowDepressed.png; path = imgs/ArrowDepressed.png; sourceTree = "<group>"; };
 		74D1A81E170BA819007E8CF9 /* Arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow_left.png; path = imgs/Arrow_left.png; sourceTree = "<group>"; };
@@ -221,6 +235,12 @@
 				6390519214B66BDF007AB7CC /* EmotionNubView.m */,
 				7438732E17554C2B0069EEC9 /* HeadTiltNubView.h */,
 				7438732F17554C2B0069EEC9 /* HeadTiltNubView.m */,
+				74193722175E777D0012A630 /* ButtonPage.m */,
+				74193721175E777D0012A630 /* ButtonPage.h */,
+				74193723175E777D0012A630 /* ButtonPage.xib */,
+				741937271767A09A0012A630 /* ButtonScrollView.m */,
+				741937261767A09A0012A630 /* ButtonScrollView.h */,
+				741937281767A09A0012A630 /* ButtonScrollView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -266,7 +286,9 @@
 		63DBAFC014B0126D00EAD344 = {
 			isa = PBXGroup;
 			children = (
-				743873361757EB5C0069EEC9 /* screens */,
+				74AEBF3D177350E40015FEE2 /* Page6.txt */,
+				74AEBF3B177350C10015FEE2 /* Page5.txt */,
+				7419372F17691B180012A630 /* screens */,
 				74D1A82A170F5BDE007E8CF9 /* RomiboAppIcon.png */,
 				74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */,
 				63DD0E2E14B5386E002FDC2F /* imgs */,
@@ -390,14 +412,6 @@
 			name = imgs;
 			sourceTree = "<group>";
 		};
-		743873361757EB5C0069EEC9 /* screens */ = {
-			isa = PBXGroup;
-			children = (
-				7438733A17580A7B0069EEC9 /* Home.txt */,
-			);
-			path = screens;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -443,7 +457,7 @@
 		63DBAFC214B0126D00EAD344 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0460;
 			};
 			buildConfigurationList = 63DBAFC514B0126D00EAD344 /* Build configuration list for PBXProject "Romibo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -503,7 +517,6 @@
 				74D1A829170F5BD0007E8CF9 /* RomiboAppIcon.png in Resources */,
 				74D1A82B170F5BDE007E8CF9 /* RomiboAppIcon.png in Resources */,
 				745DD6C81711FEF800A14AD2 /* ConfigViewController.xib in Resources */,
-				7438733B17580A7B0069EEC9 /* Home.txt in Resources */,
 				7438733E1759527C0069EEC9 /* tiltBackground.png in Resources */,
 				7438733F1759527C0069EEC9 /* tiltBackground@2x.png in Resources */,
 				74387341175956AD0069EEC9 /* driveBackground.png in Resources */,
@@ -511,6 +524,11 @@
 				743873471759579F0069EEC9 /* mood-surprised.png in Resources */,
 				743873481759579F0069EEC9 /* mood-happy.png in Resources */,
 				743873491759579F0069EEC9 /* mood-angry.png in Resources */,
+				74193725175E777D0012A630 /* ButtonPage.xib in Resources */,
+				7419372A1767A09A0012A630 /* ButtonScrollView.xib in Resources */,
+				7419373017691B180012A630 /* screens in Resources */,
+				74AEBF3C177350C20015FEE2 /* Page5.txt in Resources */,
+				74AEBF3E177350E40015FEE2 /* Page6.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +581,8 @@
 				748060BA16FD49530023A26B /* DrawPatternLockView.m in Sources */,
 				748060BB16FD49530023A26B /* DrawPatternLockViewController.m in Sources */,
 				7438733017554C2B0069EEC9 /* HeadTiltNubView.m in Sources */,
+				74193724175E777D0012A630 /* ButtonPage.m in Sources */,
+				741937291767A09A0012A630 /* ButtonScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +638,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -632,13 +656,14 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				MACOSX_DEPLOYMENT_TARGET = "";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				SUPPORTED_PLATFORMS = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -649,6 +674,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -656,6 +685,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				MACOSX_DEPLOYMENT_TARGET = "";
@@ -663,7 +693,7 @@
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				SUPPORTED_PLATFORMS = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -742,6 +772,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
@@ -749,6 +783,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				MACOSX_DEPLOYMENT_TARGET = "";
@@ -757,7 +792,7 @@
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				SUPPORTED_PLATFORMS = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};

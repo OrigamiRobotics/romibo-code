@@ -20,24 +20,19 @@
 
 @class ChildBaseView;
 
-@interface ViewController : UIViewController <UIPopoverControllerDelegate, DismissPopoverDelegate, CommandPickerDelegate>
+@interface ViewController : UIViewController <UIPopoverControllerDelegate, DismissPopoverDelegate>
 
 {
     IBOutlet UILabel *connectionLabel;
     UIPopoverController* configPopover;
-    Romibo* romibo; 
-    NSTimer* cmdTimer;
+
+    
     NSTimer* connectionStatusTimer;
     
     HeadTiltNubView* tNub;
     DrivingNubView* dNub;
 
-    CommandPickerController *commandPicker;
-    UIPopoverController *commandPickerPopover;
-    UIButton* lastButtonClicked;
-    
-    NSMutableDictionary* romiboCommands;
-    NSMutableArray* buttonLabels;
+    id appDelegate;
     
     UILongPressGestureRecognizer* longPressRecognizer;
     
@@ -46,11 +41,7 @@
 
 }
 
-
-//handles the 16 action buttons
--(IBAction)buttonClicked:(id)sender;
--(IBAction)handleLongPress:(id)sender;
--(void)pickCommand:(id)sender;
+@property (nonatomic, assign) id appDelegate;
 
 //handles the emotion buttons
 -(IBAction)happyClicked:(id)sender;
@@ -63,16 +54,15 @@
 -(void)closePopup;
 -(void)connectClicked:(NSString*) ipaddr;
 -(void)disconnectClicked;
--(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController;
+-(void)setConnectionStatus;
 
 //silhouette button
 -(IBAction)changeShell:(id)sender;
-- (void)lockEntered:(NSString*)key;
 
+//component views (drive, tilt, buttons)
 -(void)setupHeadTiltSubview;
 -(void)setupDrivingSubview;
--(void)setupButtons;
+-(void)setupButtonScrollView;
 
--(void)setConnectionStatus;
 
 @end

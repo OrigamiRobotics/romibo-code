@@ -35,9 +35,9 @@
 
 -(void)connectToIP:(NSString*)ipAddress;
 -(void)disconnect;
--(void)sendDriveCmd:(int)x:(int)y;
--(void)sendEmoteCmd:(int)x:(int)y;
--(void)sendHeadTiltCmd:(int)x:(int)y;
+-(void)sendDriveCmd:(int)x :(int)y;
+-(void)sendEmoteCmd:(int)x :(int)y;
+-(void)sendHeadTiltCmd:(int)x :(int)y;
 -(void)handleCmdTimer;
 
 -(void)driveForward;

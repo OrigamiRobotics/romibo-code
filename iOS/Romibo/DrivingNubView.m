@@ -7,10 +7,11 @@
 //
 
 #import "DrivingNubView.h"
+#import "AppDelegate.h"
 
 @implementation DrivingNubView
 
-@synthesize  cmdDelegate;
+@synthesize  cmdDelegate, appDelegate;
 
 
 - (id)init
@@ -18,6 +19,7 @@
     if (self = [super initWithImage:[UIImage imageNamed:@"emotion-nub-02.png"]])
     {
         self.userInteractionEnabled = YES;
+        self.appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     }
     
     return self;
@@ -55,7 +57,7 @@
     
 }
 
--(void)calcDriveCoordinates:(int)x:(int)y
+-(void)calcDriveCoordinates :(int)x :(int)y
 {
     float fx = x;
     float fy = y;
@@ -98,11 +100,11 @@
         driveY = driveY * q;
     }
         
-    [cmdDelegate sendDriveCmd:roundf(driveX):roundf(driveY)];
+    [[appDelegate romibo] sendDriveCmd:roundf(driveX):roundf(driveY)];
     
 }
 
--(int)getLarger:(int)i:(int)j
+-(int)getLarger :(int)i :(int)j
 {
     if (i > j)
         return i;
@@ -110,7 +112,7 @@
     return j;
 
 }
--(int)getSmaller:(int)i:(int)j
+-(int)getSmaller :(int)i :(int)j
 {
     if ( i < j)
         return i;
@@ -123,7 +125,7 @@
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     self.center = CGPointMake(CGRectGetMidX(self.superview.bounds), CGRectGetMidY(self.superview.bounds));
-    [cmdDelegate sendDriveCmd:0:0];
+    [[appDelegate romibo] sendDriveCmd:0:0];
 }
 
 

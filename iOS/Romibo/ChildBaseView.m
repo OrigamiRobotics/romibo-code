@@ -12,7 +12,7 @@
 @implementation ChildBaseView
 
 
-@synthesize romibo, romiboCommands;
+@synthesize appDelegate;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -31,6 +31,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background-02.png"]];
     
     drivingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"movement-base.png"]];
@@ -38,33 +40,16 @@
     drivingView.frame = CGRectMake(109, 40, 550, 550);
     drivingView.userInteractionEnabled = YES;
     
-    [self.view addSubview:drivingView ];
+    [self.view addSubview:drivingView];
     [drivingView release];
-
-    
-    if (!adultBase)
-    {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil];
-        adultBase = [storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-        [adultBase setModalPresentationStyle:UIModalPresentationFullScreen];
-        adultBase.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-
-    }
-    
-    [adultBase retain];
-
-    
 
 }
 
 
 - (void) touchesBegan:(NSSet*)touches withEvent:(UIEvent*) event
 {
-    if (!self.view.window)
-    {
-        return;
-    }
-    [romibo endStopDrivingTimer];
+    
+    [[appDelegate romibo] endStopDrivingTimer];
     
     CGPoint currentPt = [[touches anyObject] locationInView:drivingView];
     
@@ -95,16 +80,16 @@
     
     switch (quadrant) {
         case 1:
-            [romibo driveForward];
+            [[appDelegate romibo] driveForward];
             break;
         case 2:
-            [romibo driveLeft];
+            [[appDelegate romibo] driveLeft];
             break;
         case 3:
-            [romibo driveBackward];
+            [[appDelegate romibo] driveBackward];
             break;
         case 4:
-            [romibo driveRight];
+            [[appDelegate romibo] driveRight];
             break;
             
         default:
@@ -116,12 +101,7 @@
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (!self.view.window)
-    {
-        return;
-    }
-    
-    [romibo setStopDrivingTimer];
+    [[appDelegate romibo] setStopDrivingTimer];
 }
 
 
@@ -157,16 +137,15 @@
     }
     else
     {
-        //self.view.userInteractionEnabled = NO;
-        
+        //dismiss the lock view 
         [self dismissViewControllerAnimated:YES
                                  completion:^{
-                                     
-                                     if (![adultBase isBeingPresented])
-                                         [self presentModalViewController:adultBase animated:YES];
-                                     
+        
+                                    //dismiss ourself
+                                     UIViewController* vc = [self presentingViewController];
+                                     [vc dismissModalViewControllerAnimated:true];
+        
                                  }
-         
          ];
         
     }
@@ -175,15 +154,11 @@
 
 -(IBAction)buttonClicked:(id)sender
 {
-    if (!self.view.window)
-    {
-        return;
-    }
     
     NSString* btnText = [((UIButton *)sender).titleLabel text];
     NSLog(@"Button text: %@", btnText);
     
-    NSString* btnCommand = [romiboCommands objectForKey:btnText];
+    NSString* btnCommand = [[appDelegate romiboCommands] objectForKey:btnText];
     NSLog(@"Button command: %@", btnCommand);
     
     NSString* command;
@@ -194,7 +169,7 @@
     NSString* fullCommand = [NSString stringWithFormat:@"%@\r", command];
     NSLog(@"Full command: %@", fullCommand);
     
-    [romibo sendString:fullCommand];
+    [[appDelegate romibo] sendString:fullCommand];
 }
 
 
@@ -206,11 +181,6 @@
 
 - (void) dealloc
 {
-    [adultBase release];
-    adultBase = nil;
-    
-    [romibo release];
-    
     [super dealloc];
     
 }

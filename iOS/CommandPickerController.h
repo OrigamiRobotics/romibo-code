@@ -15,10 +15,10 @@
 
 @interface CommandPickerController : UITableViewController {
   
+    NSArray* commands;
 }
 
 @property (nonatomic, assign) id<CommandPickerDelegate> delegate;
-@property (nonatomic, retain) NSArray* commands;
 
 
 @end

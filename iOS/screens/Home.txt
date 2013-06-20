@@ -1,18 +1,19 @@
-nod,Nod
-bob,Bob
+Conversation I
 shalom.wav,Shalom
-how_are0.wav,How are you feeling
-i_hope_0.wav,I hope you feel better soon
-it_was_n.wav,It was nice talking to you
+my_name_.wav,My name is romibo
 it's_so_.wav,It's so nice to see you
-Hava_Nag.wav,Hava nagila
-In_the_M.wav,In the mood (glenn miller)
-Show_Me_.wav,Show me the way to go home
-Let_Me_C.wav,Let me call you sweetheart
-You_Are1.wav,You are my sunshine
-Bye_Bye_.wav,Bye bye blackbird
-could_y0.wav,Could you tell me more
-what_hap.wav,What happened next
-what_was.wav,What was that
+i_am_a_r.wav,I am a robot
+what_is_.wav,What is your name
+where_do.wav,Where do you live
+what_are.wav,What are your favorite activities
+how_are_.wav,How are you today
+how_are0.wav,How are you feeling
+what_do_.wav,What do you think
+yes.wav,Yes
+no.wav,No
 why_is_t.wav,Why is that
-thats_to.wav,Thats too bad
+ou_are_.wav,You are my friend
+happy.wav,Happy
+sad.wav,Sad
+confused.wav,Confused
+ro_mi_bo.wav,Ro mi bo

@@ -122,13 +122,13 @@
     }
 }
 
--(void)testDriveCmd:(int)startX:(int)startY:(int)x:(int)y
+-(void)testDriveCmd:(int)startX :(int)startY :(int)x :(int)y
 {
     NSString* dCmd = [NSString stringWithFormat:@"start %i %i drive %i %i\r", startX, startY, x, y];
     [self setDriveCmd:dCmd];
 }
 
--(void)sendDriveCmd:(int)x:(int)y
+-(void)sendDriveCmd:(int)x :(int)y
 {
     NSString* dCmd = [NSString stringWithFormat:@"drive %i %i\r", x, y];
     
@@ -137,7 +137,7 @@
     [self setDriveCmd:dCmd];
 }
 
--(void)sendEmoteCmd:(int)x:(int)y
+-(void)sendEmoteCmd:(int)x :(int)y
 {
     NSString* eCmd = [NSString stringWithFormat:@"emote %i %i\r", x, y];
     
@@ -146,7 +146,7 @@
     [self setEmoteCmd:eCmd];
 }
 
--(void)sendHeadTiltCmd:(int)x:(int)y
+-(void)sendHeadTiltCmd :(int)x :(int)y
 {
     NSString* tCmd = [NSString stringWithFormat:@"tilt %i %i\r", x, y];
     

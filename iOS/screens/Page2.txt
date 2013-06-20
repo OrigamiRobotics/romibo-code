@@ -1,0 +1,19 @@
+Conversation II
+maybe.wav,Maybe
+bless_yo.wav,Bless you
+could_y0.wav,Could you tell me more
+it's_so_.wav,It's so nice to see you
+it_was_n.wav,It was nice talking to you
+i_hope_0.wav,I hope you feel better soon
+maybe.wav,Maybe
+me_too.wav,Me too
+okay.wav,Okay
+nope.wav,Nope
+ooooo.wav,Ooooo
+sorry.wav,Sorry
+thank_yo.wav,Thank you
+thats_to.wav,Thats too bad
+what_was.wav,What was that
+will_you.wav,Will you pet me
+yes.wav,Yes
+goodbye.wav,Goodbye

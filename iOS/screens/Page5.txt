@@ -1,0 +1,19 @@
+Simon Says
+lets_spi.wav,Lets spin
+i_am_goi.wav,I am going to get you
+ready_or.wav,Ready or not here i come
+lets_pla.wav,Lets play hide and go seek
+you're_a.wav,You're awesome
+look_dow.wav,Look down
+look_lef.wav,Look left
+look_rig.wav,Look right
+look_up.wav,Look up
+down.wav,Down
+give_me_.wav,Give me a hug
+lets_mak.wav,Lets make silly sounds
+ooooo.wav,Ooooo
+omnomno0.wav,Omnomnomonom
+wheeee.wav,Wheeee
+please.wav,Please
+stomp_yo.wav,Stomp your feet
+wave_you.wav,Wave your hands

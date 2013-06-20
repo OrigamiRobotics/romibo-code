@@ -7,10 +7,11 @@
 //
 
 #import "CommandPickerController.h"
+#import "AppDelegate.h"
 
 @implementation CommandPickerController
 
-@synthesize delegate, commands;
+@synthesize delegate;
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -41,6 +42,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    AppDelegate* app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    commands = [app buttonLabels];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -175,6 +179,8 @@
 {
     commands = nil;
     self.delegate = nil;
+    
+    [super dealloc];
 }
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation EmotionNubView
 
-@synthesize cmdDelegate;
+@synthesize cmdDelegate, appDelegate;
 
 
 - (id)init
@@ -18,6 +18,7 @@
     if (self = [super initWithImage:[UIImage imageNamed:@"emotion-nub-02.png"]])
     {
         self.userInteractionEnabled = YES;
+        self.appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     }
     
     return self;
@@ -108,7 +109,7 @@
     emoteX = (emoteX - 169) * 0.59;
     emoteY = - (emoteY - 169) * 0.59;  //iOS origin is upper left instead of lower left
     
-    [cmdDelegate sendEmoteCmd:roundf(emoteX):roundf(emoteY)];
+    [[appDelegate romibo] sendEmoteCmd:roundf(emoteX):roundf(emoteY)];
 }
 
 

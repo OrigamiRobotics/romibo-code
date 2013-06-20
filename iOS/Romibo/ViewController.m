@@ -15,10 +15,13 @@
 #import "DrawPatternLockView.h"
 #import "DrawPatternLockViewController.h"
 #import "ChildBaseView.h"
+#import "ButtonScrollView.h"
+#import "AppDelegate.h"
+
 
 @implementation ViewController 
 
-//@synthesize commandPickerPopover;
+@synthesize appDelegate;
 
 - (void)didReceiveMemoryWarning
 {
@@ -36,112 +39,48 @@
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background-01.png"]];
     
     
-    romibo = [[Romibo alloc] init];
-    
     [self closePopup];
     
-    [self setupHeadTiltSubview];
-    [tNub setCmdDelegate:romibo];
     
-    [self setupDrivingSubview];
-    [dNub setCmdDelegate:romibo];
+    self.appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    //gathers the generic list of commands
-    [self setupRomiboCommands];
-    
-    //sets up buttons specified in screens
-    [self setupButtons];
     
     if (!childView)
     {
         childView = [[ChildBaseView alloc] initWithNibName:@"ChildBaseView" bundle:nil];
         childView.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-        
-        [childView setRomibo:romibo];
-        [childView setRomiboCommands:romiboCommands];
+       
     }
-
+    
+    [self setupButtonScrollView];
+   
+    [self setupHeadTiltSubview];
+    
+    [self setupDrivingSubview];
+    
 }
 
-
--(void)setupButtons
-{
-    NSString* screenPath = [[NSBundle mainBundle] pathForResource:@"Home" ofType:@"txt"];
-    
-    NSString* allCommands = [NSString stringWithContentsOfFile:screenPath encoding:NSUTF8StringEncoding error:NULL];
-    
-    NSArray* commandsArray = [allCommands componentsSeparatedByString:@"\n"];
-    
-    for (int i = 1; i < 19; i++)
-    {
-        NSString* command = [commandsArray objectAtIndex:i-1];
-        NSArray* commandFragments = [command componentsSeparatedByString:@","];
-        
-        if ([commandFragments count] < 2)
-        {
-            NSLog(@"Invalid command syntax: %@", command);
-            continue;
-        }
-        
-        NSString* cmd = [[commandFragments objectAtIndex:0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-        
-        NSString* label = [[commandFragments objectAtIndex:1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-        
-        if ([romiboCommands objectForKey:label] == nil)
-        {
-            [romiboCommands setObject:cmd forKey:label];
-            [buttonLabels addObject:label];
-        }
-        
-        UIButton* button = (UIButton*)[self.view viewWithTag:i];
-        [button setTitle:label forState:UIControlStateNormal];
-        
-        //NSLog(@"%@", [[button titleLabel] text]);
-    }
-}
-
--(void)setupRomiboCommands
+-(void)setupButtonScrollView
 {
     
-    NSString* commandPath = [[NSBundle mainBundle] pathForResource:@"RomiboCommands" ofType:@"txt"];
+    ButtonScrollView* buttonScrollController = [[ButtonScrollView alloc] initWithNibName:@"ButtonScrollView" bundle:[NSBundle mainBundle]];
     
-    NSString* allCommands = [NSString stringWithContentsOfFile:commandPath encoding:NSUTF8StringEncoding error:NULL];
+    buttonScrollController.view.frame = CGRectMake(0, 552, self.view.frame.size.width, self.view.frame.size.height);
     
-    NSArray* commandsArray = [allCommands componentsSeparatedByString:@"\n"];
     
-    romiboCommands = [[NSMutableDictionary alloc] init];
-    buttonLabels = [[NSMutableArray alloc] init];
+    [self addChildViewController:buttonScrollController];
     
-    for (int i = 0; i < commandsArray.count; i++)
-    {
-        NSString* command = [commandsArray objectAtIndex:i];
-        NSArray* commandFragments = [command componentsSeparatedByString:@","];
-        
-        if ([commandFragments count] < 2)
-        {
-            NSLog(@"Invalid command syntax: %@", command);
-            continue;
-        }
-        
-        NSString* cmd = [[commandFragments objectAtIndex:0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-        
-        NSString* label = [[commandFragments objectAtIndex:1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-        
-        [romiboCommands setObject:cmd forKey:label];
-        [buttonLabels addObject:label];
-    }
+    [self.view addSubview:buttonScrollController.view];
+    
 }
 
 
--(IBAction)handleLongPress:(UILongPressGestureRecognizer*)gesture
-{
-    UIButton* button = (UIButton *) gesture.view;
-    [self pickCommand:button];
-    
-}
+
 
 -(IBAction)changeShell:(UILongPressGestureRecognizer*)gesture
 {
+    NSLog(@"Changing shell...");
+    
     if (![childView isBeingPresented])
         [self presentModalViewController:childView animated:YES];
 
@@ -154,11 +93,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil
-    
-    [tNub release];
-    [dNub release];
-    [romibo release];
-    [cmdTimer release];
+ 
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -234,20 +169,16 @@
     [drivingView release];
 }
 
-- (IBAction)stopClicked:(id)sender {
-    
-    [romibo sendString:@"drive 0 0\r"];
-}
 
 -(IBAction)configClicked:(id)sender
 {
     ConfigViewController* configVC = [[ConfigViewController alloc] initWithNibName:@"ConfigViewController" bundle:nil];
     [configVC view];
     [configVC setPopDelegate:self];
-    [configVC configureButtonState:[romibo isConnected]];
+    [configVC configureButtonState:[[appDelegate romibo] isConnected]];
     
-    if ([romibo isConnected])
-        [configVC setTextBoxText:[romibo ipAddress]];
+    if ([[appDelegate romibo] isConnected])
+        [configVC setTextBoxText:[[appDelegate romibo] ipAddress]];
     else [configVC setTextBoxText:@"169.254.1.1"];      
     
     
@@ -263,19 +194,19 @@
 
 -(void)connectClicked:(NSString*)ipaddr
 {
-    [romibo connectToIP:ipaddr];
+    [[appDelegate romibo] connectToIP:ipaddr];
     [self closePopup];
 }
 
 -(void)disconnectClicked
 {
-    [romibo disconnect];
+    [[appDelegate romibo] disconnect];
     [self closePopup];
 }
 
 -(void)setConnectionStatus
 {
-    if (romibo.isConnected)
+    if ([[appDelegate romibo] isConnected])
         [connectionLabel setText:@"Connection OK"];
     else
         [connectionLabel setText:@"Not Connected"];
@@ -290,63 +221,6 @@
 }
 
 
--(IBAction)buttonClicked:(id)sender
-{
-    
-    NSString* btnText = [((UIButton *)sender).titleLabel text];
-    NSLog(@"Button text: %@", btnText);
-    
-    NSString* btnCommand = [romiboCommands objectForKey:btnText];
-    NSLog(@"Button command: %@", btnCommand);
-
-    NSString* command;
-    if ([btnCommand hasSuffix:@".wav"] || [btnCommand hasSuffix:@".WAV"])
-        command = [@"say " stringByAppendingString:btnCommand];
-    else command = btnCommand;
-    
-    NSString* fullCommand = [NSString stringWithFormat:@"%@\r", command];
-    NSLog(@"Full command: %@", fullCommand);
-    
-    [romibo sendString:fullCommand];
-}
-
-
--(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
-{
-    
-}
-
-- (void)commandSelected:(NSString *)cmd {
-    
-    [lastButtonClicked setTitle:cmd forState:UIControlStateNormal];
-    
-    [commandPickerPopover dismissPopoverAnimated:YES];
-}
-
--(void)pickCommand:(id)sender {
-    
-    lastButtonClicked = sender;
-    
-    if (commandPicker == nil) {
-                
-        commandPicker = [[CommandPickerController alloc] 
-                             initWithStyle:UITableViewStylePlain];
-        
-        [commandPicker setDelegate:self];
-        [commandPicker setCommands:buttonLabels];
-         
-        commandPickerPopover = [[UIPopoverController alloc] 
-                                    initWithContentViewController:commandPicker];  
-        
-    }
-    
-    [commandPickerPopover presentPopoverFromRect:[sender frame]
-                          inView:[self view]      
-                            permittedArrowDirections:UIPopoverArrowDirectionAny 
-                            animated:YES];
-
-}
-
 
 -(IBAction)happyClicked:(id)sender
 {
@@ -354,7 +228,7 @@
     NSString* emotion = @"emote 100 100\r";
     NSLog(@"Full command: %@", emotion);
     
-    [romibo sendString:emotion];
+    [[appDelegate romibo] sendString:emotion];
 }
 
 
@@ -365,7 +239,7 @@
     NSString* emotion = @"emote 100 -100\r";
     NSLog(@"Full command: %@", emotion);
     
-    [romibo sendString:emotion];
+    [[appDelegate romibo] sendString:emotion];
 }
 
 
@@ -375,7 +249,7 @@
     NSString* emotion = @"emote -100 100\r";
     NSLog(@"Full command: %@", emotion);
     
-    [romibo sendString:emotion];
+    [[appDelegate romibo] sendString:emotion];
 }
 
 
@@ -385,29 +259,19 @@
     NSString* emotion = @"emote -100 -100\r";
     NSLog(@"Full command: %@", emotion);
     
-    [romibo sendString:emotion];
+    [[appDelegate romibo] sendString:emotion];
 }
 
 - (void)dealloc {
     
-    [romibo release];
-    romibo = nil;
-    
     [connectionLabel release];
     connectionLabel = nil;
     
-    [cmdTimer invalidate];
-    cmdTimer = nil;
+    [tNub release];
+    tNub = nil;
     
-    [romiboCommands release];
-    romiboCommands = nil;
-    
-    [buttonLabels release];
-    buttonLabels = nil;
-    
-    [commandPicker release];
-    commandPicker = nil;
-    
+    [dNub release];
+    dNub = nil;
     
     [super dealloc];
 }

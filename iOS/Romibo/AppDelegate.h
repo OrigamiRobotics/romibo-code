@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Romibo.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (retain, nonatomic) NSMutableDictionary* romiboCommands;
+@property (retain, nonatomic) NSMutableArray* buttonLabels;
+@property (retain, nonatomic) Romibo* romibo;
+
+
+-(void)setupRomiboCommands;
 
 @end

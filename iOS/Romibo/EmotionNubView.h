@@ -8,15 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "CmdDelegate.h"
+#import "AppDelegate.h"
 
 @interface EmotionNubView : UIImageView
 {
     CGPoint currentPt;
+    
+    id appDelegate;
+
 }
 
 @property (nonatomic, retain) id <CmdDelegate> cmdDelegate;
 
--(void)calcEmoteCoordinates:(int)x:(int)y;
+@property (nonatomic, assign) id appDelegate;
+
+-(void)calcEmoteCoordinates:(int)x :(int)y;
 
 -(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;

@@ -1,0 +1,19 @@
+I Spy
+i_spy.wav,I spy
+i_spy_so.wav,I spy something
+black.wav,Black
+blue.wav,Blue
+green.wav,Green
+orange.wav,Orange
+purple.wav,Purple
+red.wav,Red
+white.wav,White
+yellow.wav,Yellow
+over_her.wav,Over here
+keep_gue.wav,Keep guessing
+guess_ag.wav,Guess again
+you_win.wav,You win
+you're_a.wav,You're awesome
+big.wav,Big
+small.wav,Small
+square.wav,Square

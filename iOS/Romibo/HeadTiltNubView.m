@@ -10,7 +10,7 @@
 
 @implementation HeadTiltNubView
 
-@synthesize  cmdDelegate;
+@synthesize  cmdDelegate, appDelegate;
 
 
 - (id)init
@@ -18,6 +18,7 @@
     if (self = [super initWithImage:[UIImage imageNamed:@"emotion-nub-02.png"]])
     {
         self.userInteractionEnabled = YES;
+        self.appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     }
     
     return self;
@@ -55,7 +56,7 @@
     
 }
 
--(void)calcDriveCoordinates:(int)x:(int)y
+-(void)calcDriveCoordinates :(int)x :(int)y
 {
     float fx = x;
     float fy = y;
@@ -71,7 +72,7 @@
     NSLog(@"%@", tCmd);
     
     
-    [cmdDelegate sendHeadTiltCmd:roundf(tiltX):roundf(tiltY)];
+    [[appDelegate romibo] sendHeadTiltCmd:roundf(tiltX):roundf(tiltY)];
     
 }
 
@@ -80,8 +81,7 @@
 {
     self.center = CGPointMake(CGRectGetMidX(self.superview.bounds), CGRectGetMidY(self.superview.bounds));
     
-    
-    [cmdDelegate sendHeadTiltCmd:50:50];
+    [[appDelegate romibo] sendHeadTiltCmd:50:50];
 }
 
 

@@ -12,7 +12,13 @@
 @interface DrivingNubView : UIImageView
 {
     CGPoint currentPt;
+    
+    id appDelegate;
+    
 }
+
+
+@property (nonatomic, assign) id appDelegate;
 
 @property (nonatomic, retain) id <CmdDelegate> cmdDelegate;
 
@@ -20,9 +26,9 @@
 -(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
 
--(void)calcDriveCoordinates:(int)x:(int)y;
--(int)getLarger:(int)i:(int)j;
--(int)getSmaller:(int)i:(int)j;
+-(void)calcDriveCoordinates :(int)x :(int)y;
+-(int)getLarger :(int)i :(int)j;
+-(int)getSmaller :(int)i :(int)j;
 
 @end
 

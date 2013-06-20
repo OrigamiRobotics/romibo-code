@@ -7,15 +7,21 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Romibo.h"
 
 @implementation AppDelegate
 
-@synthesize window = _window;
+@synthesize window = _window, romiboCommands, buttonLabels, romibo;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [self setupRomiboCommands];
+    
+    romibo = [[Romibo alloc] init];
+    
+    
     return YES;
 }
 							
@@ -58,6 +64,52 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+}
+
+-(void)setupRomiboCommands
+{
+    
+    NSString* commandPath = [[NSBundle mainBundle] pathForResource:@"RomiboCommands" ofType:@"txt"];
+    
+    NSString* allCommands = [NSString stringWithContentsOfFile:commandPath encoding:NSUTF8StringEncoding error:NULL];
+    
+    NSArray* commandsArray = [allCommands componentsSeparatedByString:@"\n"];
+    
+    romiboCommands = [[NSMutableDictionary alloc] init];
+    buttonLabels = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < commandsArray.count; i++)
+    {
+        NSString* command = [commandsArray objectAtIndex:i];
+        NSArray* commandFragments = [command componentsSeparatedByString:@","];
+        
+        if ([commandFragments count] < 2)
+        {
+            NSLog(@"Invalid command syntax: %@", command);
+            continue;
+        }
+        
+        NSString* cmd = [[commandFragments objectAtIndex:0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        
+        NSString* label = [[commandFragments objectAtIndex:1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        
+        [romiboCommands  setObject:cmd forKey:label];
+        [buttonLabels addObject:label];
+    }
+}
+
+-(void)dealloc
+{
+    [romiboCommands release];
+    romiboCommands = nil;
+    
+    [buttonLabels release];
+    buttonLabels = nil;
+    
+    [romibo release];
+    romibo = nil;
+    
+    [super dealloc];
 }
 
 @end

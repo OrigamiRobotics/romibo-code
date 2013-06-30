@@ -1,0 +1,20 @@
+Robot I Spy
+RB_big.wav,Rb big
+RB_black.wav,Rb black
+RB_blue.wav,Rb blue
+RB_green.wav,Rb green
+RB_guess.wav,Rb guess again
+RB_I Spy.wav,Rb i spy
+RB_keep_.wav,Rb keep guessing
+RB_Lets_.wav,Rb lets play i spy
+RB_No.wav,Rb no
+RB_orang.wav,Rb orange
+RB_purpl.wav,Rb purple
+RB_red.wav,Rb red
+RB_small.wav,Rb small
+RB_somet.wav,Rb something
+RB_white.wav,Rb white
+RB_yello.wav,Rb yellow
+RB_yes.wav,Rb yes
+RB_You_0.wav,Rb you win
+RB_you'r.wav,Rb you're close

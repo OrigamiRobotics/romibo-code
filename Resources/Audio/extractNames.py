@@ -33,7 +33,7 @@ def listFiles(path):
             
             buttonname = file[0:filelength-4] #removes .wav
             buttonname = buttonname.replace("_", " ")#removes underscore
-            buttonText = buttonname.capitalize()
+            buttonText = buttonname[3:].capitalize()
             #print("Button text: {0}".format(buttonText))
             
             allButtonNames.append(buttonText)

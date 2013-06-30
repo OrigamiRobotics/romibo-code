@@ -1,0 +1,18 @@
+Robot Story Telling
+RB_hehe0.wav,Rb hehe that's funny
+RB_How.wav,Rb how
+RB_I_do .wav,Rb i do not like
+RB_is_th.wav,Rb is that
+RB_Reall.wav,Rb really
+RB_tell0.wav,Rb tell me a story
+RB_tell1.wav,Rb tell me more
+RB_that'.wav,Rb that's interesting
+RB_was_t.wav,Rb was that
+RB_What0.wav,Rb what happens next
+RB_What.wav,Rb what
+RB_When.wav,Rb when
+RB_Where.wav,Rb where
+RB_Who_1.wav,Rb who 1
+RB_Why.wav,Rb why
+RB_Wow!.wav,Rb wow!
+RB_you'0.wav,Rb you're kidding

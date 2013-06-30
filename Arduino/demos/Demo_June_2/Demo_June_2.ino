@@ -33,10 +33,10 @@
 Parameters parameters( NULL, 0 );
 
 //REFAC: this should be in config file
-boolean shouldBlink = true;
-boolean shouldWander = true;
+boolean shouldBlink = false;
+boolean shouldWander = false;
 boolean shouldDrive = true;  //currently unused, all driving occurs during wandering
-boolean shouldRespondToTouch = true;
+boolean shouldRespondToTouch = false;
 boolean shouldBob = false;
 boolean shouldSway = false;
 

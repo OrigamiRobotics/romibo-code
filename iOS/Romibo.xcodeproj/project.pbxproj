@@ -72,8 +72,6 @@
 		748060BE16FE71820023A26B /* dot_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 748060BC16FE71820023A26B /* dot_off.png */; };
 		748060BF16FE71820023A26B /* dot_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 748060BD16FE71820023A26B /* dot_on.png */; };
 		74A6F86516CF0B1F00B99FF0 /* RomiboCommands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */; };
-		74AEBF3C177350C20015FEE2 /* Page5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74AEBF3B177350C10015FEE2 /* Page5.txt */; };
-		74AEBF3E177350E40015FEE2 /* Page6.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74AEBF3D177350E40015FEE2 /* Page6.txt */; };
 		74D1A81B170643BD007E8CF9 /* ActionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A819170643BD007E8CF9 /* ActionButton.png */; };
 		74D1A81D1706441C007E8CF9 /* ArrowDepressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A81C1706441C007E8CF9 /* ArrowDepressed.png */; };
 		74D1A822170BA819007E8CF9 /* Arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A81E170BA819007E8CF9 /* Arrow_left.png */; };
@@ -186,8 +184,6 @@
 		748060BC16FE71820023A26B /* dot_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dot_off.png; path = imgs/dot_off.png; sourceTree = "<group>"; };
 		748060BD16FE71820023A26B /* dot_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dot_on.png; path = imgs/dot_on.png; sourceTree = "<group>"; };
 		74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RomiboCommands.txt; sourceTree = "<group>"; };
-		74AEBF3B177350C10015FEE2 /* Page5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Page5.txt; path = screens/Page5.txt; sourceTree = "<group>"; };
-		74AEBF3D177350E40015FEE2 /* Page6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Page6.txt; path = screens/Page6.txt; sourceTree = "<group>"; };
 		74D1A819170643BD007E8CF9 /* ActionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ActionButton.png; path = imgs/ActionButton.png; sourceTree = "<group>"; };
 		74D1A81C1706441C007E8CF9 /* ArrowDepressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ArrowDepressed.png; path = imgs/ArrowDepressed.png; sourceTree = "<group>"; };
 		74D1A81E170BA819007E8CF9 /* Arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow_left.png; path = imgs/Arrow_left.png; sourceTree = "<group>"; };
@@ -286,8 +282,6 @@
 		63DBAFC014B0126D00EAD344 = {
 			isa = PBXGroup;
 			children = (
-				74AEBF3D177350E40015FEE2 /* Page6.txt */,
-				74AEBF3B177350C10015FEE2 /* Page5.txt */,
 				7419372F17691B180012A630 /* screens */,
 				74D1A82A170F5BDE007E8CF9 /* RomiboAppIcon.png */,
 				74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */,
@@ -527,8 +521,6 @@
 				74193725175E777D0012A630 /* ButtonPage.xib in Resources */,
 				7419372A1767A09A0012A630 /* ButtonScrollView.xib in Resources */,
 				7419373017691B180012A630 /* screens in Resources */,
-				74AEBF3C177350C20015FEE2 /* Page5.txt in Resources */,
-				74AEBF3E177350E40015FEE2 /* Page6.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,6 +703,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -727,6 +720,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -809,6 +803,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos6.1;
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};

@@ -1,0 +1,18 @@
+Robot Songs and Dance
+RB_dance.wav,Rb dance with me
+RB_Do_wh.wav,Rb do what i do
+RB_do_yo.wav,Rb do you know this one
+RB_do_y0.wav,Rb do you know this
+RB_lets1.wav,Rb lets sing songs
+RB_loude.wav,Rb louder!
+RB_quiet.wav,Rb quieter
+RB_sing_.wav,Rb sing me a
+RB_that0.wav,Rb that's my favorite!
+RB_You_a.wav,Rb you are awesome!
+itsy_bit.wav,Itsy bitsy spider
+little_m.wav,Little miss muffet
+old_macd.wav,Old macdonald
+the_farm.wav,The farmer in the dell(complete)
+the_far0.wav,The farmer in the dell(short)
+twinkle.wav,Twinkle
+You_Are1.wav,You are my sunshine

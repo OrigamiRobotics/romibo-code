@@ -1,0 +1,18 @@
+Story Telling
+RB_Who_1.wav,Who 1
+RB_What.wav,What
+RB_Where.wav,Where
+RB_When.wav,When
+RB_Why.wav,Why
+RB_How.wav,How
+RB_is_th.wav,Is that
+RB_was_t.wav,Was that
+RB_tel0.wav,Tell me more
+RB_Wow!.wav,Wow!
+RB_that'.wav,That's interesting
+RB_I_do_.wav,I do not like
+RB_hehe_.wav,Hehe that's funny!
+RB_Reall.wav,Really
+RB_you0.wav,You're kidding
+RB_tell_.wav,Tell me a story
+RB_Wha11.wav,What happens next

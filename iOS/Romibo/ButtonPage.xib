@@ -438,10 +438,13 @@
 						<bool key="IBUIOpaque">NO</bool>
 						<int key="IBUITag">18</int>
 						<reference key="IBUIGestureRecognizers" ref="0"/>
+						<object class="IBUIAccessibilityConfiguration" key="IBUIAccessibilityConfiguration">
+							<string key="IBUIAccessibilityLabel">Wow!</string>
+						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUINormalTitle">Thats too bad</string>
+						<string key="IBUINormalTitle">Wow!</string>
 						<reference key="IBUIHighlightedTitleColor" ref="393126112"/>
 						<reference key="IBUINormalTitleColor" ref="393126112"/>
 						<reference key="IBUINormalTitleShadowColor" ref="224182980"/>
@@ -455,6 +458,7 @@
 						<string key="NSFrame">{{20, 364}, {504, 21}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -1175,6 +1179,7 @@
 						<reference key="object" ref="275697060"/>
 						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="766721923"/>
+						<string key="objectName">Button - Wow!</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">245</int>

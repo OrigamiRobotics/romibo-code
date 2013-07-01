@@ -45,9 +45,9 @@ def listFiles(path):
 
                 if (shortFileExists(newFileName)):
 
-                    for i in range(0,9):
+                    for i in range(0,100):
 
-                        newFileName = file[0:7]
+                        newFileName = file[0:6]
                         newFileName += str(i)
 
                         if (not(shortFileExists(newFileName))):

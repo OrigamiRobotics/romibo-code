@@ -14,79 +14,73 @@ RB_Berke.wav,Berkelium
 RB_big.wav,Big
 RB_black.wav,Black
 RB_blue.wav,Blue
+RB_blue_.wav,Blue 1
 RB_Can_y.wav,Can you draw that
-RB_cat.wav,Cat
 RB_Cesiu.wav,Cesium
 RB_China.wav,China
 RB_Chlor.wav,Chloride
 RB_clap_.wav,Clap your hands
-RB_climb.wav,Climb the tree
 RB_color.wav,Color
+RB_Could.wav,Could you draw
 RB_cross.wav,Cross a robot with a tractor
-RB_cros0.wav,Cross the road
-RB_dance.wav,Dance with me
-RB_Do_wh.wav,Do what i do
-RB_do_yo.wav,Do you know this
-RB_do_y0.wav,Do you know this one
-RB_dog.wav,Dog
 RB_down.wav,Down
 RB_Draw_.wav,Draw a tree
-RB_Draw0.wav,Draw me a car
-RB_Draw1.wav,Draw me a costume
-RB_Draw2.wav,Draw me a friend
-RB_Draw3.wav,Draw me a hat
-RB_Draw4.wav,Draw me on the moon
-RB_Draw5.wav,Draw me the sky
-RB_Draw6.wav,Draw my house
-RB_Draw7.wav,Draw something  all the colors 
-RB_Draw8.wav,Draw the land
-RB_Draw8.wav,Draw the water
+RB_Dra0.wav,Draw me a car
+RB_Dra1.wav,Draw me a costume
+RB_Dra2.wav,Draw me a friend
+RB_Dra3.wav,Draw me a hat
+RB_Dra4.wav,Draw me glasses
+RB_Dra5.wav,Draw me on the moon
+RB_Dra6.wav,Draw me the sky
+RB_Dra7.wav,Draw my house
+RB_Dra8.wav,Draw someone else
+RB_Dra9.wav,Draw something  all the colors 
+RB_Dra10.wav,Draw the land
+RB_Dra11.wav,Draw the water
 RB_Ecuad.wav,Ecuador
 RB_Egypt.wav,Egypt
 RB_Engla.wav,England
 RB_food.wav,Food
-RB_frog.wav,Frog
 RB_Germa.wav,Germany
 RB_Gold.wav,Gold
 RB_Great.wav,Great job
+RB_Gre0.wav,Great job ian!
 RB_green.wav,Green
+RB_gre1.wav,Green 1
 RB_guess.wav,Guess again
 RB_hand.wav,Hand
 RB_He_wa.wav,He was crashing his hard drive
-RB_He_w0.wav,He was data mining
+RB_He_0.wav,He was data mining
 RB_Heavy.wav,Heavy metal
 RB_HeHe.wav,Hehe
 RB_hehe_.wav,Hehe that's funny!
-RB_hehe0.wav,Hehe that's funny
 RB_Heliu.wav,Helium
 RB_Hello.wav,Hello 1
 RB_How.wav,How
 RB_I'll_.wav,I'll see you next time
 RB_I'm__.wav,I'm    tired   
 RB_I_do_.wav,I do not like
-RB_I_don.wav,I don't know
 RB_I_hat.wav,I hate telling noble gases jokes 
 RB_I_lik.wav,I like that!
+RB_I_loo.wav,I look awesome!
 RB_I_nee.wav,I need to charge my batteries
 RB_I_Spy.wav,I spy
-RB_If_yo.wav,"If you can't helium, or curium, then barium"
+RB_If_yo.wav,"If you can't helium, or curium, then"
 RB_India.wav,India
 RB_is_th.wav,Is that
-RB_Is_t0.wav,Is there anything in the tree
+RB_Is_0.wav,Is there anything in the tree
+RB_Is_1.wav,Is there anything in the water
 RB_It_wa.wav,It was upstairs
 RB_J.wav,J
 RB_jump_.wav,Jump up and down
-RB_just_.wav,Just kidding
 RB_keep_.wav,Keep guessing
-RB_knock.wav,Knock knock
 RB_left.wav,Left
-RB_Lets_.wav,Lets play i spy
-RB_Lets0.wav,Lets play simon says
-RB_lets1.wav,Lets sing songs
-RB_lets2.wav,Lets try again
+RB_Lets_.wav,Lets play again!
+RB_Let0.wav,Lets play i spy
+RB_Let1.wav,Lets play simon says
+RB_let2.wav,Lets try again
 RB_look.wav,Look
 RB_look_.wav,Look to your
-RB_loude.wav,Louder!
 RB_Mammo.wav,Mammoth caves
 RB_me_to.wav,Me too
 RB_Mercu.wav,Mercury
@@ -99,28 +93,25 @@ RB_No.wav,No
 RB_no_1.wav,No 1
 RB_On_wh.wav,On what continent
 RB_orang.wav,Orange
+RB_ora0.wav,Orange 1
 RB_ouch.wav,Ouch
-RB_owl.wav,Owl
 RB_Penns.wav,Pennsylvania
 RB_place.wav,Place to go
 RB_point.wav,Point
 RB_purpl.wav,Purple
-RB_quiet.wav,Quieter
+RB_pur0.wav,Purple 1
 RB_R2_De.wav,R2 detour
 RB_R2_Do.wav,R2 doo doo
 RB_raise.wav,Raise your
 RB_Reall.wav,Really
 RB_red.wav,Red
+RB_Red_1.wav,Red 1
 RB_Rib-b.wav,Rib-bot
 RB_right.wav,Right
-RB_robot.wav,Robot
-RB_Robo0.wav,Robot driver's license
-RB_robo1.wav,Robot that takes the longest way
-RB_Romee.wav,Romeebo
+RB_Robot.wav,Robot driver's license
+RB_rob0.wav,Robot that takes the longest way
 RB_Russi.wav,Russia
-RB_say_t.wav,Say to thuh
 RB_Simon.wav,Simon says
-RB_sing_.wav,Sing me a
 RB_sit_d.wav,Sit down
 RB_small.wav,Small
 RB_somet.wav,Something
@@ -129,15 +120,13 @@ RB_spin_.wav,Spin around
 RB_stand.wav,Stand up
 RB_stomp.wav,Stomp your feet
 RB_Stron.wav,Strontium
-RB_tell_.wav,Tell me a joke
-RB_tell0.wav,Tell me a story
-RB_tell1.wav,Tell me more
+RB_tell_.wav,Tell me a story
+RB_tel0.wav,Tell me more
 RB_Texas.wav,Texas
 RB_that'.wav,That's interesting
-RB_that0.wav,That's my favorite!
 RB_The_a.wav,The atomosphere is mostly   
 RB_The_c.wav,The chicket was out of order
-RB_The_0.wav,The coldest temperature on earth
+RB_The0.wav,The coldest temperature on earth
 RB_The_l.wav,The largest of body of water on earth
 RB_The_m.wav,The most common rare gas in the atmosphere
 RB_The_P.wav,The pacific ocean
@@ -147,54 +136,54 @@ RB_thing.wav,Thing
 RB_up.wav,Up
 RB_was_t.wav,Was that
 RB_What'.wav,What's silver and lies in the grass
-RB_What0.wav,What's the important rule in chemistry
-RB_What1.wav,What's your name
+RB_Wha0.wav,What's the important rule in chemistry
+RB_Wha1.wav,What's your name
 RB_What.wav,What
 RB_What_.wav,What am i
-RB_What2.wav,What are the longest caves
-RB_What3.wav,What did i do
-RB_what4.wav,What did the
-RB_What5.wav,What did the robot frog say
-RB_What6.wav,What do you call a clown who's in jail
-RB_What7.wav,What do you call a driving robot
-RB_What8.wav,What do you do with a sick chemist
-RB_What8.wav,What element checks for fires
-RB_What8.wav,What element will be liquid at absolute 0
-RB_What8.wav,What happens next
-RB_What8.wav,What is a robot's favorite type of music
-RB_What8.wav,What is chalk made of
-RB_What8.wav,What is happening in the picture
-RB_What8.wav,What is the capital
-RB_What8.wav,What is the rarest element on earth
-RB_What8.wav,What is your favorite
-RB_What8.wav,What letter is not in the periodic table
+RB_Wha2.wav,What are the longest caves
+RB_wha3.wav,What are we
+RB_Wha4.wav,What did i do
+RB_Wha5.wav,What did the robot frog say
+RB_Wha6.wav,What do you call a clown who's in jail
+RB_Wha7.wav,What do you call a driving robot
+RB_Wha8.wav,What do you do with a sick chemist
+RB_Wha9.wav,What element checks for fires
+RB_Wha10.wav,What element will be liquid at absolute 0
+RB_Wha11.wav,What happens next
+RB_Wha12.wav,What is a robot's favorite type of music
+RB_Wha13.wav,What is chalk made of
+RB_Wha14.wav,What is happening in the picture
+RB_Wha15.wav,What is that 
+RB_Wha16.wav,What is the capital
+RB_Wha17.wav,What is the rarest element on earth
+RB_Wha18.wav,What is their name
+RB_Wha19.wav,What is your favorite
+RB_Wha20.wav,What letter is not in the periodic table
 RB_When.wav,When
 RB_When_.wav,When does a robot need training
 RB_Whene.wav,Whenever he gets rusty!
 RB_Where.wav,Where
+RB_Whe0.wav,Where am i 
 RB_Which.wav,Which element's atoms have the largest volume
-RB_Whic0.wav,Which element is a liquid at room temp
-RB_Whic1.wav,Which element makes fireworks red
-RB_Whic2.wav,Which element makes the thinnest wires
-RB_Whic3.wav,Which halogen is the most in nature
+RB_Whi0.wav,Which element is a liquid at room temp
+RB_Whi1.wav,Which element makes fireworks red
+RB_Whi2.wav,Which element makes the thinnest wires
+RB_Whi3.wav,Which halogen is the most in nature
 RB_white.wav,White
-RB_who's.wav,Who's there
-RB_who.wav,Who
 RB_Who_1.wav,Who 1
+RB_Who_i.wav,Who is it 
 RB_Why.wav,Why
 RB_Why_c.wav,Why couldn't the robot go to the party
-RB_why_d.wav,Why did the
-RB_Why_0.wav,Why did the robot cross the road
+RB_Why_d.wav,Why did the robot cross the road
 RB_Why_i.wav,Why is that
 RB_Why_w.wav,Why was the robot angry
-RB_Why_1.wav,Why was the robot digging a hole
+RB_Why0.wav,Why was the robot digging a hole
 RB_Wow!.wav,Wow!
 RB_yello.wav,Yellow
+RB_yel0.wav,Yellow 1
 RB_yes.wav,Yes
 RB_yes_1.wav,Yes 1
 RB_you'r.wav,You're close
-RB_you'0.wav,You're kidding
-RB_You_a.wav,You are awesome!
-RB_you_t.wav,You tell me
+RB_you0.wav,You're kidding
 RB_You_w.wav,You win!
-RB_You_0.wav,You win
+RB_You1.wav,You win

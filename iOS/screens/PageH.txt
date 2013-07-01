@@ -1,0 +1,19 @@
+Chemistry Trivia I
+RB_Wha20.wav,What letter is not in the periodic table
+RB_J.wav,J
+RB_Wha17.wav,What is the rarest element on earth
+RB_Berke.wav,Berkelium
+RB_Wha9.wav,What element checks for fires
+RB_Ameri.wav,Americium
+RB_Which.wav,Which element's atoms have the largest volume
+RB_Cesiu.wav,Cesium
+RB_Whi3.wav,Which halogen is the most in nature
+RB_Chlor.wav,Chloride
+RB_Whi1.wav,Which element makes fireworks red
+RB_Stron.wav,Strontium
+RB_Whi2.wav,Which element makes the thinnest wires
+RB_Gold.wav,Gold
+RB_Whi0.wav,Which element is a liquid at room temp
+RB_Mercu.wav,Mercury
+RB_Wha10.wav,What element will be liquid at absolute 0
+RB_Heliu.wav,Helium

@@ -122,6 +122,48 @@ void execute_command( int argc, char **argv )
 	{
 	  Romibo.playWavFile(argv[1]);
 	  sound = argv[1];
+
+	  
+
+	  if ( (strstr(sound, "Yes_2.wav") != NULL ) ||
+	       (strstr(sound, "up_and_d.wav") != NULL ))
+	    {
+	      Romibo.bob();
+	    }
+
+	  if ( strstr(sound, "no_1.wav") != NULL )
+	    {
+	      Romibo.sway();
+	    }
+
+	   if ( strstr(sound, "Spin_Aro.wav") != NULL )
+	    {
+	      Romibo.spinInPlace(100);
+	    }
+
+	   if ( (strstr(sound, "right_an.wav") != NULL ) ||
+	        (strstr(sound, "side_to_.wav") != NULL ) )
+	    {
+	      Romibo.sway();
+	    }
+
+	   if ( strstr(sound, "Spin_and.wav") != NULL )
+	    {
+	      Romibo.spinInPlace(100);
+	      Romibo.bob();
+	    }
+
+	   if ( strstr(sound, "Head_Rol.wav") != NULL )
+	    {
+	      Romibo.sway();
+	      Romibo.bob();
+
+	      //Romibo.headRoll();
+	    }
+
+
+
+
 	}
 
 	else

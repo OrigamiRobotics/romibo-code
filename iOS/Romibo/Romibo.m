@@ -102,6 +102,8 @@
         {
             [self setLastSendDriveCmd:driveCmd];
             [self sendString:driveCmd];
+            
+            NSLog(@"driving %@", driveCmd);
         }
     }
     

@@ -348,7 +348,7 @@ void beenTouched()
   //half the time, whistle when petted 
   if (r < 51)
   {
-    Romibo.playSoundNamed("BECKON3"); 
+    Romibo.playSoundNamed("S1"); 
   }
     
 }
@@ -362,4 +362,5 @@ void blinkRandomly()
    
    blinkTimer.after(blinkInterval, blinkRandomly);
 }
+
 

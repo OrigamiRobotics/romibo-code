@@ -1,0 +1,7 @@
+Directions
+Up 1.wav,Up 1
+Down 1.wav,Down 1
+Behind.wav,Behind
+Under.wav,Under
+Left 1.wav,Left 1
+Right 1.wav,Right 1

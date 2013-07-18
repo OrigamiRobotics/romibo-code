@@ -1,0 +1,7 @@
+Phrases
+Please.wav,Please
+Thank yo.wav,Thank you!
+Hi.wav,Hi
+Bye.wav,Bye
+Yes 2.wav,Yes 2
+no_1.wav,No

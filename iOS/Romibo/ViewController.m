@@ -67,6 +67,7 @@
     
     buttonScrollController.view.frame = CGRectMake(0, 552, self.view.frame.size.width, self.view.frame.size.height);
     
+    [buttonScrollController loadButtonPages:@"screens"];
     
     [self addChildViewController:buttonScrollController];
     

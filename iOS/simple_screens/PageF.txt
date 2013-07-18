@@ -1,0 +1,7 @@
+Feelings
+Happy!.wav,Happy!
+Sad.wav,Sad
+Angry.wav,Angry
+Love.wav,Love
+Silly.wav,Silly
+I don't .wav,I don't know 1

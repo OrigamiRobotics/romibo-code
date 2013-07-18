@@ -307,6 +307,9 @@ public:
   void tiltHeadForward(void);
   void tiltHeadBack(void);
   void sway(void);
+  void headTiltYes(void);
+  void headTiltNo(void);
+  void headRoll(void);
 
   void bob(void);
 

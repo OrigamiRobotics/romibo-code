@@ -1,17 +1,15 @@
 //
-//  ButtonPage.h
+//  SimpleButtonPage.h
 //  Romibo
 //
-//  Created by jmcmillan on 6/4/13.
+//  Created by jmcmillan on 7/9/13.
 //
 //
 
 #import <UIKit/UIKit.h>
 #import "CommandPickerController.h"
-#import "AppDelegate.h"
-#import "ButtonPageBase.h"
 
-@interface ButtonPage : UIViewController <CommandPickerDelegate>
+@interface SimpleButtonPage : UIViewController
 {
     IBOutlet UILabel *nameLabel;
     
@@ -24,15 +22,12 @@
 
 @property (nonatomic, assign) id appDelegate;
 
--(void)setupButtons:(NSString*)fileName;
--(void)setupPage:(NSString*)filePath;
+-(void)setupButtons:(NSString*)fileName:(NSString*)directory;
+-(void)setupPage:(NSString*)filePath:(NSString*)directory;
 
 @property (retain, nonatomic) NSString* pageName;
 
-//handles the 16 action buttons
+//handles the 6 action buttons
 -(IBAction)buttonClicked:(id)sender;
--(IBAction)handleLongPress:(id)sender;
--(void)pickCommand:(id)sender;
-
 
 @end

@@ -8,6 +8,8 @@
 
 #import "ChildBaseView.h"
 #import "CmdDelegate.h"
+#import "ButtonScrollView.h"
+
 
 @implementation ChildBaseView
 
@@ -35,15 +37,46 @@
     
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background-02.png"]];
     
-    drivingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"movement-base.png"]];
     
-    drivingView.frame = CGRectMake(109, 40, 550, 550);
-    drivingView.userInteractionEnabled = YES;
+    ButtonScrollView* buttonScrollController = [[ButtonScrollView alloc] initWithNibName:@"ButtonScrollView" bundle:[NSBundle mainBundle]];
     
-    [self.view addSubview:drivingView];
-    [drivingView release];
+    buttonScrollController.view.frame = CGRectMake(0, 552, self.view.frame.size.width, self.view.frame.size.height);
+    
+    [buttonScrollController loadButtonPages:@"simple_screens"];
+    
+    [self addChildViewController:buttonScrollController];
+    
+    [self.view addSubview:buttonScrollController.view];
+    
 
 }
+
+-(void)driveForward
+{
+    
+    [[appDelegate romibo] driveForward];
+    [[appDelegate romibo] setStopDrivingTimer];
+    
+}
+-(void)driveBackward
+{
+    
+    [[appDelegate romibo] driveBackward];
+    [[appDelegate romibo] setStopDrivingTimer];
+}
+-(void)driveRight
+{
+    
+    [[appDelegate romibo] driveRight];
+    [[appDelegate romibo] setStopDrivingTimer];
+}
+-(void)driveLeft
+{
+    
+    [[appDelegate romibo] driveLeft];
+    [[appDelegate romibo] setStopDrivingTimer];
+}
+
 
 
 - (void) touchesBegan:(NSSet*)touches withEvent:(UIEvent*) event

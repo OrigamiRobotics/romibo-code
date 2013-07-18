@@ -314,16 +314,16 @@ RomiboRobot::RomiboRobot()
     // Configure servo calibration.
 #if (ROMIBO_ELECTRONICS_MAJOR_REV==1) || (ROMIBO_ELECTRONICS_MAJOR_REV==2)
     front_max = 100;   // position closest to the neck
-    front_min =  50;   // position closest to the head structure
+    front_min =  10;   // position closest to the head structure
     back_min  = 100;   // position closest to the neck
     back_max  = 150;   // position closest to the head structure
     eye_min   =  20;   // most wide-open position
     eye_max   =  90;   // most closed position
 #endif
 #if (ROMIBO_ELECTRONICS_MAJOR_REV==3)
-    front_max = 150;   // position closest to the neck
-    front_min = 20;   // position closest to the head structure
-    back_min  = 20;   // x-axis
+    front_max = 150;   // lean backwards
+    front_min = 0;   // position closest to the head structure
+    back_min  = 20;   // x-axis (side to side)
     back_max  = 150;   // x-axis
     eye_min   =  0;   // most wide-open position  *** Caz *** was playing around with the eyelid calibration a bit
     eye_max   = 150;   // most closed position	*** Caz *** hard to know what these should be without a defined servo linkage length
@@ -657,7 +657,23 @@ void RomiboRobot::drive(int leftSpeed, int rightSpeed)
 void RomiboRobot::stop(void)               { drive( 0, 0 );  }
 void RomiboRobot::driveForward(int speed)  { drive(  speed,  speed ); }
 void RomiboRobot::driveBackward(int speed) { drive( -speed, -speed ); }
-void RomiboRobot::spinInPlace(int speed)   { drive( -speed,  speed ); }
+
+void RomiboRobot::spinInPlace(int speed)   
+{ 
+
+  int t = 0;
+
+  while (t < 3000)
+   {
+     Console.println(t);
+       drive( -speed,  speed ); 
+      t++;
+     }
+  drive(0,0);
+
+}
+
+
 
 void RomiboRobot::driveTowardLight(int speed) { }
 
@@ -684,8 +700,6 @@ void RomiboRobot::setHeadPosition( int front_position, int back_position )
   //tilt_servo[ ROMIBO_FRONT_SERVO ].write( front_position );
   //tilt_servo[ ROMIBO_BACK_SERVO  ].write( back_position );
    
-
-
   int yAxis = map( constrain(front_position,0,100), 0, 100, front_min, front_max);
   int xAxis = map( constrain(back_position,0,100), 0, 100, back_min, back_max);
 
@@ -762,58 +776,128 @@ void RomiboRobot::tiltHeadBack(void)
 void RomiboRobot::sway(void)
 {
 
-   int nextX = back_pos;
+  int nextX = 50;
+  setHeadPosition(50,50);
 
   while (nextX < 100)
    {
-     //Console.print("Setting head to "); Console.println(nextX);
-     setHeadPosition(front_pos,nextX);
+     Console.print("Setting head to "); Console.println(nextX);
+     setHeadPosition(50,nextX);
      nextX = nextX + 1;
-     delay(15);
+     delay(6);
    } 
 
-  int midPoint = round((back_max - back_min)/2);
 
-  while (nextX > 50)
+  while (nextX > 1 )
+   {
+     Console.print("Setting head to "); Console.println(nextX);
+     setHeadPosition(50,nextX);
+     nextX = nextX - 1;
+     delay(6);
+   } 
+
+
+  //int midPoint = round((back_max - back_min)/2);
+
+  while (nextX < 50)
     {
-      //Console.print("Setting head to "); Console.println(nextX);
-      setHeadPosition(front_pos, nextX);
-      nextX = nextX - 1;
-      delay(15);
+      Console.print("Setting head to "); Console.println(nextX);
+      setHeadPosition(50, nextX);
+      nextX = nextX + 1;
+      delay(6);
     }
 
 
-
 }
+
 
 
 void RomiboRobot::bob(void)
 {
 
- int nextY = front_pos;
+ int nextY = 50;
 
   while (nextY < 100)
    {
  Console.print("Setting head to "); Console.println(nextY);
-     setHeadPosition(nextY,back_pos);
+     setHeadPosition(nextY,50);
      nextY = nextY + 1;
-     delay(10);
+     delay(6);
    } 
 
-  int midPoint = round((front_max - front_min)/2);
-
-  while (nextY > 50)
-    {
+  while (nextY > 1)
+   {
  Console.print("Setting head to "); Console.println(nextY);
-      setHeadPosition(nextY, back_pos);
-      nextY = nextY - 1;
-      delay(10);
-    }
+     setHeadPosition(nextY,50);
+     nextY = nextY - 1;
+     delay(6);
+   } 
+
+  while (nextY < 50)
+   {
+ Console.print("Setting head to "); Console.println(nextY);
+     setHeadPosition(nextY,50);
+     nextY = nextY + 1;
+     delay(6);
+   } 
 
 
 }
 
+void RomiboRobot::headRoll(void)
+{
+  setHeadPosition(50,50);
 
+  int nextX = 50;
+
+  while (nextX > 0)
+   {
+     Console.print("Setting head to "); Console.println(nextX);
+     setHeadPosition(50,nextX);
+     nextX = nextX - 1;
+     delay(6);
+   } 
+
+  int nextY = 50;
+
+  while (nextY > 0 )
+   {
+     Console.print("Setting head to "); Console.println(nextX);
+     setHeadPosition(nextY,nextX);
+     nextX = nextX - 1;
+     delay(6);
+   } 
+
+ while (nextX < 100)
+   {
+     Console.print("Setting head to "); Console.println(nextX);
+     setHeadPosition(nextY,nextX);
+     nextX = nextX + 1;
+     delay(6);
+   } 
+
+  while (nextY < 100 )
+   {
+     Console.print("Setting head to "); Console.println(nextX);
+     setHeadPosition(nextY,nextX);
+     nextX = nextX + 1;
+     delay(6);
+   } 
+
+  setHeadPosition(50,50);
+
+
+}
+
+void headTiltYes(void)
+{
+
+}
+  
+void headTiltNo(void)
+{
+
+}
 
 
 /****************************************************************/

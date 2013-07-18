@@ -1,0 +1,7 @@
+Food
+Hamburge.wav,Hamburger
+Pancakes.wav,Pancakes
+Orange J.wav,Orange juice
+Spaghett.wav,Spaghetti!
+Pizza!.wav,Pizza!
+Meat bal.wav,Meat balls

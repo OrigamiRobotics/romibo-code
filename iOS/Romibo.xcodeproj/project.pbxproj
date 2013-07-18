@@ -61,9 +61,17 @@
 		743873471759579F0069EEC9 /* mood-surprised.png in Resources */ = {isa = PBXBuildFile; fileRef = 743873431759579F0069EEC9 /* mood-surprised.png */; };
 		743873481759579F0069EEC9 /* mood-happy.png in Resources */ = {isa = PBXBuildFile; fileRef = 743873441759579F0069EEC9 /* mood-happy.png */; };
 		743873491759579F0069EEC9 /* mood-angry.png in Resources */ = {isa = PBXBuildFile; fileRef = 743873451759579F0069EEC9 /* mood-angry.png */; };
+		743A1417178CA6E5007AAEB5 /* SimpleButtonPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 743A1415178CA6E5007AAEB5 /* SimpleButtonPage.m */; };
+		743A1418178CA6E5007AAEB5 /* SimpleButtonPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 743A1416178CA6E5007AAEB5 /* SimpleButtonPage.xib */; };
+		743A141B178CA7E5007AAEB5 /* ButtonPageBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 743A141A178CA7E5007AAEB5 /* ButtonPageBase.m */; };
+		743A141D178CAF1C007AAEB5 /* simple_screens in Resources */ = {isa = PBXBuildFile; fileRef = 743A141C178CAF1C007AAEB5 /* simple_screens */; };
+		743A141F178CB334007AAEB5 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 743A141E178CB334007AAEB5 /* MainStoryboard_iPad.storyboard */; };
+		743A1472178E15D7007AAEB5 /* arrow_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 743A146E178E15D6007AAEB5 /* arrow_up.png */; };
+		743A1473178E15D7007AAEB5 /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 743A146F178E15D6007AAEB5 /* arrow_right.png */; };
+		743A1474178E15D7007AAEB5 /* arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 743A1470178E15D6007AAEB5 /* arrow_down.png */; };
+		743A1475178E15D7007AAEB5 /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 743A1471178E15D6007AAEB5 /* arrow_left.png */; };
 		745DD6C81711FEF800A14AD2 /* ConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6390519C14B69403007AB7CC /* ConfigViewController.xib */; };
 		7470808C16CF1D650007158D /* CommandPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7470808B16CF1D650007158D /* CommandPickerController.m */; };
-		7480608216FCE3C50023A26B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63DBAFE414B0126D00EAD344 /* MainStoryboard_iPad.storyboard */; };
 		7480608616FD31270023A26B /* ChildBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7480608416FD31270023A26B /* ChildBaseView.m */; };
 		7480608716FD31270023A26B /* ChildBaseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7480608516FD31270023A26B /* ChildBaseView.xib */; };
 		7480608C16FD41F50023A26B /* silhouette.png in Resources */ = {isa = PBXBuildFile; fileRef = 7480608B16FD41F50023A26B /* silhouette.png */; };
@@ -73,11 +81,6 @@
 		748060BF16FE71820023A26B /* dot_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 748060BD16FE71820023A26B /* dot_on.png */; };
 		74A6F86516CF0B1F00B99FF0 /* RomiboCommands.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */; };
 		74D1A81B170643BD007E8CF9 /* ActionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A819170643BD007E8CF9 /* ActionButton.png */; };
-		74D1A81D1706441C007E8CF9 /* ArrowDepressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A81C1706441C007E8CF9 /* ArrowDepressed.png */; };
-		74D1A822170BA819007E8CF9 /* Arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A81E170BA819007E8CF9 /* Arrow_left.png */; };
-		74D1A823170BA819007E8CF9 /* Arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A81F170BA819007E8CF9 /* Arrow_down.png */; };
-		74D1A824170BA819007E8CF9 /* Arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A820170BA819007E8CF9 /* Arrow_right.png */; };
-		74D1A825170BA819007E8CF9 /* Arrow_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A821170BA819007E8CF9 /* Arrow_up.png */; };
 		74D1A827170BA8B3007E8CF9 /* movement_base.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A826170BA8B3007E8CF9 /* movement_base.png */; };
 		74D1A829170F5BD0007E8CF9 /* RomiboAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A828170F5BD0007E8CF9 /* RomiboAppIcon.png */; };
 		74D1A82B170F5BDE007E8CF9 /* RomiboAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1A82A170F5BDE007E8CF9 /* RomiboAppIcon.png */; };
@@ -130,7 +133,6 @@
 		63DBAFDD14B0126D00EAD344 /* Romibo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Romibo-Prefix.pch"; sourceTree = "<group>"; };
 		63DBAFDE14B0126D00EAD344 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		63DBAFDF14B0126D00EAD344 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		63DBAFE514B0126D00EAD344 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		63DBAFE714B0126D00EAD344 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		63DBAFE814B0126D00EAD344 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		63DBAFEF14B0126D00EAD344 /* RomiboTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RomiboTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,17 @@
 		743873431759579F0069EEC9 /* mood-surprised.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mood-surprised.png"; path = "imgs/mood-surprised.png"; sourceTree = "<group>"; };
 		743873441759579F0069EEC9 /* mood-happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mood-happy.png"; path = "imgs/mood-happy.png"; sourceTree = "<group>"; };
 		743873451759579F0069EEC9 /* mood-angry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mood-angry.png"; path = "imgs/mood-angry.png"; sourceTree = "<group>"; };
+		743A1414178CA6E5007AAEB5 /* SimpleButtonPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleButtonPage.h; path = Views/SimpleButtonPage.h; sourceTree = "<group>"; };
+		743A1415178CA6E5007AAEB5 /* SimpleButtonPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleButtonPage.m; path = Views/SimpleButtonPage.m; sourceTree = "<group>"; };
+		743A1416178CA6E5007AAEB5 /* SimpleButtonPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SimpleButtonPage.xib; path = Views/SimpleButtonPage.xib; sourceTree = "<group>"; };
+		743A1419178CA7E5007AAEB5 /* ButtonPageBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonPageBase.h; sourceTree = "<group>"; };
+		743A141A178CA7E5007AAEB5 /* ButtonPageBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonPageBase.m; sourceTree = "<group>"; };
+		743A141C178CAF1C007AAEB5 /* simple_screens */ = {isa = PBXFileReference; lastKnownFileType = folder; path = simple_screens; sourceTree = "<group>"; };
+		743A141E178CB334007AAEB5 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		743A146E178E15D6007AAEB5 /* arrow_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow_up.png; path = imgs/arrow_up.png; sourceTree = "<group>"; };
+		743A146F178E15D6007AAEB5 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow_right.png; path = imgs/arrow_right.png; sourceTree = "<group>"; };
+		743A1470178E15D6007AAEB5 /* arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow_down.png; path = imgs/arrow_down.png; sourceTree = "<group>"; };
+		743A1471178E15D6007AAEB5 /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow_left.png; path = imgs/arrow_left.png; sourceTree = "<group>"; };
 		7470808A16CF1D650007158D /* CommandPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandPickerController.h; path = ../CommandPickerController.h; sourceTree = "<group>"; };
 		7470808B16CF1D650007158D /* CommandPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommandPickerController.m; path = ../CommandPickerController.m; sourceTree = "<group>"; };
 		7480608316FD31270023A26B /* ChildBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildBaseView.h; sourceTree = "<group>"; };
@@ -185,11 +198,6 @@
 		748060BD16FE71820023A26B /* dot_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dot_on.png; path = imgs/dot_on.png; sourceTree = "<group>"; };
 		74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RomiboCommands.txt; sourceTree = "<group>"; };
 		74D1A819170643BD007E8CF9 /* ActionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ActionButton.png; path = imgs/ActionButton.png; sourceTree = "<group>"; };
-		74D1A81C1706441C007E8CF9 /* ArrowDepressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ArrowDepressed.png; path = imgs/ArrowDepressed.png; sourceTree = "<group>"; };
-		74D1A81E170BA819007E8CF9 /* Arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow_left.png; path = imgs/Arrow_left.png; sourceTree = "<group>"; };
-		74D1A81F170BA819007E8CF9 /* Arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow_down.png; path = imgs/Arrow_down.png; sourceTree = "<group>"; };
-		74D1A820170BA819007E8CF9 /* Arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow_right.png; path = imgs/Arrow_right.png; sourceTree = "<group>"; };
-		74D1A821170BA819007E8CF9 /* Arrow_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow_up.png; path = imgs/Arrow_up.png; sourceTree = "<group>"; };
 		74D1A826170BA8B3007E8CF9 /* movement_base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = movement_base.png; path = imgs/movement_base.png; sourceTree = "<group>"; };
 		74D1A828170F5BD0007E8CF9 /* RomiboAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RomiboAppIcon.png; path = imgs/RomiboAppIcon.png; sourceTree = "<group>"; };
 		74D1A82A170F5BDE007E8CF9 /* RomiboAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RomiboAppIcon.png; sourceTree = "<group>"; };
@@ -237,6 +245,9 @@
 				741937271767A09A0012A630 /* ButtonScrollView.m */,
 				741937261767A09A0012A630 /* ButtonScrollView.h */,
 				741937281767A09A0012A630 /* ButtonScrollView.xib */,
+				743A1414178CA6E5007AAEB5 /* SimpleButtonPage.h */,
+				743A1415178CA6E5007AAEB5 /* SimpleButtonPage.m */,
+				743A1416178CA6E5007AAEB5 /* SimpleButtonPage.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -244,14 +255,16 @@
 		6390519914B693F1007AB7CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7480608316FD31270023A26B /* ChildBaseView.h */,
 				7480608416FD31270023A26B /* ChildBaseView.m */,
+				7480608316FD31270023A26B /* ChildBaseView.h */,
 				7480608516FD31270023A26B /* ChildBaseView.xib */,
 				7470808A16CF1D650007158D /* CommandPickerController.h */,
 				7470808B16CF1D650007158D /* CommandPickerController.m */,
 				6390519A14B69403007AB7CC /* ConfigViewController.h */,
 				6390519B14B69403007AB7CC /* ConfigViewController.m */,
 				6390519C14B69403007AB7CC /* ConfigViewController.xib */,
+				743A1419178CA7E5007AAEB5 /* ButtonPageBase.h */,
+				743A141A178CA7E5007AAEB5 /* ButtonPageBase.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -282,6 +295,8 @@
 		63DBAFC014B0126D00EAD344 = {
 			isa = PBXGroup;
 			children = (
+				743A141E178CB334007AAEB5 /* MainStoryboard_iPad.storyboard */,
+				743A141C178CAF1C007AAEB5 /* simple_screens */,
 				7419372F17691B180012A630 /* screens */,
 				74D1A82A170F5BDE007E8CF9 /* RomiboAppIcon.png */,
 				74A6F86416CF0B1F00B99FF0 /* RomiboCommands.txt */,
@@ -326,7 +341,6 @@
 				6396AD7F14B24E020023CE66 /* Romibo.entitlements */,
 				63DBAFDE14B0126D00EAD344 /* AppDelegate.h */,
 				63DBAFDF14B0126D00EAD344 /* AppDelegate.m */,
-				63DBAFE414B0126D00EAD344 /* MainStoryboard_iPad.storyboard */,
 				63DBAFE714B0126D00EAD344 /* ViewController.h */,
 				63DBAFE814B0126D00EAD344 /* ViewController.m */,
 				63DBAFD614B0126D00EAD344 /* Supporting Files */,
@@ -367,6 +381,10 @@
 		63DD0E2E14B5386E002FDC2F /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				743A146E178E15D6007AAEB5 /* arrow_up.png */,
+				743A146F178E15D6007AAEB5 /* arrow_right.png */,
+				743A1470178E15D6007AAEB5 /* arrow_down.png */,
+				743A1471178E15D6007AAEB5 /* arrow_left.png */,
 				743873421759579F0069EEC9 /* mood-sad.png */,
 				743873431759579F0069EEC9 /* mood-surprised.png */,
 				743873441759579F0069EEC9 /* mood-happy.png */,
@@ -376,11 +394,6 @@
 				7438733D1759527C0069EEC9 /* tiltBackground@2x.png */,
 				74D1A828170F5BD0007E8CF9 /* RomiboAppIcon.png */,
 				74D1A826170BA8B3007E8CF9 /* movement_base.png */,
-				74D1A81E170BA819007E8CF9 /* Arrow_left.png */,
-				74D1A81F170BA819007E8CF9 /* Arrow_down.png */,
-				74D1A820170BA819007E8CF9 /* Arrow_right.png */,
-				74D1A821170BA819007E8CF9 /* Arrow_up.png */,
-				74D1A81C1706441C007E8CF9 /* ArrowDepressed.png */,
 				74D1A819170643BD007E8CF9 /* ActionButton.png */,
 				748060BC16FE71820023A26B /* dot_off.png */,
 				748060BD16FE71820023A26B /* dot_on.png */,
@@ -496,17 +509,11 @@
 				63DD0EA814B54C1F002FDC2F /* sound_right.png in Resources */,
 				63AEE88414B91C2300A8C8DC /* emotion-base-03.png in Resources */,
 				74A6F86516CF0B1F00B99FF0 /* RomiboCommands.txt in Resources */,
-				7480608216FCE3C50023A26B /* MainStoryboard_iPad.storyboard in Resources */,
 				7480608716FD31270023A26B /* ChildBaseView.xib in Resources */,
 				7480608C16FD41F50023A26B /* silhouette.png in Resources */,
 				748060BE16FE71820023A26B /* dot_off.png in Resources */,
 				748060BF16FE71820023A26B /* dot_on.png in Resources */,
 				74D1A81B170643BD007E8CF9 /* ActionButton.png in Resources */,
-				74D1A81D1706441C007E8CF9 /* ArrowDepressed.png in Resources */,
-				74D1A822170BA819007E8CF9 /* Arrow_left.png in Resources */,
-				74D1A823170BA819007E8CF9 /* Arrow_down.png in Resources */,
-				74D1A824170BA819007E8CF9 /* Arrow_right.png in Resources */,
-				74D1A825170BA819007E8CF9 /* Arrow_up.png in Resources */,
 				74D1A827170BA8B3007E8CF9 /* movement_base.png in Resources */,
 				74D1A829170F5BD0007E8CF9 /* RomiboAppIcon.png in Resources */,
 				74D1A82B170F5BDE007E8CF9 /* RomiboAppIcon.png in Resources */,
@@ -521,6 +528,13 @@
 				74193725175E777D0012A630 /* ButtonPage.xib in Resources */,
 				7419372A1767A09A0012A630 /* ButtonScrollView.xib in Resources */,
 				7419373017691B180012A630 /* screens in Resources */,
+				743A1418178CA6E5007AAEB5 /* SimpleButtonPage.xib in Resources */,
+				743A141D178CAF1C007AAEB5 /* simple_screens in Resources */,
+				743A141F178CB334007AAEB5 /* MainStoryboard_iPad.storyboard in Resources */,
+				743A1472178E15D7007AAEB5 /* arrow_up.png in Resources */,
+				743A1473178E15D7007AAEB5 /* arrow_right.png in Resources */,
+				743A1474178E15D7007AAEB5 /* arrow_down.png in Resources */,
+				743A1475178E15D7007AAEB5 /* arrow_left.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +589,8 @@
 				7438733017554C2B0069EEC9 /* HeadTiltNubView.m in Sources */,
 				74193724175E777D0012A630 /* ButtonPage.m in Sources */,
 				741937291767A09A0012A630 /* ButtonScrollView.m in Sources */,
+				743A1417178CA6E5007AAEB5 /* SimpleButtonPage.m in Sources */,
+				743A141B178CA7E5007AAEB5 /* ButtonPageBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,14 +619,6 @@
 				63DBAFD914B0126D00EAD344 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		63DBAFE414B0126D00EAD344 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				63DBAFE514B0126D00EAD344 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		63DBAFF914B0126D00EAD344 /* InfoPlist.strings */ = {

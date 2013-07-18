@@ -1,0 +1,7 @@
+Actions
+Spin Aro.wav,Spin around!
+side to .wav,Side to side
+up and d.wav,Up and down
+right an.wav,Right and left
+Head Rol.wav,Head roll!
+Spin and.wav,Spin and nod

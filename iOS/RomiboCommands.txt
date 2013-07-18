@@ -1,221 +1,65 @@
-RB_A_rob.wav,A robot that loves canoes
-RB_A_row.wav,A row-bot
-RB_A_sil.wav,A silicon
-RB_A_Tra.wav,A trans-farmer
-RB_Alask.wav,Alaska
-RB_Ameri.wav,Americium
-RB_An_au.wav,An autonomous car
-RB_Antar.wav,Antartica
-RB_Argon.wav,Argon
-RB_Ask_m.wav,Ask me a question
-RB_Austr.wav,Australia
-RB_Becau.wav,Because someone kept pushing his buttons
-RB_Berke.wav,Berkelium
-RB_big.wav,Big
-RB_black.wav,Black
-RB_blue.wav,Blue
-RB_blue_.wav,Blue 1
-RB_Can_y.wav,Can you draw that
-RB_Cesiu.wav,Cesium
-RB_China.wav,China
-RB_Chlor.wav,Chloride
-RB_clap_.wav,Clap your hands
-RB_color.wav,Color
-RB_Could.wav,Could you draw
-RB_cross.wav,Cross a robot with a tractor
-RB_down.wav,Down
-RB_Draw_.wav,Draw a tree
-RB_Dra0.wav,Draw me a car
-RB_Dra1.wav,Draw me a costume
-RB_Dra2.wav,Draw me a friend
-RB_Dra3.wav,Draw me a hat
-RB_Dra4.wav,Draw me glasses
-RB_Dra5.wav,Draw me on the moon
-RB_Dra6.wav,Draw me the sky
-RB_Dra7.wav,Draw my house
-RB_Dra8.wav,Draw someone else
-RB_Dra9.wav,Draw something  all the colors 
-RB_Dra10.wav,Draw the land
-RB_Dra11.wav,Draw the water
-RB_Ecuad.wav,Ecuador
-RB_Egypt.wav,Egypt
-RB_Engla.wav,England
-RB_food.wav,Food
-RB_Germa.wav,Germany
-RB_Gold.wav,Gold
-RB_Great.wav,Great job
-RB_Gre0.wav,Great job ian!
-RB_green.wav,Green
-RB_gre1.wav,Green
-RB_guess.wav,Guess again
-RB_hand.wav,Hand
-RB_He_wa.wav,He was crashing his hard drive
-RB_He_0.wav,He was data mining
-RB_Heavy.wav,Heavy metal
-RB_HeHe.wav,Hehe
-RB_hehe_.wav,Hehe that's funny!
-RB_Heliu.wav,Helium
-RB_Hello.wav,Hello 1
-RB_How.wav,How
-RB_I'll_.wav,I'll see you next time
-RB_I'm__.wav,I'm    tired   
-RB_I_do_.wav,I do not like
-RB_I_hat.wav,I hate telling noble gases jokes 
-RB_I_lik.wav,I like that!
-RB_I_loo.wav,I look awesome!
-RB_I_nee.wav,I need to charge my batteries
-RB_I_Spy.wav,I spy
-RB_If_yo.wav,"If you can't helium, or curium, then"
-RB_India.wav,India
-RB_is_th.wav,Is that
-RB_Is_0.wav,Is there anything in the tree
-RB_Is_1.wav,Is there anything in the water
-RB_It_wa.wav,It was upstairs
-RB_J.wav,J
-RB_jump_.wav,Jump up and down
-RB_keep_.wav,Keep guessing
-RB_left.wav,Left
-RB_Lets_.wav,Lets play again!
-RB_Let0.wav,Lets play i spy
-RB_Let1.wav,Lets play simon says
-RB_let2.wav,Lets try again
-RB_look.wav,Look
-RB_look_.wav,Look to your
-RB_Mammo.wav,Mammoth caves
-RB_me_to.wav,Me too
-RB_Mercu.wav,Mercury
-RB_Mexic.wav,Mexico
-RB_Micro.wav,Microscopic skeleton fossils of plankton
-RB_My_na.wav,My name is romibo 1
-RB_Never.wav,Never lick the spoon
-RB_Nitro.wav,Nitrogen
-RB_No.wav,No
-RB_no_1.wav,No 1
-RB_On_wh.wav,On what continent
-RB_orang.wav,Orange
-RB_ora0.wav,Orange 1
-RB_ouch.wav,Ouch
-RB_Penns.wav,Pennsylvania
-RB_place.wav,Place to go
-RB_point.wav,Point
-RB_purpl.wav,Purple
-RB_pur0.wav,Purple 1
-RB_R2_De.wav,R2 detour
-RB_R2_Do.wav,R2 doo doo
-RB_raise.wav,Raise your
-RB_Reall.wav,Really
-RB_red.wav,Red
-RB_Red_1.wav,Red 1
-RB_Rib-b.wav,Rib-bot
-RB_right.wav,Right
-RB_Robot.wav,Robot driver's license
-RB_rob0.wav,Robot that takes the longest way
-RB_Russi.wav,Russia
-RB_Simon.wav,Simon says
-RB_sit_d.wav,Sit down
-RB_small.wav,Small
-RB_somet.wav,Something
-RB_Spain.wav,Spain
-RB_spin_.wav,Spin around
-RB_stand.wav,Stand up
-RB_stomp.wav,Stomp your feet
-RB_Stron.wav,Strontium
-RB_tell_.wav,Tell me a story
-RB_tel0.wav,Tell me more
-RB_Texas.wav,Texas
-RB_that'.wav,That's interesting
-RB_The_a.wav,The atomosphere is mostly   
-RB_The_c.wav,The chicket was out of order
-RB_The0.wav,The coldest temperature on earth
-RB_The_l.wav,The largest of body of water on earth
-RB_The_m.wav,The most common rare gas in the atmosphere
-RB_The_P.wav,The pacific ocean
-RB_The_s.wav,The scientist found isoptoses in helium
-RB_They_.wav,They never get a reaction 
-RB_thing.wav,Thing
-RB_up.wav,Up
-RB_was_t.wav,Was that
-RB_What'.wav,What's silver and lies in the grass
-RB_Wha0.wav,What's the important rule in chemistry
-RB_Wha1.wav,What's your name
-RB_What.wav,What
-RB_What_.wav,What am i
-RB_Wha2.wav,What are the longest caves
-RB_wha3.wav,What are we
-RB_Wha4.wav,What did i do
-RB_Wha5.wav,What did the robot frog say
-RB_Wha6.wav,What do you call a clown who's in jail
-RB_Wha7.wav,What do you call a driving robot
-RB_Wha8.wav,What do you do with a sick chemist
-RB_Wha9.wav,What element checks for fires
-RB_Wha10.wav,What element will be liquid at absolute 0
-RB_Wha11.wav,What happens next
-RB_Wha12.wav,What is a robot's favorite type of music
-RB_Wha13.wav,What is chalk made of
-RB_Wha14.wav,What is happening in the picture
-RB_Wha15.wav,What is that 
-RB_Wha16.wav,What is the capital
-RB_Wha17.wav,What is the rarest element on earth
-RB_Wha18.wav,What is their name
-RB_Wha19.wav,What is your favorite
-RB_Wha20.wav,What letter is not in the periodic table
-RB_When.wav,When
-RB_When_.wav,When does a robot need training
-RB_Whene.wav,Whenever he gets rusty!
-RB_Where.wav,Where
-RB_Whe0.wav,Where am i 
-RB_Which.wav,Which element's atoms have the largest volume
-RB_Whi0.wav,Which element is a liquid at room temp
-RB_Whi1.wav,Which element makes fireworks red
-RB_Whi2.wav,Which element makes the thinnest wires
-RB_Whi3.wav,Which halogen is the most in nature
-RB_white.wav,White
-RB_Who_1.wav,Who 1
-RB_Who_i.wav,Who is it 
-RB_Why.wav,Why
-RB_Why_c.wav,Why couldn't the robot go to the party
-RB_Why_d.wav,Why did the robot cross the road
-RB_Why_i.wav,Why is that
-RB_Why_w.wav,Why was the robot angry
-RB_Why0.wav,Why was the robot digging a hole
-RB_Wow!.wav,Wow!
-RB_yello.wav,Yellow
-RB_yel0.wav,Yellow 1
-RB_yes.wav,Yes
-RB_yes_1.wav,Yes 1
-RB_you'r.wav,You're close
-RB_you0.wav,You're kidding
-RB_You_w.wav,You win!
-RB_You1.wav,You win
-gotcha.wav, Gotcha!
-oops.wav, Ooooops
-sinosay, Simon didn't say!
-tricku, I tricked you!
-Bye_Bye_.wav,Bye bye blackbird
-Hava_Nag.wav,Hava nagila
-In_the_M.wav,In the mood (glenn miller)
-itsy_bit.wav,Itsy bitsy spider
-Let_Me_C.wav,Let me call you sweetheart
-little_m.wav,Little miss muffet
-mario_th.wav,Mario theme
-old_macd.wav,Old macdonald
-Show_Me_.wav,Show me the way to go home
-the_farm.wav,The farmer in the dell(complete)
-the_far0.wav,The farmer in the dell(short)
-twinkle.wav,Twinkle
-You_Are1.wav,You are my sunshine
-0.wav,0
-1.wav,1
-2.wav,2
-3.wav,3
-4.wav,4
-5.wav,5
-6.wav,6
-7.wav,7
-8.wav,8
-9.wav,9
-count,Count
-dance,Dance
-rock,Rock
+Good_job.wav,Good job sam!
+Goodbye_.wav,Goodbye sam!
+ha_ha_th.wav,Ha ha that's funny
+Hello_Sa.wav,Hello sam!
+How_are_.wav,How are you 
+I_like_t.wav,I like that song
+I_like0.wav,I like that
+Lets_dan.wav,Lets dance!
+Me_too!.wav,Me too!
+My_name_.wav,My name is romibo 2
+Sam_is_a.wav,Sam is awesome! 1
+That_was.wav,That was fun!
+That's_R.wav,That's right!
+What_do_.wav,What do you like to eat
+What_is_.wav,What is your favorite song
+Where_is.wav,Where is the
+ah!.wav,Ah!
+Angry.wav,Angry
+Behind.wav,Behind
+Bye.wav,Bye
+Down_1.wav,Down 1
+Eeeeeep!.wav,Eeeeeep!
+Great_jo.wav,Great job sam!
+ha_ha_ha.wav,Ha ha ha that's funny
+Hamburge.wav,Hamburger
+Happy!.wav,Happy!
+Head_Rol.wav,Head roll!
+Hi_Sam!.wav,Hi sam!
+Hi.wav,Hi
+I_don't_.wav,I don't know 1
+Left_1.wav,Left 1
+Love.wav,Love
+Meat_bal.wav,Meat balls
+Ooooooo!.wav,Ooooooo!
+Ooops!_1.wav,Ooops! 1
+Orange_J.wav,Orange juice
+Pancakes.wav,Pancakes
+Pizza!.wav,Pizza!
+Please.wav,Please
+Right_1.wav,Right 1
+right_an.wav,Right and left
+Sad.wav,Sad
+Sam_is0.wav,Sam is awesome!
+Sam!.wav,Sam!
+side_to_.wav,Side to side
+Silly.wav,Silly
+Spaghett.wav,Spaghetti!
+Spin_and.wav,Spin and nod
+Spin_Aro.wav,Spin around!
+Thank_yo.wav,Thank you!
+Under.wav,Under
+Up_1.wav,Up 1
+up_and_d.wav,Up and down
+Wheeeeee.wav,Wheeeeee!
+Yay.wav,Yay
+Yes_2.wav,Yes 2
+You_are_.wav,You are my friend
+789.wav,789
+Apples_a.wav,Apples and bananas
+Barney_I.wav,Barney i love you
+Down_by_.wav,Down by the bay
+If_You'r.wav,If you're happy
+Mr_Sun.wav,Mr sun
+no_1.wav,No
 bob,Bob
-nod,Nod

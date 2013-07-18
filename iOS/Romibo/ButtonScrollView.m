@@ -8,6 +8,7 @@
 
 #import "ButtonScrollView.h"
 #import "ButtonPage.h"
+#import "SimpleButtonPage.h"
 
 @implementation ButtonScrollView
 
@@ -15,14 +16,15 @@
 @synthesize pager;
 @synthesize viewControllers;
 @synthesize totalPages;
+@synthesize directoryName;
 
 
--(void)loadButtonPages
+-(void)loadButtonPages:(NSString*) dirName
 {
-
-//    NSArray* pagePaths = [NSBundle pathsForResourcesOfType:@"txt" inDirectory:[[[NSBundle mainBundle] bundlePath] stringByAppendingString:@"/screens"]];
+    NSString* directory = [NSString stringWithFormat:@"/%@", dirName];
+    directoryName = directory;
     
-    NSArray* pagePaths = [[NSBundle mainBundle] pathsForResourcesOfType:@"txt" inDirectory:@"/screens"];
+    pagePaths = [[NSBundle mainBundle] pathsForResourcesOfType:@"txt" inDirectory:directoryName];
     
     totalPages = [pagePaths count];
     
@@ -41,22 +43,47 @@
         
         NSLog(@"%@", pagePaths[i]);
         
-        ButtonPage *testView = [[ButtonPage alloc] initWithNibName:@"ButtonPage" bundle:[NSBundle mainBundle]];
-        [testView setupPage:pagePaths[i]];
-        
-        CGRect viewFrame = CGRectMake(scroll.frame.size.width * i, 0.0, scroll.frame.size.width, scroll.frame.size.height);
-        [testView.view setFrame:viewFrame];
-        
-        [scroll addSubview:testView.view];
-        
-        [viewControllers addObject:testView];
-        
-        [testView release];
-        
+        if ([dirName isEqualToString:@"screens"])
+            [self addAdultButtonPage:i];
+        else [self addSimpleButtonPage:i];
     }
     
     [pager setNumberOfPages:totalPages];
     [pager setCurrentPage:0];
+    
+}
+
+-(void)addAdultButtonPage:(int)index
+{
+    ButtonPage *testView = [[ButtonPage alloc] initWithNibName:@"ButtonPage" bundle:[NSBundle mainBundle]];
+    [testView setupPage:pagePaths[index]];
+    
+    CGRect viewFrame = CGRectMake(scroll.frame.size.width * index, 0.0, scroll.frame.size.width, scroll.frame.size.height);
+    [testView.view setFrame:viewFrame];
+    
+    [scroll addSubview:testView.view];
+    
+    [viewControllers addObject:testView];
+    
+    [testView release];
+    
+
+}
+
+-(void)addSimpleButtonPage:(int)index
+{
+    SimpleButtonPage *testView = [[SimpleButtonPage alloc] initWithNibName:@"SimpleButtonPage" bundle:[NSBundle mainBundle]];
+    [testView setupPage:pagePaths[index]:directoryName];
+    
+    CGRect viewFrame = CGRectMake(scroll.frame.size.width * index, 0.0, scroll.frame.size.width, scroll.frame.size.height);
+    [testView.view setFrame:viewFrame];
+    
+    [scroll addSubview:testView.view];
+    
+    [viewControllers addObject:testView];
+    
+    [testView release];
+    
     
 }
 
@@ -79,10 +106,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
-    [self loadButtonPages];
-    
     
     [self.view setBackgroundColor:[UIColor clearColor]];
     [self.view setOpaque:NO];

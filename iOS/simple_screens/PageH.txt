@@ -1,0 +1,7 @@
+Silly Sounds
+Eeeeeep!.wav,Eeeeeep!
+Ooooooo!.wav,Ooooooo!
+ah!.wav,Ah!
+Yay.wav,Yay
+Ooops! 1.wav,Ooops! 1
+Wheeeeee.wav,Wheeeeee!

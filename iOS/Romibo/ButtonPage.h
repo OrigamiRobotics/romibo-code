@@ -11,26 +11,23 @@
 #import "AppDelegate.h"
 #import "ButtonPageBase.h"
 
-@interface ButtonPage : UIViewController <CommandPickerDelegate>
+@interface ButtonPage : ButtonPageBase <CommandPickerDelegate>
 {
-    IBOutlet UILabel *nameLabel;
+    //IBOutlet UILabel *nameLabel;
     
     CommandPickerController *commandPicker;
     UIPopoverController *commandPickerPopover;
-    UIButton* lastButtonClicked;
+
     
-    id appDelegate;
 }
 
-@property (nonatomic, assign) id appDelegate;
+//-(void)setupButtons:(NSString*)fileName;
+//-(void)setupPage:(NSString*)filePath;
 
--(void)setupButtons:(NSString*)fileName;
--(void)setupPage:(NSString*)filePath;
 
-@property (retain, nonatomic) NSString* pageName;
 
 //handles the 16 action buttons
--(IBAction)buttonClicked:(id)sender;
+//-(IBAction)buttonClicked:(id)sender;
 -(IBAction)handleLongPress:(id)sender;
 -(void)pickCommand:(id)sender;
 

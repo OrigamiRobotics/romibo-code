@@ -7,27 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CommandPickerController.h"
+#import "ButtonPageBase.h"
 
-@interface SimpleButtonPage : UIViewController
+@interface SimpleButtonPage : ButtonPageBase
 {
-    IBOutlet UILabel *nameLabel;
     
-    CommandPickerController *commandPicker;
-    UIPopoverController *commandPickerPopover;
-    UIButton* lastButtonClicked;
     
-    id appDelegate;
+    
+  
 }
 
-@property (nonatomic, assign) id appDelegate;
-
--(void)setupButtons:(NSString*)fileName:(NSString*)directory;
--(void)setupPage:(NSString*)filePath:(NSString*)directory;
-
-@property (retain, nonatomic) NSString* pageName;
-
-//handles the 6 action buttons
--(IBAction)buttonClicked:(id)sender;
 
 @end

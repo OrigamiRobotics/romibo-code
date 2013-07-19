@@ -67,13 +67,12 @@
     
     [testView release];
     
-
 }
 
 -(void)addSimpleButtonPage:(int)index
 {
     SimpleButtonPage *testView = [[SimpleButtonPage alloc] initWithNibName:@"SimpleButtonPage" bundle:[NSBundle mainBundle]];
-    [testView setupPage:pagePaths[index]:directoryName];
+    [testView setupPage:pagePaths[index]];
     
     CGRect viewFrame = CGRectMake(scroll.frame.size.width * index, 0.0, scroll.frame.size.width, scroll.frame.size.height);
     [testView.view setFrame:viewFrame];

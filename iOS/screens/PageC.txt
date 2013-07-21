@@ -1,0 +1,19 @@
+Conversation
+hello.wav,Hello
+My_nam0.wav,My name is romibo
+what_i4.wav,What is their name
+what_i5.wav,What is your favorite
+Me_too!.wav,Me too!
+Yes_2.wav,Yes 2
+no.wav,No
+ask_me_a.wav,Ask me a question
+I_like1.wav,I like that
+tell_m1.wav,Tell me more
+ouch.wav,Ouch
+color.wav,Color
+food.wav,Food
+thing.wav,Thing
+place_to.wav,Place to go
+I_am_tir.wav,I am tired
+I_need_t.wav,I need to charge my batteries
+I'll_see.wav,I'll see you next time

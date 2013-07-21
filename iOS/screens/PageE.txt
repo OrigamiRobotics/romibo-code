@@ -1,0 +1,19 @@
+Story Telling
+who.wav,Who
+what.wav,What
+where.wav,Where
+when.wav,When
+why.wav,Why
+how.wav,How
+is_that.wav,Is that
+was_that.wav,Was that
+tell_m1.wav,Tell me more
+wow.wav,Wow
+that's_i.wav,That's interesting
+I_do_not.wav,I do not like that
+that's_f.wav,That's funny
+really.wav,Really
+you're_k.wav,You're kidding
+hehe_tha.wav,Hehe that's funny
+tell_m0.wav,Tell me a story
+what_hap.wav,What happens next

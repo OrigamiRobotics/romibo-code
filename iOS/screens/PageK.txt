@@ -1,0 +1,19 @@
+Drawing Game 2
+what_did.wav,What did i do today
+draw_me_.wav,Draw me a car
+draw_m0.wav,Draw me a costume
+what_am_.wav,What am i
+how_did_.wav,How did i get to the moon
+draw_a_t.wav,Draw a tree
+is_there.wav,Is there anything in the tree
+draw_m4.wav,Draw me glasses
+what_i4.wav,What is their name
+who_is_i.wav,Who is it
+is_the0.wav,Is there anything in the water
+draw_som.wav,Draw someone else
+what_are.wav,What are we doing
+could_yo.wav,Could you draw that
+I_look_a.wav,I look awesome
+let's_pl.wav,Let's play again
+where_am.wav,Where am i
+Great_Jo.wav,Great job!

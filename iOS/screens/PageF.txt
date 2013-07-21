@@ -1,0 +1,19 @@
+Jokes
+why_di0.wav,Why did the
+robot.wav,Robot
+frog.wav,Frog
+cat.wav,Cat
+dog.wav,Dog
+what_d2.wav,What did the
+cross_th.wav,Cross the road
+climb_th.wav,Climb the tree
+say_to_t.wav,Say to the
+you_tell.wav,You tell me
+hehe_tha.wav,Hehe that's funny
+tell_me_.wav,Tell me a joke
+I_don't_.wav,I don't know
+knock_kn.wav,Knock knock
+who's_th.wav,Who's there
+Romibo.wav,Romibo
+who.wav,Who
+just_kid.wav,Just kidding

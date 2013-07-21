@@ -27,26 +27,27 @@ def listFiles(path):
 
             filelength = len(file);
 
-            if (file[filelength-4:filelength] != ".wav"):
+            if (file[filelength-4:filelength].lower() != ".wav"):
                 continue;
             
             buttonname = file[0:filelength-4] #removes .wav
-            buttonname = buttonname.replace("_", " ")#removes underscore
+            #buttonname = buttonname.replace("_", " ")#removes underscore
             buttonText = buttonname.capitalize()
             #print("Button text: {0}".format(buttonText))
             
             allButtonNames.append(buttonText)
 
             if (filelength > 12):
+
                 print("File name too long: {0}".format(file))
 
                 newFileName = file[0:8].replace(" ", "_");
-
+                
                 if (shortFileExists(newFileName)):
 
                     for i in range(0,100):
 
-                        newFileName = file[0:6]
+                        newFileName = newFileName[0:6]
                         newFileName += str(i)
 
                         if (not(shortFileExists(newFileName))):

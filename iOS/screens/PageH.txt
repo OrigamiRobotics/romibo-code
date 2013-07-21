@@ -1,0 +1,19 @@
+Robot Jokes
+why_was_.wav,Why was the robot angry_
+Because_.wav,Because someone kept pushing his buttons
+what_i0.wav,What is a robot's favorite type of music
+heavy_me.wav,Heavy metal
+what_d8.wav,What do you get when you cross a robot and a tractor
+a_trans-.wav,A trans-farmer
+when_doe.wav,When does a robot need training
+whenever.wav,Whenever it gets rusty
+why_did_.wav,Why did the robot cross the road
+becaus0.wav,Because the chicken was out of order
+what_d5.wav,What do you call a robot that always takes the longest way around
+R2_detou.wav,R2 detour
+What's_s.wav,What's silver and lies in the grass
+R2_doo_d.wav,R2 doo doo
+what_d6.wav,What do you call a robot that loves canoes
+a_row-bo.wav,A row-bot!
+what_d0.wav,What did the robot frog say
+Rib-bot.wav,Rib-bot

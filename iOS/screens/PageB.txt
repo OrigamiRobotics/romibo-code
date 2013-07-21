@@ -1,0 +1,19 @@
+I Spy
+lets_p0.wav,Lets play i spy
+somethin.wav,Something
+red.wav,Red
+orange.wav,Orange
+yellow.wav,Yellow
+green.wav,Green
+blue.wav,Blue
+purple.wav,Purple
+black.wav,Black
+white.wav,White
+big.wav,Big
+small.wav,Small
+no.wav,No
+Yes_2.wav,Yes 2
+guess_ag.wav,Guess again
+keep_gue.wav,Keep guessing
+you're_c.wav,You're close
+you_win.wav,You win

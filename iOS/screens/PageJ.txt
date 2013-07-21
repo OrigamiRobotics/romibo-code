@@ -1,0 +1,19 @@
+Drawing Game
+draw_m2.wav,Draw me a hat
+draw_t0.wav,Draw the sky
+draw_m1.wav,Draw me a friend
+draw_t1.wav,Draw the water
+draw_the.wav,Draw the land
+why_is_t.wav,Why is that
+what_i1.wav,What is happening in this picture
+draw_m3.wav,Draw me a scarf
+draw_s0.wav,Draw something...
+red.wav,Red
+orange.wav,Orange
+yellow.wav,Yellow
+green.wav,Green
+blue.wav,Blue
+purple.wav,Purple
+white.wav,White
+black.wav,Black
+draw_my_.wav,Draw my house

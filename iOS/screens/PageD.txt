@@ -1,0 +1,19 @@
+Song and Dance
+lets_sin.wav,Lets sing songs
+do_you_k.wav,Do you know this one
+sing_me_.wav,Sing me a song
+that's_m.wav,That's my favorite
+dance_wi.wav,Dance with me
+do_what_.wav,Do what i do
+louder.wav,Louder
+quieter.wav,Quieter
+You_are_.wav,You are awesome
+lets_try.wav,Lets try again
+Bye_Bye_.wav,Bye bye blackbird
+In_the_M.wav,In the mood (glenn miller)
+little_m.wav,Little miss muffet
+old_macd.wav,Old macdonald
+Show_Me_.wav,Show me the way to go home
+the_far0.wav,The farmer in the dell(short)
+twinkle.wav,Twinkle
+You_Are1.wav,You are my sunshine

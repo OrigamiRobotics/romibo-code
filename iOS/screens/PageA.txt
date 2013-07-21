@@ -1,19 +1,19 @@
-Conversation
-Hello Sa.wav,Hello sam!
-Sam is0.wav,Sam is awesome!
-What do .wav,What do you like to eat
-I like0.wav,I like that
-What is .wav,What is your favorite song
-I like t.wav,I like that song
-Lets dan.wav,Lets dance!
-That was.wav,That was fun!
-Me too!.wav,Me too!
-Hello Sa.wav,Hello sam!
-My name .wav,My name is romibo 2
-Good job.wav,Good job sam!
-How are .wav,How are you
-Me too!.wav,Me too!
-ha ha ha.wav,Ha ha ha that's funny
-That's R.wav,That's right!
-Goodbye .wav,Goodbye sam!
-Goodbye .wav,Goodbye sam!
+Simon Says
+lets_p1.wav,Lets play simon says
+simon_sa.wav,Simon says
+raise_yo.wav,Raise your
+look.wav,Look
+hand.wav,Hand
+right.wav,Right
+left.wav,Left
+up.wav,Up
+Down_1.wav,Down 1
+point.wav,Point
+Simon_di.wav,Simon didn't say!
+Gotcha!.wav,Gotcha!
+Oops.wav,Oops
+let's_pl.wav,Let's play again
+Great_Jo.wav,Great job!
+clap_you.wav,Clap your hands
+you_win.wav,You win
+great_0.wav,Great job

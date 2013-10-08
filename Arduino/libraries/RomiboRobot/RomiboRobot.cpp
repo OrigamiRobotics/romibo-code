@@ -932,12 +932,12 @@ void RomiboRobot::setAntennaColorWhite(void)
 
 void RomiboRobot::setAntennaColorGreen(void)
 { 
-  setAntennaColor(255, 0,0); // Green
+  setAntennaColor(0, 255, 0); // Green
 }
 
 void RomiboRobot::setAntennaColorRed(void)
 { 
-  setAntennaColor(0, 255, 0); // Red
+  setAntennaColor(255, 0, 0); // Red
 }
 
 void RomiboRobot::setAntennaColorBlue(void)

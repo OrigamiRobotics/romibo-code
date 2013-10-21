@@ -66,6 +66,15 @@ int rlight = 0;
 boolean inWanderingTime = false;
 Timer wanderingTimer;
 
+// range audio stuff
+int sndIndex = 0;
+int sndDelay = 0;
+int lastRange = 0;
+const int sndCount = 3;
+const char sndFiles[sndCount][8] = {"HAPPY1", "HAPPY1", "HAPPY1"};
+const int sndDelayConst = 5000;
+const int sndRangeConst = 300;
+
 // Define a polled serial output stream.
 ConsoleOutput Console;
 
@@ -133,6 +142,9 @@ void loop( void )
   {
     checkTouches();
   }
+
+  // check range for audio playback
+  checkRangeForAudio();
   
   //if we're supposed to be wandering, check for light sources and walls
   wanderingTimer.update();
@@ -142,6 +154,27 @@ void loop( void )
       checkLighting();
   }
   
+}
+
+void checkRangeForAudio()
+{
+  int range = Romibo.frontRangeDistance();
+
+  if (lastRange > sndRangeConst && range <= sndRangeConst && !sndDelay) {
+    //play next audio track
+    Serial.print(sndFiles[sndIndex]);
+    Romibo.playSoundNamed (sndFiles[sndIndex]);
+    sndDelay = sndDelayConst;
+
+    sndIndex ++;
+    if (sndIndex >= sndCount) {
+      sndIndex = 0;
+    }
+    Serial.print("index "); Serial.print(sndIndex);
+  }
+
+  lastRange = range;
+  if (sndDelay > 0) sndDelay --;
 }
 
 

@@ -73,7 +73,7 @@ int lastRange = 0;
 const int sndCount = 3;
 const char sndFiles[sndCount][8] = {"HAPPY1", "HAPPY1", "HAPPY1"};
 const int sndDelayConst = 5000;
-const int sndRangeConst = 300;
+const int sndRangeConst = 350;
 
 // Define a polled serial output stream.
 ConsoleOutput Console;

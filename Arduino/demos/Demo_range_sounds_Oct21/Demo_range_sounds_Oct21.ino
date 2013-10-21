@@ -73,8 +73,8 @@ int sndIndex = 0;
 int sndDelay = 0;
 int lastRange = 0;
 const int sndCount = 6;
-const char sndFiles[sndCount][8] = {"ROBOBIZ1", "ROBOBIZ2", "ROBOBIZ3", "ROBOBIZ4", "ROBOBIZ5", "ROBOBIZ6"};
-const int sndDelayConst = 1000;
+const char sndFiles[sndCount][9] = {"ROBOBIZ1", "ROBOBIZ2", "ROBOBIZ3", "ROBOBIZ4", "ROBOBIZ5", "ROBOBIZ6"};
+const int sndDelayConst = 2000;
 const int sndRangeConst = 350;
 
 // Define a polled serial output stream.

@@ -32,6 +32,8 @@
 #include <Parameters.h>
 Parameters parameters( NULL, 0 );
 
+const char touchSound[8] = "HAPPY1";
+
 //REFAC: this should be in config file
 boolean shouldBlink = true;
 boolean shouldWander = false;
@@ -72,7 +74,7 @@ int sndDelay = 0;
 int lastRange = 0;
 const int sndCount = 3;
 const char sndFiles[sndCount][8] = {"HAPPY1", "HAPPY1", "HAPPY1"};
-const int sndDelayConst = 5000;
+const int sndDelayConst = 1000;
 const int sndRangeConst = 350;
 
 // Define a polled serial output stream.
@@ -171,6 +173,11 @@ void checkRangeForAudio()
       sndIndex = 0;
     }
     Serial.print("index "); Serial.print(sndIndex);
+  }
+
+  // disable sound delay count down until the audio is done playing
+  if (Romibo.isSoundPlaying() && sndDelay > 0) {
+    sndDelay = sndDelayConst;
   }
 
   lastRange = range;
@@ -381,7 +388,7 @@ void beenTouched()
   //half the time, whistle when petted 
   if (r < 51)
   {
-    Romibo.playSoundNamed("S1"); 
+    Romibo.playSoundNamed(touchSound); 
   }
     
 }

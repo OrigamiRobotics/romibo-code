@@ -72,8 +72,8 @@ Timer wanderingTimer;
 int sndIndex = 0;
 int sndDelay = 0;
 int lastRange = 0;
-const int sndCount = 3;
-const char sndFiles[sndCount][8] = {"HAPPY1", "HAPPY1", "HAPPY1"};
+const int sndCount = 5;
+const char sndFiles[sndCount][8] = {"ROBOBIZ1", "ROBOBIZ2", "ROBOBIZ3", "ROBOBIZ4", "ROBOBIZ5"};
 const int sndDelayConst = 1000;
 const int sndRangeConst = 350;
 

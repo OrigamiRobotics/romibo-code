@@ -32,7 +32,7 @@
 #include <Parameters.h>
 Parameters parameters( NULL, 0 );
 
-const char touchSound[8] = "HAPPY1";
+const char touchSound[9] = "HAPPY1";
 
 //REFAC: this should be in config file
 boolean shouldBlink = true;

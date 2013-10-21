@@ -160,7 +160,7 @@ void checkRangeForAudio()
 {
   int range = Romibo.frontRangeDistance();
 
-  if (lastRange > sndRangeConst && range <= sndRangeConst && !sndDelay) {
+  if (!Romibo.isSoundPlaying() && lastRange > sndRangeConst && range <= sndRangeConst && !sndDelay) {
     //play next audio track
     Serial.print(sndFiles[sndIndex]);
     Romibo.playSoundNamed (sndFiles[sndIndex]);
